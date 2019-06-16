@@ -46,7 +46,7 @@ header:after{
     display: flex;
     width: 100vw;
     position: relative;
-    font: 20px poppins;
+    font: 20px arial;
     list-style: none;
     justify-content: space-around;
 }
@@ -55,32 +55,31 @@ header:after{
     color: white;
 }
 /*---------- ended header*/
-.user-info{
+.butt-contain{
     display: flex;
     flex-flow: column;
-    margin: 10px;
-    align-items: center;
-    padding: 30px;
+    margin: 20px;
+    align-items: start;
 }
-.PP-container{
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-    border-radius: 100%;
+
+.butt{  
+    background: #f1c40f;
+    border: none;
+    font: 18px poppins;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius:5px;
+    border-bottom:  5px solid #cea709 ;
+    transition: 1s;
 }
-.user-info > .data-container{
-    display: flex;
-    flex-flow: column;
-    margin-left: 4vw;
-    font: 23px poppins;
-    letter-spacing: 1px;
+.butt:hover {
+     border-bottom:  1px solid #cea709 ;
 }
-.data-container > span{
-    margin-top: 20px;
-}
-.PP-container> img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.helptxt{
+    margin:10px 0px; 
+    border: 1px solid lightblue;
+    padding: 10px;
+    font: 15px calibri;
+    background: lightyellow;
 }
