@@ -1,0 +1,82 @@
+body, html{
+    margin: 0px;
+    padding: 0px;
+     background: #36d1dc;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);  
+    overflow-x: hidden;
+}
+
+.container{
+    min-width: 100vw;
+    min-height: 100vh;
+   }
+.hero{
+    
+     perspective: 3000px;
+}
+.forms{
+    position: relative;
+    min-width: 100vw;
+    min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  transform-style: preserve-3d;
+    transition: 0.5s;
+     transform:  translateZ(-200px) ;
+}
+.forms-log{
+    transform:  translateZ(-200px) rotatey(0deg);
+}
+.forms-reg{
+    transform:  translateZ(-200px) rotatey(180deg);
+}
+form {
+    position: absolute;
+    max-width: 400px;
+    min-width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 20px 20px 30px 0px  black;
+    background: whitesmoke;
+    padding:  20px 0;
+}
+form:nth-child(1){
+    transform: rotateY(180deg) translatez(200px);
+}
+form:nth-child(2){
+    transform: rotateY(0deg) translatez(200px);
+}
+form *{
+    max-width: 90%;
+    min-width: 70%;
+    margin: 10px 30px;
+    padding: 10px;
+}
+
+form input{
+    background: white;
+    border: none;
+    border-bottom: 4px solid #5b86e5;
+    font: 20px josefinslab;
+}
+form h1{
+    font: 30px josefinsans;
+}
+form .error{
+    text-align: left;
+    color: tomato;
+    font: 15px lora;
+    border-left: 3px solid tomato;
+}
+form button{
+    background: tomato;
+    border: none;
+    font: 18px josefinsans;
+    color: white;
+    cursor: pointer;
+}
+form button:nth-last-child(1){
+    background: #4CAF50 ;
+}
