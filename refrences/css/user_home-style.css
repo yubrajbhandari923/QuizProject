@@ -109,9 +109,10 @@ header:after{
 }
 .notifications-contain{
     margin: 10px;
-    flex: 1 1 350px;
+    flex: 1 1 450px;
+    max-width: 1000px;
     min-height:350px;
- 
+    justify-self: ; 
 }
 .subhead-text{
     font: 35px Passionone;
@@ -136,4 +137,29 @@ header:after{
     background: white;
     margin: 0px 20px 0px 0px;
     border-radius:5px;
+}
+.search-contain{
+    flex-basis: 95%;
+    margin: 20px;
+}
+.search-contain form{
+    margin: 10px 20px;
+    position: relative;
+}
+.search-contain form input{
+    width: 100%;
+    font: 15px rubik;
+    padding: 10px;
+    box-shadow: 0 0 3px 0px black;
+}
+.search-contain form button{
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top:-1px;
+    right:-23px;
+    cursor: pointer;
+}
+.search-contain .search-result {
+    margin: 0px 20px;
 }
