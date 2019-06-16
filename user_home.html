@@ -9,6 +9,9 @@
     </head>
     <body>
             <header>
+                    <div class="user-info"> 
+
+                    </div>
                     <div class="head-text">
                         Hey! {{ fullname }}. Long Heading Text Here.
                     </div>
@@ -26,11 +29,34 @@
                             <button class="butt create-quiz"> Add questions </button>
                             <span class="helptxt"> Add new questions to your quiz set. </span>
                             
-                            <button class="butt create-quiz"> Manage questions </button>
+                            <button class="butt manage-quiz"> Manage questions </button>
                             <span class="helptxt"> Manage questions of your quiz set. </span>
+                           
+                            <button class="butt Take-quiz"> Take a quiz test </button>
+                            <span class="helptxt"> Take a test and learn new questions. </span>
                         </div>
+                        
+                        <div class="notifications-contain">
+                            <div class="subhead-text">Notification!</div>
+                            <div>
+                                <div class="a-notification" id="note-1"> 
+                                    <div class="opponent-userpic"> </div>
+                                  <span> $Oppoenent_name has challenged you.</span>
+                                </div>
+                                <div class="a-notification" id="note-1"> 
+                                    <div class="opponent-userpic"> </div>
+                                   <span>$Oppoenent_name accepted your challenge and scored $opponent_score in your quiz set.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="search-contain">
+                            <form>
+                            <input name=player-search type=text placeholder="Search a person to challenge here.">
+                            </form> 
+                        </div> -->
                     </section>
-            
+                    
                     
                 </section>
     </body>

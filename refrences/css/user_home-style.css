@@ -55,14 +55,19 @@ header:after{
     color: white;
 }
 /*---------- ended header*/
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
 .butt-contain{
     display: flex;
     flex-flow: column;
     margin: 20px;
-    align-items: start;
 }
 
 .butt{  
+    max-width: max-content;
     background: #f1c40f;
     border: none;
     font: 18px poppins;
@@ -76,10 +81,59 @@ header:after{
 .butt:hover {
      border-bottom:  1px solid #cea709 ;
 }
+.manage-quiz{
+    border-bottom:  5px solid #CE3323 ;
+    background: #e74c3c;
+}
+.Take-quiz{
+    border-bottom:  5px solid #15B358 ;
+    background: #2ecc71;
+}
+
 .helptxt{
     margin:10px 0px; 
-    border: 1px solid lightblue;
     padding: 10px;
     font: 15px calibri;
-    background: lightyellow;
+    background: lightsteelblue;
+    position: relative;
+    border-radius: 5px;
+    
+}
+.helptxt:before{
+    content:"+";
+    font: 18px poppins;
+    color: royalblue;
+    position: absolute;
+    top:-12px;
+    left:-5px;
+}
+.notifications-contain{
+    margin: 10px;
+    flex: 1 1 350px;
+    min-height:350px;
+ 
+}
+.subhead-text{
+    font: 35px Passionone;
+    letter-spacing: 2px;
+}
+.a-notification{
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    margin: 5px 0px;
+    font: 18px lora;
+}
+.a-notification:nth-child(odd){
+    background: lightgrey
+}
+.a-notification:nth-child(even){
+    background: whitesmoke
+}
+.opponent-userpic{
+    min-height:40px;
+    min-width:40px;
+    background: white;
+    margin: 0px 20px 0px 0px;
+    border-radius:5px;
 }
