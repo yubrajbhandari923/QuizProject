@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title> Guffadi </title>
+        <link rel=stylesheet href="refrences/fonts/fonts.css ">
+        <link rel=stylesheet href='refrences/css/user_home-style.css'>
+    </head>
+    <body>
+            <header>
+                    <div class="head-text">
+                        Hey! {{ fullname }}. Long Heading Text Here.
+                    </div>
+                    <div class="page-links">
+                        <ul>
+                            <li><a>My account</a></li>
+                            <li><a>Notifications</a></li>
+                            <li><a>Chat</a></li>
+                        </ul>
+                    </div>
+                </header>
+                <section class="container">
+                    <section class="hero">
+                        <div class="user-info">
+                            <div class="PP-container">
+                                <img src="1.jpg" alt="Pic">
+                            </div>
+                            <div class="data-container">
+                                <span>Name: {{ fullname }}</span>
+                                <span>Username: {{ Username }}</span>
+                                <span>Email: {{ email }}</span>
+                                <span>Gender: {{ gender }}</span>
+                                <span>Language: {{ language }}</span>
+                                <span><a>Change password</a></span>
+                            </div>
+            
+                        </div>
+                    </section>
+            
+                    
+                </section>
+    </body>
+</html>
