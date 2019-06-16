@@ -4,16 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <title> Guffadi </title>
-        <link rel=stylesheet href="fonts/fonts.css ">
+        <link rel=stylesheet href="refrences/fonts/fonts.css ">
         <link rel=stylesheet href='refrences/css/index-style.css'>
         <script>
             window.onload = function() {
                 document.querySelector(".reg-btn").onclick = function(){
-                    window.location.href = "{% url 'register' %}"
+                    window.location.href = window.location.href + "login.html"
                     
                 }
                 document.querySelector(".log-btn").onclick = function(){
-                    window.location.href = "{% url 'login' %}"
+                    window.location.href = window.location.href+ "login.html"
                 }
             }
          </script>
