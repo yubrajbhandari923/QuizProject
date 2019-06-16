@@ -1,3 +1,6 @@
+<?php 
+$data=$_GET['page'];
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -14,7 +17,7 @@
 <body>
     <section class="container">
         <section class="hero">
-            <section class="forms forms-{{ data }}">
+            <section class="forms forms-<?php echo $data ?>">
                     <form class="register-form" method="POST" action="">
                             <h1>Register</h1>
                             <input type=text name=fullname placeholder="Enter Your Full Name">

@@ -9,11 +9,11 @@
         <script>
             window.onload = function() {
                 document.querySelector(".reg-btn").onclick = function(){
-                    window.location.href = window.location.href + "login.html"
+                    window.location.href = window.location.href + "login.php<?php echo '?page=reg'; ?> ";
                     
                 }
                 document.querySelector(".log-btn").onclick = function(){
-                    window.location.href = window.location.href+ "login.html"
+                    window.location.href = window.location.href+ "login.php<?php echo '?page=log'; ?>";
                 }
             }
          </script>
