@@ -8,13 +8,29 @@
         <link rel=stylesheet href="refrences/fonts/fonts.css ">
         <link rel=stylesheet href='refrences/css/user_home-style.css'>
     </head>
+    <script>
+        window.onload = function(){
+            data ={
+                UIB : false
+            }
+            document.querySelector("#user-info-butt").onclick = function(){
+            if (data.UIB){
+                document.querySelector("#user-info-butt > div").style.display = "block";
+            } else {
+                document.querySelector("#user-info-butt > div").style.display = "none";
+            }
+            }
+            //
+            // Beemarsh Please make it functional. NOt working!!!!
+        }
+    </script>
     <body>
             <header>
                     <div class="user-info-butt" id="user-info-butt"> 
                         <div>
-                            <span> $user_username </span>
-                            <span> Myaccount</span>
-                            <span> Logout</span>
+                            <span> User: $user_username </span>
+                            <span> <a href="#">Myaccount</a></span>
+                            <span> <a href="#">Logout</a></span>
                         </div>
 
                     </div>
@@ -31,10 +47,7 @@
                 </header>
                 <section class="container">
                     <section class="hero">
-                        <div class="butt-contain">
-                            <button class="butt create-quiz"> Add questions </button>
-                            <span class="helptxt"> Add new questions to your quiz set. </span>
-                            
+                        <div class="butt-contain">                            
                             <button class="butt manage-quiz"> Manage questions </button>
                             <span class="helptxt"> Manage questions of your quiz set. </span>
                            

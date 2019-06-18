@@ -31,7 +31,6 @@ header:after{
     margin: -10px 30px 20px auto;
     cursor: pointer;
     position: relative;
-
 }
 .user-info-butt > div{
     background: white;
@@ -40,12 +39,14 @@ header:after{
     right: 110%;
     padding: 20px;
     z-index: 2;
+    display: none;
 }
-display:  .user-info-butt > div > span:nth-child(1){
+.user-info-butt > div  span{
+    display: block;
+    min-width: max-content;
+     margin: 10px 0px ;
 }
-.user-info-butt > div > span{
-     margin: 10px 0px;
-}
+
 .head-text{
     flex-basis: 100%;
     width: max-content;
