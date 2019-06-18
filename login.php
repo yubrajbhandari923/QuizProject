@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $data=$_GET['page'];
 ?>
 <!DOCTYPE HTML>
@@ -18,23 +19,30 @@ $data=$_GET['page'];
     <section class="container">
         <section class="hero">
             <section class="forms forms-<?php echo $data ?>">
-                    <form class="register-form" method="POST" action="">
+                    <form class="register-form" method="POST" action="register.php" autocomplete=on>
                             <h1>Register</h1>
-                            <input type=text name=fullname placeholder="Enter Your Full Name">
-                            <input type=email name=emailid placeholder="Enter Your Email Address">
-                            <input type=text name=username placeholder="Enter Username">
-                            <input type=password name=password placeholder="Enter Password">
-                            <div class="error"> {{ message }} </div>
+                            <input type=text name='fullname' placeholder="Enter Your Full Name">
+                            <input type=email name='emailid' placeholder="Enter Your Email Address">
+                            <input type=text name='username' placeholder="Enter Username">
+                            <input type=password name='password' placeholder="Enter Password">
+                            <div class="error">
+                            <?php
+                            if(isset($_SESSION['error'])){
+                            echo $_SESSION['error'];
+                            }
+                            ?>
+                            </div>
                             
                             <button type=submit> Register </button>
                             <button id="goto-log"> Already registered? Log in </button>
                             
                         </form>
-                        <form class="login-form" method="POST" action="">
+                        <form class="login-form" method="POST" action="login-check.php">
                             <h1>Log In</h1>
-                            <input type=text name=username Placeholder="Username">
-                            <input type=password name=password Placeholder="Password">
-                            <div class="error">  {{ message1 }}</div>
+                            <input type=text name='username1' Placeholder="Username">
+                            <input type=password name='password1' Placeholder="Password">
+                            <div class="error">
+                            </div>
                             <button type=submit> Login </button>
                             <button id="goto-reg">New ? Register</button>
                         </form>
@@ -43,4 +51,5 @@ $data=$_GET['page'];
     </section>
 </body>
 </html>
+<?php session_destroy();?>
 
