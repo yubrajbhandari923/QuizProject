@@ -10,19 +10,20 @@
         <link rel=stylesheet href='refrences/css/header.css'>
     </head>
     <script>
+        // functionality for User-info-butt
         window.onload = function(){
             data ={
-                UIB : false
+                UIB : true
             }
             document.querySelector("#user-info-butt").onclick = function(){
             if (data.UIB){
                 document.querySelector("#user-info-butt > div").style.display = "block";
+                data.UIB= false ;
             } else {
                 document.querySelector("#user-info-butt > div").style.display = "none";
+                data.UIB= true ;
             }
             }
-            //
-            // Beemarsh Please make it functional. NOt working!!!!
         }
     </script>
     <body>
