@@ -83,12 +83,12 @@ include 'afterlog.php';
                             </button>
                             </form> 
                             <div class="search-result">
-                                <div class="a-result">
+                                <!-- <div class="a-result">
                                     <div class="opponent-userpic"> </div>
-                                    <span id='result-search'> $opponent_name </span>
+                                    <span id='result-search'></span>
                                     <div class="butt challenge-opponent"> Challenge</div>
                                     <div class="butt view-profile-opponent"> View Profile</div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </section>
