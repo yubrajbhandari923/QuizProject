@@ -9,7 +9,8 @@ $newtable="CREATE TABLE account(
     name TEXT NOT NULL,
     username TEXT NOT NULL,
     email TEXT NOT NULL,
-    password TEXT NOT NULL
+    password TEXT NOT NULL,
+    pic_status TEXT NOT NULL
     )";
     mysqli_query($sql_connect,$newtable);
     ?>
