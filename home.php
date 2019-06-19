@@ -29,6 +29,7 @@ include 'afterlog.php';
             }
         }
     </script>
+    <script src='ajax.js'></script>
     <body>
             <header>
                     <div class="user-info-butt" id="user-info-butt"> 
@@ -76,7 +77,7 @@ include 'afterlog.php';
 
                         <div class="search-contain">
                             <form>
-                            <input name=player-search type=text placeholder="Search a person to challenge here.">
+                            <input name=player-search type=text placeholder="Search a person to challenge here." id='search-player' onkeyup='getname(this.value)'>
                             <button type=submit> 
                                 <span class="fa fa-send"></span>
                             </button>
@@ -84,7 +85,7 @@ include 'afterlog.php';
                             <div class="search-result">
                                 <div class="a-result">
                                     <div class="opponent-userpic"> </div>
-                                    <span> $opponent_name </span>
+                                    <span id='result-search'> $opponent_name </span>
                                     <div class="butt challenge-opponent"> Challenge</div>
                                     <div class="butt view-profile-opponent"> View Profile</div>
                                 </div>
