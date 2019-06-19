@@ -5,7 +5,7 @@ if(isset($_GET['page'])){
 }else{
     $data='log';
 }
-if($data!='log'||$data!='reg'){
+if($data!='reg'){
     $data='log';
 }
 ?>
@@ -25,7 +25,7 @@ if($data!='log'||$data!='reg'){
 <body>
     <section class="container">
         <section class="hero">
-            <section class="forms forms-<?php echo $data ?>">
+            <section class="forms forms-<?php echo $data; ?>">
                     <form class="register-form" method="POST" action="register.php" autocomplete=on>
                             <h1>Register</h1>
                             <input type=text name='fullname' placeholder="Enter Your Full Name">
@@ -63,5 +63,4 @@ if($data!='log'||$data!='reg'){
     </section>
 </body>
 </html>
-<?php session_destroy();?>
 

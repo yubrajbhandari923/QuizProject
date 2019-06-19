@@ -32,7 +32,8 @@ include 'afterlog.php';
     <script src='refrences/js/ajax.js'></script>
     <body>
             <header>
-                    <div class="user-info-butt" id="user-info-butt"> 
+                    <div class="user-info-butt" id="user-info-butt">
+                     <?php echo  'A';?>
                         <div>
                             <span> <?php echo $username_user; ?> </span>
                             <span> <a href="#">Myaccount</a></span>
