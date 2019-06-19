@@ -22,6 +22,7 @@ $get_id=mysqli_fetch_assoc($query_login);
 $user_id=$get_id['id'];
 $cookie_time=time()+60*60*60*24;
 setcookie('userid',$user_id,$cookie_time);
+$_SESSION['id']=$user_id;
 if($rows==1){
     header('location:home.php');
     exit();
