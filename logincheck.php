@@ -21,11 +21,17 @@ $rows=mysqli_num_rows($query_login);
 $get_id=mysqli_fetch_assoc($query_login);
 $user_id=$get_id['id'];
 $user_letter=$get_id['name'];
+$user_pic_status=$get_id['pic_status'];
 $cookie_time=time()+60*60*60*24;
 setcookie('userid',$user_id,$cookie_time);
 $_SESSION['id']=$user_id;
+
 if($rows==1){
-    $_SESSION['user-letter']=$user_letter[0];
+    if($user_pic_status=='text'){
+    $_SESSION['user-letter']=strtoupper($user_letter[0]);
+    }else{
+        $_SESSION['user-letter']='IMG';
+    }
     header('location:home.php');
     exit();
 }else{
