@@ -10,7 +10,7 @@ include 'sql-connection.php';
         if($user_profile_status=='text'){
         $user_letter=$row['name'][0];
           echo "<div class='a-result'>
-                                    <div class='opponent-userpic'>".$user_letter."</div>
+                                    <div class='opponent-userpic opp-found'>".$user_letter."</div>
                                     <span id='result-search'>".$row['name'] ."</span>
                                     <div class='butt challenge-opponent'> Challenge</div>
                                     <div class='butt view-profile-opponent'> View Profile</div>

@@ -88,6 +88,8 @@ body,html{
     border-radius: 100%;
     line-height: 40px;
     text-align: center;
+}
+.opp-found{
     background: #d17d1dd8;
     color: white;
     font-weight: 500;
