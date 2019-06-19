@@ -30,7 +30,7 @@ if($rows==1){
     if($user_pic_status=='text'){
     $_SESSION['user-letter']=strtoupper($user_letter[0]);
     }else{
-        $_SESSION['user-letter']='IMG';
+        $_SESSION['user-letter']="<img src='abc.img'>";
     }
     header('location:home.php');
     exit();
