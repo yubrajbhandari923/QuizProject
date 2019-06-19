@@ -42,8 +42,6 @@ include 'sql-connection.php';
             </div> ";
             }
           }
-
-       
     }
     }
 ?>
