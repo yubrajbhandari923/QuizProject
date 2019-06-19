@@ -79,3 +79,8 @@ header:after{
     cursor:pointer;
     color: white;
 }
+#pic_logo{
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}

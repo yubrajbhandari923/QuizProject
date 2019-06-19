@@ -80,11 +80,24 @@ body,html{
     background: whitesmoke
 }
 .opponent-userpic{
-    min-height:40px;
-    min-width:40px;
+    height:40px;
+    width:40px;
     background: white;
     margin: 0px 20px 0px 0px;
     border-radius:5px;
+    border-radius: 100%;
+    line-height: 40px;
+    text-align: center;
+    background: #d17d1dd8;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+}
+.opponent-userpic img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
 }
 .search-contain{
     flex-basis: 100%;
