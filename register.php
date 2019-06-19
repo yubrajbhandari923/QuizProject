@@ -58,4 +58,5 @@ session_start();
     }
     $record="INSERT INTO account(name,username,email,password) VALUES('$name','$username','$email','$password')";
     mysqli_query($sql_connect,$record);
+    header('location:login.php?page=log');
 ?>
