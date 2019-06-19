@@ -1,6 +1,13 @@
 <?php 
 session_start();
-$data=$_GET['page'];
+if(isset($_GET['page'])){
+    $data=$_GET['page'];
+}else{
+    $data='log';
+}
+if($data!='log'||$data!='reg'){
+    $data='log';
+}
 ?>
 <!DOCTYPE HTML>
 <html>

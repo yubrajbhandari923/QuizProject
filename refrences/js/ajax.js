@@ -7,9 +7,9 @@ function getname(str){
       xmlhttp.onreadystatechange=function(){
           if(this.readyState==4 && this.status==200){
             if(str.length==0){
-              document.getElementById('result-search').innerHTML='';
+              document.getElementsByClassName('search-result')[0].innerHTML='';
             }else{
-              document.getElementById('result-search').innerHTML=xmlhttp.responseText;
+              document.getElementsByClassName('search-result')[0].innerHTML=xmlhttp.responseText;
             }
           }
       }

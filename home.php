@@ -29,7 +29,7 @@ include 'afterlog.php';
             }
         }
     </script>
-    <script src='ajax.js'></script>
+    <script src='refrences/js/ajax.js'></script>
     <body>
             <header>
                     <div class="user-info-butt" id="user-info-butt"> 

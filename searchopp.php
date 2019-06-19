@@ -6,7 +6,12 @@ include 'sql-connection.php';
     while($row=mysqli_fetch_assoc($query_select_name)){
         $compare_str=strncasecmp($user_query,$row['name'],strlen($user_query));
         if($compare_str==0){
-            echo $row['name'];
+          echo "<div class='a-result'>
+                                    <div class='opponent-userpic'> </div>
+                                    <span id='result-search'>".$row['name'] ."</span>
+                                    <div class='butt challenge-opponent'> Challenge</div>
+                                    <div class='butt view-profile-opponent'> View Profile</div>
+                                </div> ";
         }
     }
 ?>
