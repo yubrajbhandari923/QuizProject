@@ -33,7 +33,7 @@ include 'afterlog.php';
     <body>
             <header>
                     <div class="user-info-butt" id="user-info-butt">
-                     <?php echo  'A';?>
+                     <?php echo  $_SESSION['user-letter'];?>
                         <div>
                             <span> <?php echo $username_user; ?> </span>
                             <span> <a href="#">Myaccount</a></span>

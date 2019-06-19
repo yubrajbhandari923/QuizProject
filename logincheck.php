@@ -20,10 +20,12 @@ $query_login=mysqli_query($sql_connect,$login_q);
 $rows=mysqli_num_rows($query_login);
 $get_id=mysqli_fetch_assoc($query_login);
 $user_id=$get_id['id'];
+$user_letter=$get_id['name'];
 $cookie_time=time()+60*60*60*24;
 setcookie('userid',$user_id,$cookie_time);
 $_SESSION['id']=$user_id;
 if($rows==1){
+    $_SESSION['user-letter']=$user_letter[0];
     header('location:home.php');
     exit();
 }else{

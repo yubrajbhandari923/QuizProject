@@ -24,10 +24,14 @@ header:after{
     height:50px;
     width:50px;
     border-radius:100%;
-    background: white;
     margin: -10px 30px 20px auto;
     cursor: pointer;
+    background: rgba(179, 84, 46, 0.849);
     position: relative;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
 }
 .user-info-butt > div{
     background: white;
