@@ -1,3 +1,6 @@
+<?php 
+include 'afterlog.php';
+?>
 <!DOCTYPE Html>
 <html>
     <head>
@@ -8,7 +11,9 @@
         <link rel=stylesheet href='refrences/css/header.css'>
     </head>
     <body>
-        ?php include 'header.php'; ?
+        <?php 
+        include 'header.php'; 
+        ?>
     
         <h2> Manage your Quiz Sets</h2>
         <button> Add a New Quiz Set</button>
