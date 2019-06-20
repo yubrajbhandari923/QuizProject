@@ -1,3 +1,6 @@
+<?php 
+    include 'check-status.php';
+ ?>
 <!DOCTYPE html>
 <html>
     <head>
