@@ -1,5 +1,5 @@
 <?php 
-include 'afterlog.php';
+include 'handle/afterlog.php';
 ?>
 <!DOCTYPE Html>
 <html>
@@ -9,6 +9,7 @@ include 'afterlog.php';
         <link rel=stylesheet href="refrences/fonts/fonts.css ">
         <link rel=stylesheet href='refrences/css/manage_quiz-style.css'>
         <link rel=stylesheet href='refrences/css/header.css'>
+        <script src='refrences/js/open-close.js'></script>
     </head>
     <body>
         <?php 

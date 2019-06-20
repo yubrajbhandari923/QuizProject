@@ -13,6 +13,6 @@ function getname(str){
             }
           }
       }
-    xmlhttp.open("GET","searchopp.php?text="+str);
+    xmlhttp.open("GET","handle/searchopp.php?text="+str);
     xmlhttp.send();
 }

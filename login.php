@@ -1,5 +1,5 @@
 <?php 
-include 'check-status.php';
+include 'handle/check-status.php';
 if(isset($_GET['page'])){
     $data=$_GET['page'];
 }else{
@@ -26,7 +26,7 @@ if($data!='reg'){
     <section class="container">
         <section class="hero">
             <section class="forms forms-<?php echo $data; ?>">
-                    <form class="register-form" method="POST" action="register.php" autocomplete=on>
+                    <form class="register-form" method="POST" action="header/register.php" autocomplete=on>
                             <h1>Register</h1>
                             <input type=text name='fullname' placeholder="Enter Your Full Name">
                             <input type=email name='emailid' placeholder="Enter Your Email Address">
@@ -44,7 +44,7 @@ if($data!='reg'){
                             <button id="goto-log"> Already registered? Log in </button>
                             
                         </form>
-                        <form class="login-form" method="POST" action="logincheck.php">
+                        <form class="login-form" method="POST" action="handle/logincheck.php">
                             <h1>Log In</h1>
                             <input type=text name='username1' Placeholder="Username">
                             <input type=password name='password1' Placeholder="Password">

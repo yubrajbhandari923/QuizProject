@@ -1,5 +1,5 @@
 <?php 
-include 'afterlog.php';
+include 'handle/afterlog.php';
 ?>
 <!DOCTYPE html>
 <html>

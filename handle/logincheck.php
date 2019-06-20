@@ -3,14 +3,14 @@ session_start();
 include 'sql-connection.php';
 if(empty($_POST['username1'])){
     $_SESSION['error1']='Enter your email or username';
-    header('location:login.php?page=log');
+    header('location:../login.php?page=log');
     exit();
 }else{
     $user=mysqli_real_escape_string($sql_connect,$_POST['username1']);
 }
 if(empty($_POST['password1'])){
     $_SESSION['error1']='Enter your password';
-    header('location:login.php?page=log');
+    header('location:../login.php?page=log');
     exit();
 }else{
     $pass=mysqli_real_escape_string($sql_connect,$_POST['password1']);
@@ -23,7 +23,7 @@ $user_id=$get_id['id'];
 $user_letter=$get_id['name'];
 $user_pic_status=$get_id['pic_status'];
 $cookie_time=time()+60*60*60*24;
-setcookie('userid',$user_id,$cookie_time);
+setcookie('userid',$user_id,$cookie_time,'/');
 $_SESSION['id']=$user_id;
 
 if($rows==1){
@@ -32,11 +32,11 @@ if($rows==1){
     }else{
         $_SESSION['user-letter']="<img src='".$get_id['pic_dir']."' id='pic_logo'>";
     }
-    header('location:home.php');
+    header('location:../home.php');
     exit();
 }else{
     $_SESSION['error1']='Incorrect username or Password';
-    header('location:login.php?page=log');
+    header('location:../login.php?page=log');
     exit();
 }
 
