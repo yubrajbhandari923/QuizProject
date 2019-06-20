@@ -40,8 +40,8 @@ include 'user_profile.php';
             <div>
                <span><h2>Full Name:</h2> <h3> <?php echo $user_name; ?></h3> </span>
                <span><h2>User Name:</h2> <h3> <?php echo $user_username;?></h3> </span>
-               <span><h2>Points earned:</h2> <h3> Points here</h3> </span>
-               <span><h2>Global Rank:</h2> <h3> Rank here</h3> </span>
+               <span><h2>Points earned:</h2> <h3> <?php echo $points;?></h3> </span>
+               <span><h2>Global Rank:</h2> <h3><?php echo $global_rank;?></h3> </span>
                <span><h2>Email:</h2> <h3><?php echo $user_email; ?></h3> </span>
                 <h2><A href="#">Change Password</A></h2> 
             </div>

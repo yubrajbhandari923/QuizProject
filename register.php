@@ -58,5 +58,14 @@ session_start();
     }
     $record="INSERT INTO account(name,username,email,password) VALUES('$name','$username','$email','$password')";
     mysqli_query($sql_connect,$record);
+    $select_user_id="SELECT * FROM account WHERE username='$username' AND password='$password'";
+    $select_user_id_query=mysqli_query($sql_connect,$select_user_id);
+    $row_check=mysqli_num_rows($select_user_id_query);
+    if($row_check==1){
+        $row=mysqli_fetch_assoc($select_user_id_query);
+        $user_curr_id=$row['id'];
+    }
+    $rank_record="INSERT INTO user_rank(id) VALUES('$user_curr_id')";
+    mysqli_query($sql_connect,$rank_record);
     header('location:login.php?page=log');
 ?>
