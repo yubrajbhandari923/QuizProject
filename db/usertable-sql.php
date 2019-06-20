@@ -10,7 +10,14 @@ $newtable="CREATE TABLE account(
     username TEXT NOT NULL,
     email TEXT NOT NULL,
     password TEXT NOT NULL,
-    pic_status TEXT NOT NULL
+    pic_status TEXT NOT NULL DEFAULT 'text',
+    pic_dir TEXT NOT NULL 
     )";
     mysqli_query($sql_connect,$newtable);
+    $table_points="CREATE TABLE user_rank(
+        id INT NOT NULL,
+        rank INT NOT NULL DEFAULT '0',
+        points INT NOT NULL DEFAULT '0'
+    )";
+    mysqli_query($sql_connect,$table_points);
     ?>
