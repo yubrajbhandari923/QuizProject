@@ -1,5 +1,5 @@
 <?php 
-session_start();
+include 'check-status.php';
 if(isset($_GET['page'])){
     $data=$_GET['page'];
 }else{
