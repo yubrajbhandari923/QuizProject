@@ -1,3 +1,7 @@
+<?php 
+include 'afterlog.php';
+include 'user_profile.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +12,7 @@
         <link rel=stylesheet href="refrences/fonts/fonts.css ">
         <link rel=stylesheet href='refrences/css/user_home-style.css'>
         <link rel=stylesheet href='refrences/css/header.css'>
+        <script src='refrences/js/open-close.js'>    </script>
     </head>
     <body>
         <header>
@@ -33,11 +38,11 @@
         </header>
         <div>
             <div>
-               <span><h2>Full Name:</h2> <h3> fullname here</h3> </span>
-               <span><h2>User Name:</h2> <h3> Username here</h3> </span>
+               <span><h2>Full Name:</h2> <h3> <?php echo $user_name; ?></h3> </span>
+               <span><h2>User Name:</h2> <h3> <?php echo $user_username;?></h3> </span>
                <span><h2>Points earned:</h2> <h3> Points here</h3> </span>
                <span><h2>Global Rank:</h2> <h3> Rank here</h3> </span>
-               <span><h2>Email:</h2> <h3>Email here</h3> </span>
+               <span><h2>Email:</h2> <h3><?php echo $user_email; ?></h3> </span>
                 <h2><A href="#">Change Password</A></h2> 
             </div>
         </div> 

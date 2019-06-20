@@ -12,23 +12,7 @@ include 'afterlog.php';
         <link rel=stylesheet href='refrences/css/user_home-style.css'>
         <link rel=stylesheet href='refrences/css/header.css'>
     </head>
-    <script>
-        // functionality for User-info-butt
-        window.onload = function(){
-            data ={
-                UIB : true
-            }
-            document.querySelector("#user-info-butt").onclick = function(){
-            if (data.UIB){
-                document.querySelector("#user-info-butt > div").style.display = "block";
-                data.UIB= false ;
-            } else {
-                document.querySelector("#user-info-butt > div").style.display = "none";
-                data.UIB= true ;
-            }
-            }
-        }
-    </script>
+    <script src='refrences/js/open-close.js'>    </script>
     <script src='refrences/js/ajax.js'></script>
     <body>
             <header>
@@ -36,7 +20,7 @@ include 'afterlog.php';
                      <?php echo  $_SESSION['user-letter'];?>
                         <div>
                             <span> <?php echo $username_user; ?> </span>
-                            <span> <a href="#">Myaccount</a></span>
+                            <span> <a href="my_account.php">Myaccount</a></span>
                             <span> <a href="logout.php">Logout</a></span>
                         </div>
 
@@ -46,7 +30,7 @@ include 'afterlog.php';
                     </div>
                     <div class="page-links">
                         <ul>
-                            <li><a>My account</a></li>
+                            <li><a href='my_account.php'>My account</a></li>
                             <li><a>Search</a></li>
                             <li><a>Notifications</a></li>
                         </ul>
