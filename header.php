@@ -13,9 +13,8 @@
                 </div>
                 <div class="page-links">
                     <ul>
-                        <li><a>My account</a></li>
-                        <li><a>Search</a></li>
-                        <li><a>Notifications</a></li>
+                        <li><a href="home.php">Home</a></li>
+                        <li><a href="my_account.php">My account</a></li>
                     </ul>
                 </div>
-        </header>
+</header>
