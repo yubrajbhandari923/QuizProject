@@ -18,4 +18,6 @@ include 'sql-connection.php';
     $name_user_fetch=mysqli_fetch_assoc($query_sel_name);
     $name_user=$name_user_fetch['name'];
     $username_user=$name_user_fetch['username'];
+
+    
 ?>

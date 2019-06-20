@@ -30,9 +30,8 @@ include 'user_profile.php';
                 </div>
                 <div class="page-links">
                     <ul>
+                        <li><a>Home</a></li>
                         <li><a>My account</a></li>
-                        <li><a>Search</a></li>
-                        <li><a>Notifications</a></li>
                     </ul>
                 </div>
         </header>
