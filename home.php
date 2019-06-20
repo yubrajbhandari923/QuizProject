@@ -15,27 +15,7 @@ include 'afterlog.php';
     <script src='refrences/js/open-close.js'>    </script>
     <script src='refrences/js/ajax.js'></script>
     <body>
-            <header>
-                    <div class="user-info-butt" id="user-info-butt">
-                     <?php echo  $_SESSION['user-letter'];?>
-                        <div>
-                            <span> <?php echo $username_user; ?> </span>
-                            <span> <a href="my_account.php">Myaccount</a></span>
-                            <span> <a href="logout.php">Logout</a></span>
-                        </div>
-
-                    </div>
-                    <div class="head-text">
-                        Hey! <?php echo $name_user; ?>. Long Heading Text Here.
-                    </div>
-                    <div class="page-links">
-                        <ul>
-                            <li><a href='my_account.php'>My account</a></li>
-                            <li><a>Search</a></li>
-                            <li><a>Notifications</a></li>
-                        </ul>
-                    </div>
-                </header>
+    <?php include 'header.php'; ?>
                 <section class="container">
                     <section class="hero">
                         <div class="butt-contain">                            

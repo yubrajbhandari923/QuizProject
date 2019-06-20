@@ -15,27 +15,7 @@ include 'user_profile.php';
         <script src='refrences/js/open-close.js'>    </script>
     </head>
     <body>
-        <header>
-                <div class="user-info-butt" id="user-info-butt">
-                 <?php echo  $_SESSION['user-letter'];?>
-                    <div>
-                        <span> <?php echo $username_user; ?> </span>
-                        <span> <a href="#">Myaccount</a></span>
-                        <span> <a href="logout.php">Logout</a></span>
-                    </div>
-
-                </div>
-                <div class="head-text">
-                    Hey! <?php echo $name_user; ?>. Long Heading Text Here.
-                </div>
-                <div class="page-links">
-                    <ul>
-                        <li><a>My account</a></li>
-                        <li><a>Search</a></li>
-                        <li><a>Notifications</a></li>
-                    </ul>
-                </div>
-        </header>
+    <?php include 'header.php'; ?>
         <div>
             <div>
                <span><h2>Full Name:</h2> <h3> <?php echo $user_name; ?></h3> </span>
