@@ -19,15 +19,15 @@ include 'afterlog.php';
                 <section class="container">
                     <section class="hero">
                         <div class="butt-contain">                            
-                            <button class="butt manage-quiz"> Manage questions </button>
+                            <a href=""> <button class="butt manage-quiz"> Manage questions </button> </a>
                             <span class="helptxt"> Manage questions of your quiz set. </span>
-                           
+                           <br>
                             <button class="butt Take-quiz"> Take a quiz test </button>
                             <span class="helptxt"> Take a test and learn new questions. </span>
                         </div>
                         
                         <div class="notifications-contain">
-                            <div class="subhead-text">Notification!</div>
+                            <h2 class="subhead-text">Notification!</h2>
                             <div>
                                 <div class="a-notification" id="note-1"> 
                                     <div class="opponent-userpic"> </div>

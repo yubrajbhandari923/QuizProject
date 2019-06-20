@@ -45,7 +45,13 @@ header:after{
 .user-info-butt > div  span{
     display: block;
     min-width: max-content;
-     margin: 10px 0px ;
+     margin: 8px 0px ;
+     color:black;
+}
+.user-info-butt >div span a {
+    text-decoration: underline;
+    color: black;
+
 }
 
 .head-text{
