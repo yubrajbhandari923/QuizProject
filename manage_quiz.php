@@ -12,8 +12,9 @@ include 'handle/afterlog.php';
         <link rel=stylesheet href="refrences/fonts/fonts.css ">
         <link rel=stylesheet href='refrences/css/manage_quiz-style.css'>
         <link rel=stylesheet href='refrences/css/header.css'>
-        <script src='refrences/js/open-close.js'></script>
         <script src="refrences/js/manage_quiz-script.js"></script>
+        <script src='refrences/js/open-close.js'>    </script>
+
     </head>
     <body>
         <?php 
@@ -57,9 +58,10 @@ include 'handle/afterlog.php';
                 </select>
                 <button type=submit name='submit-set' class="doneAddQSbutt"> Done</button>
             </form>
-                <div class="close-section fa fa-window-close"></div>
-                <!-- After user clicks on Add question or Manage question -->
-                <form id="formAddQ" method= 'POST' action='handle/addquiz.php' autocomplete='off'> Add new question<br>
+            <!-- After user clicks on Add question or Manage question -->
+            <form id="formAddQ" method= 'POST' action='handle/addquiz.php' autocomplete='off'> 
+                    <div class="close-section fa fa-window-close"></div>
+                    Add new question<br>
                     <input type=text placeholder="Add question" name='question'>
                     <input type=text placeholder="Enter answer" name='answer'>
                     <input type=text  placeholder="Enter Option1" name='opt1'>

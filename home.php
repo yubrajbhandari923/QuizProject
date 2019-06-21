@@ -12,7 +12,6 @@ include 'handle/afterlog.php';
         <link rel=stylesheet href='refrences/css/user_home-style.css'>
         <link rel=stylesheet href='refrences/css/header.css'>
     </head>
-    <script src='refrences/js/open-close.js'>    </script>
     <script src='refrences/js/ajax.js'></script>
     <body>
     <?php include 'header.php'; ?>
