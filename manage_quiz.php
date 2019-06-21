@@ -44,7 +44,7 @@ include 'handle/afterlog.php';
 
                 <!-- After user clicks on Add Quizset -->
                 
-            <form id="formAddQS" method='POST' action='addQuizSet.php'>
+            <form id="formAddQS" method='POST' action='handle/addQuizSet.php'>
                 <div class="close-section fa fa-window-close"></div>
                 Add Quiz Set <br>
                 <input type=text name="quizSetName" placeholder="Enter the name for your new quiz set">
