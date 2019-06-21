@@ -1,5 +1,5 @@
 <?php 
-include 'afterlog.php';
+include 'handle/afterlog.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +19,7 @@ include 'afterlog.php';
                 <section class="container">
                     <section class="hero">
                         <div class="butt-contain">                            
-                            <a href=""> <button class="butt manage-quiz"> Manage questions </button> </a>
+                            <a  href='manage_quiz.php'> <button class="butt manage-quiz"> Manage questions </button> </a>
                             <span class="helptxt"> Manage questions of your quiz set. </span>
                            <br>
                             <button class="butt Take-quiz"> Take a quiz test </button>
@@ -43,7 +43,7 @@ include 'afterlog.php';
                         <div class="search-contain">
                             <form>
                             <input name=player-search type=text placeholder="Search a person to challenge here." id='search-player' onkeyup='getname(this.value)'>
-                            <button type=submit> 
+                            <button type=submit>
                                 <span class="fa fa-send"></span>
                             </button>
                             </form> 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'sql-connection.php';
+include 'handle/sql-connection.php';
 if(empty($_POST['username1'])){
     $_SESSION['error1']='Enter your email or username';
     header('location:login.php?page=log');
@@ -23,7 +23,7 @@ $user_id=$get_id['id'];
 $user_letter=$get_id['name'];
 $user_pic_status=$get_id['pic_status'];
 $cookie_time=time()+60*60*60*24;
-setcookie('userid',$user_id,$cookie_time);
+setcookie('userid',$user_id,$cookie_time,'/');
 $_SESSION['id']=$user_id;
 
 if($rows==1){

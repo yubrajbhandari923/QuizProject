@@ -1,10 +1,13 @@
+<?php
+include 'handle/session-cookie_check.php';
+?>
 <header>
                 <div class="user-info-butt" id="user-info-butt">
                  <?php echo  $_SESSION['user-letter'];?>
                     <div>
                         <span> <?php echo $username_user; ?> </span>
-                        <span> <a href="#">Myaccount</a></span>
-                        <span> <a href="logout.php">Logout</a></span>
+                        <span> <a href="my_account.php">Myaccount</a></span>
+                        <span> <a href="handle/logout.php">Logout</a></span>
                     </div>
 
                 </div>

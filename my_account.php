@@ -1,6 +1,6 @@
 <?php 
-include 'afterlog.php';
-include 'user_profile.php';
+include 'handle/afterlog.php';
+include 'handle/user_profile.php';
 ?>
 <!DOCTYPE html>
 <html>

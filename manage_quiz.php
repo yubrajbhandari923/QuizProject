@@ -1,3 +1,9 @@
+<?php 
+include 'handle/afterlog.php';
+    if(isset($_SESSION['error_add_quiz'])){
+        echo  $_SESSION['error_add_quiz'];
+    }
+?>
 <!DOCTYPE Html>
 <html>
     <head>
@@ -6,9 +12,12 @@
         <link rel=stylesheet href="refrences/fonts/fonts.css ">
         <link rel=stylesheet href='refrences/css/manage_quiz-style.css'>
         <link rel=stylesheet href='refrences/css/header.css'>
+        <script src='refrences/js/open-close.js'></script>
     </head>
     <body>
-        <?php include 'header.php'; ?>
+        <?php 
+        include 'header.php'; 
+        ?>
     
         <h2> Manage your Quiz Sets</h2>
         <button> Add a New Quiz Set</button>
@@ -31,14 +40,14 @@
                 </ul>
                 <!-- After user clicks on Add question or Manage question -->
                 <button>Add Question</button>
-                <form> Add new question<br>
-                    <input type=text name="question" placeholder="Add question">
-                    <input type=text name="answer" placeholder="Enter answer">
-                    <input type=text name="Option1" placeholder="Enter Option1">
-                    <input type=text name="Option2" placeholder="Enter Option2">
-                    <input type=text name="Option3" placeholder="Enter Option3">
-                    <button type=submit>Add new</button>
-                    <button type=submit>Add and Exit</button>
+                <form method='POST' action='handle/addquiz.php'> Add new question<br>
+                    <input type=text placeholder="Add question" name='question'>
+                    <input type=text placeholder="Enter answer" name='answer'>
+                    <input type=text  placeholder="Enter Option1" name='opt1'>
+                    <input type=text  placeholder="Enter Option2" name='opt2'>
+                    <input type=text placeholder="Enter Option3" name='opt3'>
+                    <button type=submit name='submit'>Add new</button>
+                    <!-- <button type=submit>Add and Exit</button> -->
                 </form>
             </div>
             <!-- After user clicks on Add Quizset -->

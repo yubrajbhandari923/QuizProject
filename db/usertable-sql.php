@@ -15,9 +15,20 @@ $newtable="CREATE TABLE account(
     )";
     mysqli_query($sql_connect,$newtable);
     $table_points="CREATE TABLE user_rank(
-        id INT NOT NULL,
+        id INT PRIMARY KEY,
         rank INT NOT NULL DEFAULT '0',
         points INT NOT NULL DEFAULT '0'
     )";
     mysqli_query($sql_connect,$table_points);
+    $quiz_db='CREATE DATABASE quiz_data';
+    mysqli_query($sql_connect,$quiz_db);
+    $quiz_table="CREATE TABLE `quiz_data`.`quiz` (
+                 `id` INT PRIMARY KEY,
+                `question` TEXT NOT NULL ,
+                 `answer` TEXT NOT NULL ,
+                  `opt1` TEXT NOT NULL ,
+                   `opt2` TEXT NOT NULL ,
+                    `opt3` TEXT NOT NULL ,
+                     `field` TEXT NOT NULL )";
+    mysqli_query($sql_connect,$quiz_table);
     ?>
