@@ -105,6 +105,7 @@ button:hover, button:active {
 }
 .editQbutt, .removeQbutt{
   margin:0px 5px;
+  
 }
 
 #manageQS-contain > ul> li:nth-child(odd){
@@ -148,7 +149,6 @@ form > select{
   float: right;
   cursor:pointer;
 }
-
 
 
 /* --------Display None Section--------------------------------------------------------*/
