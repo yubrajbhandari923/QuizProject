@@ -26,7 +26,7 @@ if($data!='reg'){
     <section class="container">
         <section class="hero">
             <section class="forms forms-<?php echo $data; ?>">
-                    <form class="register-form" method="POST" action="header/register.php" autocomplete=on>
+                    <form class="register-form" method="POST" action="handle/register.php" autocomplete=on>
                             <h1>Register</h1>
                             <input type=text name='fullname' placeholder="Enter Your Full Name">
                             <input type=email name='emailid' placeholder="Enter Your Email Address">
