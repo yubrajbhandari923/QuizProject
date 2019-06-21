@@ -1,4 +1,5 @@
 <?php
+include 'handle/session-cookie_check.php';
 ?>
 <header>
                 <div class="user-info-butt" id="user-info-butt">

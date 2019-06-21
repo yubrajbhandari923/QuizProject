@@ -1,5 +1,5 @@
 <?php 
-include 'handle/check-status.php';
+include 'handle/check-user_cookie.php';
 if(isset($_GET['page'])){
     $data=$_GET['page'];
 }else{

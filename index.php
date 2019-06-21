@@ -1,5 +1,4 @@
 <?php 
-    include 'handle/check-status.php';
     include 'handle/check-user_cookie.php';
  ?>
 <!DOCTYPE html>
