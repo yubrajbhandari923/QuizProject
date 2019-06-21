@@ -49,14 +49,15 @@ include 'handle/afterlog.php';
                 Add Quiz Set <br>
                 <input type=text name="quizSetName" placeholder="Enter the name for your new quiz set">
                 <select name="quizFieldName">
-                    <option>Geography</option>
-                    <option>Science</option>
-                    <option>History</option>
-                    <option>Literature</option>
-                    <option>Mixed</option>
+                    <option value="Geography">Geography</option>
+                    <option value="Science">Science</option>
+                    <option value="History">History</option>
+                    <option value="Literature">Literature</option>
+                    <option value="Mixed">Mixed</option>
                 </select>
                 <button type=submit name='submit-set' class="doneAddQSbutt"> Done</button>
             </form>
+                <div class="close-section fa fa-window-close"></div>
                 <!-- After user clicks on Add question or Manage question -->
                 <form id="formAddQ" method= 'POST' action='handle/addquiz.php' autocomplete='off'> Add new question<br>
                     <input type=text placeholder="Add question" name='question'>
