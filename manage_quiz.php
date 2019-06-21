@@ -13,6 +13,7 @@ include 'handle/afterlog.php';
         <link rel=stylesheet href='refrences/css/manage_quiz-style.css'>
         <link rel=stylesheet href='refrences/css/header.css'>
         <script src='refrences/js/open-close.js'></script>
+        <script src="refrences/js/manage_quiz-script.js"></script>
     </head>
     <body>
         <?php 
@@ -21,7 +22,7 @@ include 'handle/afterlog.php';
         <div id="cover"></div>
         <div class="Main-container">
             <h2 class="headtext"> Manage your Quiz Sets</h2>
-            <button class="addQuizSetButt"> Add a New Quiz Set</button>
+            <button id="addQuizSetButt" class="addQuizSetButt"> Add a New Quiz Set</button>
             <ul>
             <?php include 'handle/display-set.php'; ?>
             </ul>
@@ -44,6 +45,7 @@ include 'handle/afterlog.php';
                 <!-- After user clicks on Add Quizset -->
                 
             <form id="formAddQS" method='POST' action='addQuizSet.php'>
+                <div class="close-section fa fa-window-close"></div>
                 Add Quiz Set <br>
                 <input type=text name="quizSetName" placeholder="Enter the name for your new quiz set">
                 <select name="quizFieldName">

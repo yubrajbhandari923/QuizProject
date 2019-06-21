@@ -141,6 +141,13 @@ form > select{
   padding: 10px;
   font: 15px poppins;
 }
+.close-section{
+  border-radius: 100%;
+  color: tomato;
+  font-size: 20px;
+  float: right;
+  cursor:pointer;
+}
 
 
 
