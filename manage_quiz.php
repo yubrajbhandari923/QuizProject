@@ -18,45 +18,56 @@ include 'handle/afterlog.php';
         <?php 
         include 'header.php'; 
         ?>
-    
-        <h2> Manage your Quiz Sets</h2>
-        <button> Add a New Quiz Set</button>
-        <ul>
-            <li>
-                <div> QuizSet1 <button>Manage</button> <button>View</button></div>
-            </li>
-            <li>
-                <div> QuizSet2 <button>Manage</button> <button>View</button></div>
-            </li>
-            <div>
-                <!-- After User Clicks on Manage button of quizset1 -->
-                <h3> Manage QuizSet1</h3>
-                <button>Remove this Set</button>
+        <div id="cover"></div>
+        <div class="Main-container">
+            <h2 class="headtext"> Manage your Quiz Sets</h2>
+            <button class="addQuizSetButt"> Add a New Quiz Set</button>
+            <ul>
+                <li>
+                    <div> QuizSet1 <button class="manageQSbutt">Manage</button> <button class="viewQSbutt">View</button></div>
+                </li>
+                <li>
+                    <div> QuizSet2 <button class="manageQSbutt">Manage</button> <button class="viewQSbutt">View</button></div>
+                </li>
+            </ul>
+        </div>
+
+            <!-- After User Clicks on Manage button of quizset1 -->
+            <div id="manageQS-contain"> 
+                <h3 class="headtext"> Manage QuizSet1</h3>
+                <button class="removeThisQSbutt">Remove this Set</button>
                 <ul>
                     <li>
-                        <span>Question</span> <span>Option1</span> <span>Option2</span> <span>Option3</span> <span>Answer</span> 
+                        <div><span>Question</span> <span>Option1</span> <span>Option2</span> <span>Option3</span> <span>Answer</span></div> 
                     </li>
-                    <li> <span>Who is the father of science?</span> <span>Newton</span> <span>Hawkings</span> <span>Boyle</span> <span>Einstine</span> <button>Edit</button> <button>Remove</button></li>
+                    <li> <div><span>Who is the father of science?</span> <span>Newton</span> <span>Hawkings</span> <span>Boyle</span> <span>Einstine</span></div> <button class="editQbutt">Edit</button> <button class="removeQbutt">Remove</button></li>
                 </ul>
+                <button class="addQbutt">Add Question</button>
+            </div>
+            <div style="display:none">
                 <!-- After user clicks on Add question or Manage question -->
-                <button>Add Question</button>
-                <form method='POST' action='handle/addquiz.php' autocomplete='off'> Add new question<br>
+                <form method= 'POST' action='handle/addquiz.php' autocomplete='off'> Add new question<br>
                     <input type=text placeholder="Add question" name='question'>
                     <input type=text placeholder="Enter answer" name='answer'>
                     <input type=text  placeholder="Enter Option1" name='opt1'>
                     <input type=text  placeholder="Enter Option2" name='opt2'>
                     <input type=text placeholder="Enter Option3" name='opt3'>
-                    <button type=submit name='submit'>Add new</button>
+                    <button type=submit name='submit' class="addQsubmitButt">Add new</button>
                     <!-- <button type=submit>Add and Exit</button> -->
                 </form>
-            </div>
             <!-- After user clicks on Add Quizset -->
             <form method='POST' action='addQuizSet.php'>
                 Add Quiz Set <br>
                 <input type=text name="quizSetName" placeholder="Enter the name for your new quiz set">
-                <button type=submit name='submit-set'> Done</button>
-            </form>
-        </ul>
+                <select name="quizFieldName">
+                    <option>Geography</option>
+                    <option>Science</option>
+                    <option>History</option>
+                    <option>Literature</option>
+                    <option>Mixed</option>
+                </select>
+                <button type=submit name='submit-set' class="doneAddQSbutt"> Done</button>
+            </form> </div>
     </body>
 
 </html>
