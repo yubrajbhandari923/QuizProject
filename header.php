@@ -1,4 +1,5 @@
-
+<?php
+?>
 <header>
                 <div class="user-info-butt" id="user-info-butt">
                  <?php echo  $_SESSION['user-letter'];?>
