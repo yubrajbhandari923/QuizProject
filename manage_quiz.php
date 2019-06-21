@@ -23,12 +23,7 @@ include 'handle/afterlog.php';
             <h2 class="headtext"> Manage your Quiz Sets</h2>
             <button class="addQuizSetButt"> Add a New Quiz Set</button>
             <ul>
-                <li>
-                    <div> QuizSet1 <button class="manageQSbutt">Manage</button> <button class="viewQSbutt">View</button></div>
-                </li>
-                <li>
-                    <div> QuizSet2 <button class="manageQSbutt">Manage</button> <button class="viewQSbutt">View</button></div>
-                </li>
+            <?php include 'handle/display-set.php'; ?>
             </ul>
         </div>
 

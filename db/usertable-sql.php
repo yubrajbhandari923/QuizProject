@@ -32,4 +32,9 @@ $newtable="CREATE TABLE account(
                      `field` TEXT NOT NULL,
                      `setname` TEXT NOT NULL )";
     mysqli_query($sql_connect,$quiz_table);
+    $set_table='CREATE TABLE `quiz_data`.`sets`(
+        id INT PRIMARY KEY,
+        setname TEXT NOT NULL
+    )';
+    mysqli_query($sql_connect,$set_table);
     ?>
