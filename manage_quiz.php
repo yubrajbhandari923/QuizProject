@@ -40,7 +40,7 @@ include 'handle/afterlog.php';
                 </ul>
                 <!-- After user clicks on Add question or Manage question -->
                 <button>Add Question</button>
-                <form method='POST' action='handle/addquiz.php'> Add new question<br>
+                <form method='POST' action='handle/addquiz.php' autocomplete='off'> Add new question<br>
                     <input type=text placeholder="Add question" name='question'>
                     <input type=text placeholder="Enter answer" name='answer'>
                     <input type=text  placeholder="Enter Option1" name='opt1'>
@@ -51,10 +51,10 @@ include 'handle/afterlog.php';
                 </form>
             </div>
             <!-- After user clicks on Add Quizset -->
-            <form>
+            <form method='POST' action='addQuizSet.php'>
                 Add Quiz Set <br>
                 <input type=text name="quizSetName" placeholder="Enter the name for your new quiz set">
-                <button type=submit> Done</button>
+                <button type=submit name='submit-set'> Done</button>
             </form>
         </ul>
     </body>

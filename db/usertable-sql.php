@@ -29,6 +29,7 @@ $newtable="CREATE TABLE account(
                   `opt1` TEXT NOT NULL ,
                    `opt2` TEXT NOT NULL ,
                     `opt3` TEXT NOT NULL ,
-                     `field` TEXT NOT NULL )";
+                     `field` TEXT NOT NULL,
+                     `setname` TEXT NOT NULL )";
     mysqli_query($sql_connect,$quiz_table);
     ?>
