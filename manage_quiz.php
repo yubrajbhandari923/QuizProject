@@ -23,12 +23,7 @@ include 'handle/afterlog.php';
             <h2 class="headtext"> Manage your Quiz Sets</h2>
             <button class="addQuizSetButt"> Add a New Quiz Set</button>
             <ul>
-                <li>
-                    <div> QuizSet1 <button class="manageQSbutt">Manage</button> <button class="viewQSbutt">View</button></div>
-                </li>
-                <li>
-                    <div> QuizSet2 <button class="manageQSbutt">Manage</button> <button class="viewQSbutt">View</button></div>
-                </li>
+            <?php include 'handle/display-set.php'; ?>
             </ul>
         </div>
 
@@ -44,19 +39,11 @@ include 'handle/afterlog.php';
                 </ul>
                 <button class="addQbutt">Add Question</button>
             </div>
-            <div style="display:none">
-                <!-- After user clicks on Add question or Manage question -->
-                <form method= 'POST' action='handle/addquiz.php' autocomplete='off'> Add new question<br>
-                    <input type=text placeholder="Add question" name='question'>
-                    <input type=text placeholder="Enter answer" name='answer'>
-                    <input type=text  placeholder="Enter Option1" name='opt1'>
-                    <input type=text  placeholder="Enter Option2" name='opt2'>
-                    <input type=text placeholder="Enter Option3" name='opt3'>
-                    <button type=submit name='submit' class="addQsubmitButt">Add new</button>
-                    <!-- <button type=submit>Add and Exit</button> -->
-                </form>
-            <!-- After user clicks on Add Quizset -->
-            <form method='POST' action='addQuizSet.php'>
+
+
+                <!-- After user clicks on Add Quizset -->
+                
+            <form id="formAddQS" method='POST' action='addQuizSet.php'>
                 Add Quiz Set <br>
                 <input type=text name="quizSetName" placeholder="Enter the name for your new quiz set">
                 <select name="quizFieldName">
@@ -67,7 +54,17 @@ include 'handle/afterlog.php';
                     <option>Mixed</option>
                 </select>
                 <button type=submit name='submit-set' class="doneAddQSbutt"> Done</button>
-            </form> </div>
+            </form>
+                <!-- After user clicks on Add question or Manage question -->
+                <form id="formAddQ" method= 'POST' action='handle/addquiz.php' autocomplete='off'> Add new question<br>
+                    <input type=text placeholder="Add question" name='question'>
+                    <input type=text placeholder="Enter answer" name='answer'>
+                    <input type=text  placeholder="Enter Option1" name='opt1'>
+                    <input type=text  placeholder="Enter Option2" name='opt2'>
+                    <input type=text placeholder="Enter Option3" name='opt3'>
+                    <button type=submit name='submit' class="addQsubmitButt">Add new</button>
+                    <!-- <button type=submit>Add and Exit</button> -->
+                </form>
     </body>
 
 </html>
