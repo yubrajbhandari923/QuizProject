@@ -43,7 +43,7 @@ include 'handle/afterlog.php';
                         <div class="search-contain">
                             <form>
                             <input name=player-search type=text placeholder="Search a person to challenge here." id='search-player' onkeyup='getname(this.value)'>
-                            <button type=submit> 
+                            <button type=submit>
                                 <span class="fa fa-send"></span>
                             </button>
                             </form> 
