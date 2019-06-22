@@ -69,13 +69,14 @@ button:hover, button:active {
 }
 .Main-container > ul> li> div{
   display: flex;
+  padding: 2px;
   padding-left: 10px;
   align-items: center;
 }
 .manageQSbutt {
   margin-left:auto;
 }
-.viewQSbutt{
+.Main-container .addQbutt{
   margin: 10px; 
 }
 /*------------------------------------------------------------------------*/
