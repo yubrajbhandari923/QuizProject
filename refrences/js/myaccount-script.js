@@ -11,3 +11,7 @@ function confirmPsd(){
     document.querySelector("#cover").style.display = "block";
     document.querySelector("#formConfirm").style.display = "block";
 }
+function changeName(){
+    document.querySelector("#cover").style.display = "block";
+    document.querySelector("#formChangeName").style.display = "block";  
+}

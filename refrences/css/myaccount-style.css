@@ -15,6 +15,9 @@
 a{
     font: 18px josefinsans;
     color:black;
+  }
+  header a {
+    font: 25px josefinsans;
 
 }
 body{

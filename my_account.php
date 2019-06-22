@@ -20,15 +20,29 @@ include 'handle/user_profile.php';
     <div id="cover"></div>
     <form id="formConfirm" autocomplete="off" >
         <div class="close-section fa fa-window-close"></div>
-        Confirm Your Password
+        Change Your Password
         <div class="errorMsgForm"> Error </div>
-        <input type=password placeholder="Enter your password">
+        
+        <input type=password placeholder="Enter your Old password">
+
+        <input type=password placeholder="Enter your New password">
+        
+        <button class="butt green-butt" type=submit> Done </button>
+        
+    </form>
+    <form id="formChangeName" autocomplete="off" >
+        <div class="close-section fa fa-window-close"></div>
+        Change Your Full Name
+        <div class="errorMsgForm"> Error </div>
+        
+        <input type=text placeholder="Enter your New Full Name">
+        
         <button class="butt green-butt" type=submit> Done </button>
         
     </form>
         <div>
             <div class="data-container">
-               <span><h2>Full Name:</h2> <h3> <?php echo $user_name; ?></h3> <a href="#"> Edit </a></span>
+               <span><h2>Full Name:</h2> <h3> <?php echo $user_name; ?></h3> <a href="#" onclick="changeName()"> Edit </a></span>
                <span><h2>User Name:</h2> <h3> <?php echo $user_username;?></h3> </span>
                <span><h2>Points earned:</h2> <h3> <?php echo $points;?></h3> </span>
                <span><h2>Global Rank:</h2> <h3><?php echo $global_rank;?></h3> </span>
