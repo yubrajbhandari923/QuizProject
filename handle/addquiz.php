@@ -37,6 +37,7 @@ if(isset($_POST['opt3'])&& !empty($_POST['opt3'])){
         header('location:../manage_quiz.php');
     exit();
 }
+<<<<<<< HEAD
 // if(isset($_POST['field'])&&!empty($_POST['field'])){
 //     $question=mysqli_real_escape_string($sql_connect,$_POST['field']);
 // }else{
@@ -61,12 +62,35 @@ if(isset($_POST['opt3'])&& !empty($_POST['opt3'])){
     }else{
         $_SESSION['error_add_quiz']='One of your option should match with answer';
         header('location:../manage_quiz.php');
+=======
+if(isset($_POST['field'])&&!empty($_POST['field'])){
+    $field=mysqli_real_escape_string($sql_connect,$_POST['field']);
+}else{
+    // $_SESSION['error_add_quiz']='Please fill all details';
+    //     header('location:../manage_quiz.php');
+    echo 'Sorry, There was an error';
+    exit();
+}
+
+if(strnatcasecmp($opt1,$opt2)==0 ||strnatcasecmp($opt1,$opt3)==0 || strnatcasecmp($opt2,$opt3)==0){
+        // $_SESSION['error_add_quiz']='Options cannot be same';
+        // header('location:../manage_quiz.php');
+        echo 'Options cannot be same';
+        exit();
+    }
+    if(strnatcasecmp($answer,$opt1)==0 || strnatcasecmp($answer,$opt2)==0 || strnatcasecmp($answer,$opt3)!=0){
+    }else{
+        // $_SESSION['error_add_quiz']='One of your option should match with answer';
+        // header('location:../manage_quiz.php');
+        echo 'One of your option should match with answer';
+>>>>>>> quiz questions can now be added
         exit();
     }
     unset($_SESSION['error_add_quiz']);
     $userid=$_COOKIE['userid'];
     $insert_data="INSERT INTO quiz(id,question,answer,opt1,opt2,opt3)VALUES('$userid','$question','$answer','$opt1','$opt2','$opt3')";
-    mysqli_query($sql_connect,$insert_data);    
+    mysqli_query($sql_connect,$insert_data);   
+    echo 'SUccessfully added new question' ;
 }else{
     header('location:../manage_quiz.php');
 }
