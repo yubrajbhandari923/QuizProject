@@ -23,7 +23,7 @@ $newtable="CREATE TABLE account(
     $quiz_db='CREATE DATABASE quiz_data';
     mysqli_query($sql_connect,$quiz_db);
     $quiz_table="CREATE TABLE `quiz_data`.`quiz` (
-                 `id` INT PRIMARY KEY,
+                 `id` INT ,
                 `question` TEXT NOT NULL ,
                  `answer` TEXT NOT NULL ,
                   `opt1` TEXT NOT NULL ,
@@ -33,7 +33,7 @@ $newtable="CREATE TABLE account(
                      `setname` TEXT NOT NULL )";
     mysqli_query($sql_connect,$quiz_table);
     $set_table='CREATE TABLE `quiz_data`.`sets`(
-        id INT PRIMARY KEY,
+        id INT,
         setname TEXT NOT NULL,
         field TEXT NOT NULL
     )';
