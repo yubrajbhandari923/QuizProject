@@ -24,6 +24,7 @@ $newtable="CREATE TABLE account(
     mysqli_query($sql_connect,$quiz_db);
     $quiz_table="CREATE TABLE `quiz_data`.`quiz` (
                  `id` INT ,
+                 `id_of_quiz` INT PRIMARY KEY,
                 `question` TEXT NOT NULL ,
                  `answer` TEXT NOT NULL ,
                   `opt1` TEXT NOT NULL ,

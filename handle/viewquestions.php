@@ -1,0 +1,37 @@
+<?php
+    include 'connect-quiz-ques.php';
+    include 'session-cookie_check.php';
+    $current_user=$_COOKIE['userid'];
+    if(isset($_GET['set'])){
+        $set_name=mysqli_real_escape_string($sql_connect,$_GET['set']);
+    }else{
+        header('location:manage_quiz.php');
+        exit();
+    }
+    $select_question="SELECT * FROM quiz WHERE id='$current_user' AND setname='$set_name'";
+    $query_select_question=mysqli_query($sql_connect,$select_question);
+    $check_if_exists=mysqli_num_rows($query_select_question);
+    if($check_if_exists===0){
+        echo 'No questions exist';
+    }else{
+    while($fetch_record=mysqli_fetch_assoc($query_select_question)){
+    echo "<ul>
+            <li>
+                <div><span>Question</span> <span>Option1</span> <span>Option2</span> <span>Option3</span> <span>Answer</span></div> 
+            </li>
+            <li> <div><span>".$fetch_record['question']."</span>
+             <span>".$fetch_record['answer']."</span> 
+             <span>".$fetch_record['opt1']."</span> 
+             <span>".$fetch_record['opt2']."</span>
+              <span>".$fetch_record['opt3']."</span>
+              </div>
+               <button class='editQbutt'>Edit</button>
+                <a href='handle/remove-quiz-ques.php?quiz-id=".$fetch_record['id_of_quiz']."'>
+                <button class='removeQbutt'>Remove</button>
+                </a>
+                </li>
+        </ul>";
+    }
+    }
+
+?>
