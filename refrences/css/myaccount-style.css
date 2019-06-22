@@ -1,0 +1,22 @@
+.data-container span{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 50vw;
+    min-width:100px;
+    align-items: center;
+    margin: 10px;
+}
+.data-container span h2{
+    font: 20px josefinsans;
+}
+.data-container span h3{
+    font: 18px josefinslab;
+}
+a{
+    font: 18px josefinsans;
+    color:black;
+
+}
+body{
+    margin: 0px;
+}

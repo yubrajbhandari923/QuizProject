@@ -3,6 +3,7 @@ body{
   margin:0px;
   padding: 0px;
   background: white;
+  scroll-behavior: smooth;
 }
 #cover{
   background: #000000d6;
