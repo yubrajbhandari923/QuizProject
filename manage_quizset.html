@@ -10,8 +10,9 @@
     </head>
         <script src='refrences/js/open-close.js'>    </script>
         <script src='refrences/js/jquery.js'>    </script>
-        <script src="refrences/js/manageset_quiz-script.js"></script>
+        <script src="refrences/js/manage_quizset-script.js"></script>
     <body>
+            <div id="cover"></div>
 <div id="manageQS-contain"> 
         <h3 class="headtext"> Manage QuizSet1</h3>
         <button class="addQbutt">Add Question</button>
@@ -23,5 +24,17 @@
             <li> <div><span>Who is the father of science?</span> <span>Newton</span> <span>Hawkings</span> <span>Boyle</span> <span>Einstine</span></div> <button class="editQbutt">Edit</button> <button class="removeQbutt">Remove</button></li>
         </ul>
     </div>
+     <!-- After user clicks on Add question or Manage question -->
+     <form id="formAddQ" method= 'POST' autocomplete='off'> 
+            <div class="close-section fa fa-window-close"></div>
+            Add new question<br>
+            <input type=text placeholder="Add question" name='question'>
+            <input type=text placeholder="Enter answer" name='answer'>
+            <input type=text  placeholder="Enter Option1" name='opt1'>
+            <input type=text  placeholder="Enter Option2" name='opt2'>
+            <input type=text placeholder="Enter Option3" name='opt3'>
+            <button type=submit name='submit' class="addQsubmitButt">Add new</button>
+            <!-- <button type=submit>Add and Exit</button> -->
+        </form>
 </body>
 </html>

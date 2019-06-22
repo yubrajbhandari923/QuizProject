@@ -61,19 +61,7 @@ include 'handle/afterlog.php';
                 <span class="errorMsgForm">
                 
                  </span>
-            </form>
-            <!-- After user clicks on Add question or Manage question -->
-            <form id="formAddQ" method= 'POST' autocomplete='off'> 
-                    <div class="close-section fa fa-window-close"></div>
-                    Add new question<br>
-                    <input type=text placeholder="Add question" name='question'>
-                    <input type=text placeholder="Enter answer" name='answer'>
-                    <input type=text  placeholder="Enter Option1" name='opt1'>
-                    <input type=text  placeholder="Enter Option2" name='opt2'>
-                    <input type=text placeholder="Enter Option3" name='opt3'>
-                    <button type=submit name='submit' class="addQsubmitButt">Add new</button>
-                    <!-- <button type=submit>Add and Exit</button> -->
-                </form>
+</form>
     </body>
 
 </html>
