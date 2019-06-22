@@ -34,6 +34,7 @@ include 'handle/afterlog.php';
             <!-- After User Clicks on Manage button of quizset1 -->
             <div id="manageQS-contain"> 
                 <h3 class="headtext"> Manage QuizSet1</h3>
+                <button class="addQbutt">Add Question</button>
                 <button class="removeThisQSbutt">Remove this Set</button>
                 <ul>
                     <li>
@@ -41,7 +42,6 @@ include 'handle/afterlog.php';
                     </li>
                     <li> <div><span>Who is the father of science?</span> <span>Newton</span> <span>Hawkings</span> <span>Boyle</span> <span>Einstine</span></div> <button class="editQbutt">Edit</button> <button class="removeQbutt">Remove</button></li>
                 </ul>
-                <button class="addQbutt">Add Question</button>
             </div>
 
 
