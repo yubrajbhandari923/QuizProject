@@ -5,13 +5,13 @@
     $query_table_set=mysqli_query($sql_connect,$select_table);
     if(isset($_POST['submit-set'])){
         if(isset($_POST['quizSetName']) && !empty($_POST['quizSetName'])){
-            $set_name=$_POST['quizSetName'];
+            $set_name=mysqli_real_escape_string($sql_connect,$_POST['quizSetName']);
         }else{
             echo 'Please enter a quiz set';
             exit();
         }
         if(isset($_POST['quizFieldName']) && !empty($_POST['quizFieldName'])){
-            $set_field=$_POST['quizFieldName'];
+            $set_field=mysqli_real_escape_string($sql_connect,$_POST['quizFieldName']);
         }else{
             echo 'Please select a quiz field';
             exit();
