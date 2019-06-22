@@ -13,9 +13,6 @@ window.onload = function(){
         document.querySelector("#formAddQS").style.display = "block";
         
     }
-    document.querySelectorAll(".close-section").onclick = function(){
-        
-    }
     
     document.querySelector("#manageQSbutt").onclick= function(){
         document.querySelector("#manageQS-contain").style.display = "block";

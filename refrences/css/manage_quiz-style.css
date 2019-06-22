@@ -154,7 +154,7 @@ form > select{
 
 .errorMsgForm{
   display: block;
-  padding: 0px;
+  padding: 10px;
   font: 15px calibri;
   background: lightcoral;
   width:90%;
