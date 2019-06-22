@@ -3,6 +3,7 @@ body{
   margin:0px;
   padding: 0px;
   background: white;
+  scroll-behavior: smooth;
 }
 #cover{
   background: #000000d6;
@@ -153,7 +154,7 @@ form > select{
 
 .errorMsgForm{
   display: block;
-  padding: 0px;
+  padding: 10px;
   font: 15px calibri;
   background: lightcoral;
   width:90%;

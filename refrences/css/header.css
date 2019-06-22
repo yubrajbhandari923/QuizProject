@@ -81,7 +81,11 @@ header:after{
     list-style: none;
     justify-content: space-around;
 }
-.page-links >ul >li:hover{
+.page-links >ul>li>a{
+    text-decoration: none;
+    color:black;
+}
+.page-links >ul >li:hover a{
     cursor:pointer;
     color: white;
 }
