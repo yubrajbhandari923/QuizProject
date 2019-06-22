@@ -57,6 +57,8 @@ include 'handle/afterlog.php';
                     <option value="Mixed">Mixed</option>
                 </select>
                 <button type=submit name='submit-set' class="doneAddQSbutt"> Done</button>
+
+                <span class="errorMsgForm"> </span>
             </form>
             <!-- After user clicks on Add question or Manage question -->
             <form id="formAddQ" method= 'POST' action='handle/addquiz.php' autocomplete='off'> 

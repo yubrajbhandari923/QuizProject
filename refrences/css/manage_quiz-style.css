@@ -150,7 +150,16 @@ form > select{
   cursor:pointer;
 }
 
-
+.errorMsgForm{
+  display: block;
+  padding: 0px;
+  font: 15px calibri;
+  background: lightcoral;
+  width:90%;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
 /* --------Display None Section--------------------------------------------------------*/
 #formAddQ, #formAddQS, #manageQS-contain, #cover{
   display: none;

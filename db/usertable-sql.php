@@ -37,5 +37,6 @@ $newtable="CREATE TABLE account(
         setname TEXT NOT NULL,
         field TEXT NOT NULL
     )';
+    echo "done";
     mysqli_query($sql_connect,$set_table);
     ?>
