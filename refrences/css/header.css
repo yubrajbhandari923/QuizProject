@@ -77,7 +77,7 @@ header:after{
     display: flex;
     width: 100vw;
     position: relative;
-    font: 20px arial;
+    font: 25px josefinsans;
     list-style: none;
     justify-content: space-around;
 }

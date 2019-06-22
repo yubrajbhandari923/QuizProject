@@ -15,13 +15,15 @@ include 'handle/afterlog.php';
     <script src='refrences/js/open-close.js'>    </script>
     <script src='refrences/js/ajax.js'></script>
     <body>
-    <?php include 'header.php'; ?>
+    <?php 
+    include 'header.php'; 
+    ?>
                 <section class="container">
                     <section class="hero">
                         <div class="butt-contain">                            
                             <a  href='manage_quiz.php'> <button class="butt manage-quiz"> Manage questions </button> </a>
                             <span class="helptxt"> Manage questions of your quiz set. </span>
-                           <br>
+                            <br>
                             <button class="butt Take-quiz"> Take a quiz test </button>
                             <span class="helptxt"> Take a test and learn new questions. </span>
                         </div>
@@ -31,11 +33,11 @@ include 'handle/afterlog.php';
                             <div>
                                 <div class="a-notification" id="note-1"> 
                                     <div class="opponent-userpic"> </div>
-                                  <span> $Oppoenent_name has challenged you.</span>
+                                    <span> $Oppoenent_name has challenged you.</span>
                                 </div>
                                 <div class="a-notification" id="note-1"> 
                                     <div class="opponent-userpic"> </div>
-                                   <span>$Oppoenent_name accepted your challenge and scored $opponent_score in your quiz set.</span>
+                                    <span>$Oppoenent_name accepted your challenge and scored $opponent_score in your quiz set.</span>
                                 </div>
                             </div>
                         </div>
@@ -46,8 +48,8 @@ include 'handle/afterlog.php';
                             <button type=submit>
                                 <span class="fa fa-send"></span>
                             </button>
-                            </form> 
-                            <div class="search-result">
+                        </form> 
+                        <div class="search-result">
                             </div>
                         </div>
                     </section>
