@@ -1,8 +1,8 @@
 <?php 
 include 'handle/afterlog.php';
-    if(isset($_SESSION['error_add_quiz'])){
-        echo  $_SESSION['error_add_quiz'];
-    }
+// if(isset($_COOKIE['error_quiz_set'])){
+//     echo $_COOKIE['error_quiz_set'];
+// }
 ?>
 <!DOCTYPE Html>
 <html>
@@ -12,8 +12,10 @@ include 'handle/afterlog.php';
         <link rel=stylesheet href="refrences/fonts/fonts.css ">
         <link rel=stylesheet href='refrences/css/manage_quiz-style.css'>
         <link rel=stylesheet href='refrences/css/header.css'>
+        <script src='refrences/js/jquery.js'>    </script>
         <script src='refrences/js/open-close.js'>    </script>
         <script src="refrences/js/manage_quiz-script.js"></script>
+        <script src='refrences/js/add-new-quiz-set.js'></script>
 
     </head>
     <body>
@@ -45,23 +47,25 @@ include 'handle/afterlog.php';
 
                 <!-- After user clicks on Add Quizset -->
                 
-            <form id="formAddQS" method='POST' action='handle/addQuizSet.php' autocomplete='off'>
+            <form id="formAddQS" autocomplete='off' onsubmit='return addquizset()' >
                 <div class="close-section fa fa-window-close"></div>
                 Add Quiz Set <br>
-                <input type=text name="quizSetName" placeholder="Enter the name for your new quiz set">
-                <select name="quizFieldName">
+                <input type=text id="quizSetName" placeholder="Enter the name for your new quiz set">
+                <select id="quizFieldName">
                     <option value="Geography">Geography</option>
                     <option value="Science">Science</option>
                     <option value="History">History</option>
                     <option value="Literature">Literature</option>
                     <option value="Mixed">Mixed</option>
                 </select>
-                <button type=submit name='submit-set' class="doneAddQSbutt"> Done</button>
+                <button type=submit id='submit-set' class="doneAddQSbutt" > Done</button>
 
-                <span class="errorMsgForm"> </span>
+                <span class="errorMsgForm">
+                
+                 </span>
             </form>
             <!-- After user clicks on Add question or Manage question -->
-            <form id="formAddQ" method= 'POST' action='handle/addquiz.php' autocomplete='off'> 
+            <form id="formAddQ" method= 'POST' autocomplete='off'> 
                     <div class="close-section fa fa-window-close"></div>
                     Add new question<br>
                     <input type=text placeholder="Add question" name='question'>
