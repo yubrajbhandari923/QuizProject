@@ -8,7 +8,7 @@
                     <div>".$row['setname']."
                      <button id='manageQSbutt' class='manageQSbutt'>Manage</button>
                      <button class='addQbutt'>Add Question</button>
-                      <a href='handle/remove-set.php?setname=".$row['set']."'><button class='removeThisQSbutt'>Remove this Set</button></a>
+                      <a href='handle/remove-set.php?setname=".$row['setname']."'><button class='removeThisQSbutt'>Remove this Set</button></a>
                     </div>
                 </li>
                 ";
