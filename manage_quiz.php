@@ -12,8 +12,8 @@ include 'handle/afterlog.php';
         <link rel=stylesheet href="refrences/fonts/fonts.css ">
         <link rel=stylesheet href='refrences/css/manage_quiz-style.css'>
         <link rel=stylesheet href='refrences/css/header.css'>
-        <script src="refrences/js/manage_quiz-script.js"></script>
         <script src='refrences/js/open-close.js'>    </script>
+        <script src="refrences/js/manage_quiz-script.js"></script>
 
     </head>
     <body>

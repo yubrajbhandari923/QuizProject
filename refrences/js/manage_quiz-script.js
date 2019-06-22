@@ -1,8 +1,6 @@
 window.onload = function(){
-    alert("hey");
     
     document.querySelector(".addQuizSetButt").onclick= function(){
-        alert("hey");
         document.querySelector("#cover").style.display = "block";
         document.querySelector("#formAddQS").style.display = "block";
     }
