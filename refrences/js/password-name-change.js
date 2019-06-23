@@ -12,7 +12,28 @@ function namechange(){
             if(html=='Success'){
                 location.reload();
             }else{
-            $('.errorMsgForm').html(html);
+            $('.errorMsgForm').eq(1).html(html);
+            }
+        }
+    })
+    return false;
+}
+function passchange(){
+    var  oldpassword=document.getElementById('oldpass').value;
+    var newpassword=document.getElementById('newpass').value;
+    var confirmpassword=document.getElementById('confirmpass').value;
+    var submit_check_pass=document.getElementById('pass_submit').value;
+    var datahold='oldpass='+oldpassword + '&newpass='+newpassword+'&confirmpass='+confirmpassword+'&check_if_submit='+submit_check_pass;
+    $.ajax({
+        type:'POST',
+        url:'handle/password_change.php',
+        data:datahold,
+        cache:false,
+        success:function(html){
+            if(html=='Success'){
+                location.reload();
+            }else{
+            $('.errorMsgForm').eq(0).html(html);
             }
         }
     })

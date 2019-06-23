@@ -20,18 +20,18 @@ include 'handle/user_profile.php';
     <body>
     <?php include 'header.php'; ?>
     <div id="cover"></div>
-    <form id="formConfirm" autocomplete='off'>
+    <form id="formConfirm" autocomplete='off' onsubmit='return passchange()'>
         <div class="close-section fa fa-window-close"></div>
         Change Your Password
         <div class="errorMsgForm"> Error </div>
         
-        <input type='password' placeholder="Enter your Old password"/>
+        <input type='password' placeholder="Enter your Old password" id='oldpass'>
 
-        <input type='password' placeholder="Enter your New password"/>
+        <input type='password' placeholder="Enter your New password" id='newpass'/>
 
-        <input type='password' placeholder="Confirm your New password"/>
+        <input type='password' placeholder="Confirm your New password" id='confirmpass'/>
         
-        <button class="butt green-butt" type=submit> Done </button>
+        <button class="butt green-butt" type=submit id='pass_submit'> Done </button>
         
     </form>
     <form id="formChangeName" autocomplete="off" onsubmit='return namechange()'>
