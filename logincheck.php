@@ -1,5 +1,4 @@
 <?php
-session_start();
 include 'handle/sql-connection.php';
 if(empty($_POST['username1'])){
     $_SESSION['error1']='Enter your email or username';
@@ -28,9 +27,9 @@ $_SESSION['id']=$user_id;
 
 if($rows==1){
     if($user_pic_status=='text'){
-    $_SESSION['user-letter']=strtoupper($user_letter[0]);
+    setcookie('userpic',strtoupper($user_letter[0]),$cookie_time,'/');
     }else{
-        $_SESSION['user-letter']="<img src='".$get_id['pic_dir']."' id='pic_logo'>";
+        setcookie('userpic',"<img src='".$get_id['pic_dir']."' id='pic_logo'>",$cookie_time,'/');
     }
     header('location:home.php');
     exit();

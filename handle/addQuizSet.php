@@ -25,7 +25,7 @@
         }
         $insert_set="INSERT INTO sets(id,setname,field)VALUES('$currentuser','$set_name','$set_field')";
         mysqli_query($sql_connect,$insert_set);
-        echo 'Successfully added a new quiz';
+        echo 'Success';
         exit();
     }
 ?>

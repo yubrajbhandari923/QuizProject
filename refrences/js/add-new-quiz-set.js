@@ -9,7 +9,11 @@ function addquizset(){
         data:dataString,
         cache:false,
         success:function(html){
-            $('.errorMsgForm').html(html);
+            if(html=='Success'){
+                location.reload();
+            }else{
+            $('.errorMsgForm').eq(0).html(html);
+            }
         }
     })
     return false;

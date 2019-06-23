@@ -1,10 +1,9 @@
 <?php
 include 'handle/session-cookie_check.php';
-// include 'handle/user_profile.php';
 ?>
 <header>
                 <div class="user-info-butt" id="user-info-butt">
-                 <?php echo  $_SESSION['user-letter'];?>
+                 <?php echo  $_COOKIE['userpic'];?>
                     <div>
                         <span> <?php echo $username_user; ?> </span>
                         <span> <a href="my_account.php">Myaccount</a></span>
