@@ -26,7 +26,7 @@
               <span>".$fetch_record['opt3']."</span>
               </div>
                <button class='editQbutt'>Edit</button>
-                <a href='handle/remove-quiz-ques.php?quiz-id=".$fetch_record['id_of_quiz']."'>
+                <a href='handle/remove-quiz-ques.php?quiz-id=".$fetch_record['id_of_quiz']."&set=".$fetch_record['setname']."'>
                 <button class='removeQbutt'>Remove</button>
                 </a>
                 </li>
