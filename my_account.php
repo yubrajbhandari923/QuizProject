@@ -12,32 +12,37 @@ include 'handle/user_profile.php';
         <link rel=stylesheet href="refrences/fonts/fonts.css ">
         <link rel=stylesheet href='refrences/css/myaccount-style.css'>
         <link rel=stylesheet href='refrences/css/header.css'>
+        <script src='refrences/js/jquery.js'>    </script>
         <script src='refrences/js/open-close.js'>    </script>
         <script src='refrences/js/myaccount-script.js'>    </script>
+        <script src='refrences/js/password-name-change.js'>    </script>
     </head>
     <body>
     <?php include 'header.php'; ?>
     <div id="cover"></div>
-    <form id="formConfirm" autocomplete="off" >
+    <form id="formConfirm" autocomplete='off'>
         <div class="close-section fa fa-window-close"></div>
         Change Your Password
         <div class="errorMsgForm"> Error </div>
         
-        <input type=password placeholder="Enter your Old password">
+        <input type='password' placeholder="Enter your Old password"/>
 
-        <input type=password placeholder="Enter your New password">
+        <input type='password' placeholder="Enter your New password"/>
+
+        <input type='password' placeholder="Confirm your New password"/>
         
         <button class="butt green-butt" type=submit> Done </button>
         
     </form>
-    <form id="formChangeName" autocomplete="off" >
+    <form id="formChangeName" autocomplete="off" onsubmit='return namechange()'>
         <div class="close-section fa fa-window-close"></div>
         Change Your Full Name
         <div class="errorMsgForm"> Error </div>
         
-        <input type=text placeholder="Enter your New Full Name">
+        <input type=text placeholder="Enter your New Full Name" id='fullname'>
+        <input type=password placeholder="Enter your password" id='password'>
         
-        <button class="butt green-butt" type=submit> Done </button>
+        <button class="butt green-butt" type=submit id='submit_namechange'> Done </button>
         
     </form>
         <div>

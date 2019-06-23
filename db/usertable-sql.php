@@ -11,7 +11,8 @@ $newtable="CREATE TABLE account(
     email TEXT NOT NULL,
     password TEXT NOT NULL,
     pic_status TEXT NOT NULL DEFAULT 'text',
-    pic_dir TEXT NOT NULL 
+    pic_dir TEXT NOT NULL,
+    name_change INT NOT NULL DEFAULT '0'
     )";
     mysqli_query($sql_connect,$newtable);
     $table_points="CREATE TABLE user_rank(
@@ -24,7 +25,7 @@ $newtable="CREATE TABLE account(
     mysqli_query($sql_connect,$quiz_db);
     $quiz_table="CREATE TABLE `quiz_data`.`quiz` (
                  `id` INT ,
-                 `id_of_quiz` INT PRIMARY KEY,
+                 `id_of_quiz` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,,
                 `question` TEXT NOT NULL ,
                  `answer` TEXT NOT NULL ,
                   `opt1` TEXT NOT NULL ,
@@ -38,6 +39,17 @@ $newtable="CREATE TABLE account(
         setname TEXT NOT NULL,
         field TEXT NOT NULL
     )';
-    echo "done";
     mysqli_query($sql_connect,$set_table);
+    $create_table_adminquiz="CREATE TABLE `quiz_data`.`all_question_admin` ( 
+        `sn` INT NOT NULL AUTO_INCREMENT ,
+         `question` TEXT NOT NULL ,
+          `answer` TEXT NOT NULL ,
+           `opt1` TEXT NOT NULL ,
+            `opt2` TEXT NOT NULL ,
+             `opt3` TEXT NOT NULL , 
+             `field` TEXT NOT NULL ,
+              PRIMARY KEY (`sn`)
+              )";
+              mysqli_query($sql_connect,$create_table_adminquiz);
+    echo "done";
     ?>

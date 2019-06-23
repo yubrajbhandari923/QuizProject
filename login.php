@@ -19,7 +19,6 @@ if($data!='reg'){
     <link rel=stylesheet href="refrences/fonts/fonts.css">
     <link rel="stylesheet" href='refrences/css/login-style.css'>
     <script src="refrences/js/login-script.js">
-
      </script>
 </head>
 <body>

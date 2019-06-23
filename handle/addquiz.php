@@ -56,7 +56,9 @@ if(isset($_SESSION['current_field'])&&!empty($_SESSION['current_field'])){
     }
     $userid=$_COOKIE['userid'];
     $insert_data="INSERT INTO quiz(id,question,answer,opt1,opt2,opt3,field,setname)VALUES('$userid','$question','$answer','$opt1','$opt2','$opt3','$current_field','$current_setname')";
+    $insert_data_admin="INSERT INTO all_question_admin(question,answer,opt1,opt2,opt3,field)VALUES('$question','$answer','$opt1','$opt2','$opt3','$current_field')";
     mysqli_query($sql_connect,$insert_data);
+    mysqli_query($sql_connect,$insert_data_admin);
     echo 'Success';
     session_destroy();
     exit();

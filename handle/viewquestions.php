@@ -11,15 +11,26 @@
     $select_question="SELECT * FROM quiz WHERE id='$current_user' AND setname='$set_name'";
     $query_select_question=mysqli_query($sql_connect,$select_question);
     $check_if_exists=mysqli_num_rows($query_select_question);
+    $check=1;
     if($check_if_exists===0){
         echo 'No questions exist';
     }else{
     while($fetch_record=mysqli_fetch_assoc($query_select_question)){
+        if($check===1){
     echo "<ul>
             <li>
-                <div><span>Question</span> <span>Option1</span> <span>Option2</span> <span>Option3</span> <span>Answer</span></div> 
-            </li>
-            <li> <div><span>".$fetch_record['question']."</span>
+                <div>
+                <span>Question</span>
+                 <span>Answer</span>
+                  <span>Option1</span>
+                   <span>Option2</span>
+                    <span>Option3</span>
+                    </div> 
+            </li>";
+        }
+           echo "<li> 
+           <div>
+           <span>".$fetch_record['question']."</span>
              <span>".$fetch_record['answer']."</span> 
              <span>".$fetch_record['opt1']."</span> 
              <span>".$fetch_record['opt2']."</span>
@@ -29,9 +40,10 @@
                 <a href='handle/remove-quiz-ques.php?quiz-id=".$fetch_record['id_of_quiz']."&set=".$fetch_record['setname']."'>
                 <button class='removeQbutt'>Remove</button>
                 </a>
-                </li>
-        </ul>";
+                </li>";
+        $check++;
     }
+    echo '</ul>';
     }
 
 ?>
