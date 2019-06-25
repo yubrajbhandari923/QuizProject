@@ -1,3 +1,6 @@
+<?php 
+    include 'handle/check-user_cookie.php';
+ ?>
 <!DOCTYPE html>
 <html>
     <head>

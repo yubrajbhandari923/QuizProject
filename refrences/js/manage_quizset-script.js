@@ -1,0 +1,18 @@
+window.onload = function(){
+    document.querySelector("#cover").style.display = "none";
+    document.querySelector("#formAddQ").style.display= "none";
+    let closeButt = document.querySelectorAll(".close-section");
+    for(i=0;i < closeButt.length; i++){
+        closeButt[i].addEventListener("click", function(){
+        document.querySelector("#cover").style.display = "none";
+        this.parentElement.style.display = "none";
+        })
+    }
+
+    document.querySelector(".addQbutt").onclick= function(){
+      window.scrollTo(0,0);
+      document.querySelector("#cover").style.display = "block";
+        document.querySelector("#formAddQ").style.display= "block"
+    }
+}
+
