@@ -11,7 +11,7 @@ include 'sql-connection.php';
         $user_letter=$row['name'][0];
         $location_pic=$row['pic_dir'];
           if($row['id']==$current_user){
-              if($user_profile_status=='text'){
+              if($user_profile_status==0){
                 echo "<div class='a-result'>
                                     <div class='opponent-userpic opp-found'>".$user_letter."</div>
                                     <span id='result-search'>".$row['name'] ."</span>

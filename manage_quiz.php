@@ -1,8 +1,5 @@
 <?php 
 include 'handle/afterlog.php';
-// if(isset($_COOKIE['error_quiz_set'])){
-//     echo $_COOKIE['error_quiz_set'];
-// }
 ?>
 <!DOCTYPE Html>
 <html>

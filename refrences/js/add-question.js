@@ -13,8 +13,10 @@ function addquizquestion(){
         cache:false,
         success:function(html){
             if(html=='Success'){
+                $('.errorMsgForm').hide();
                 location.reload();
             }else{
+                $('.errorMsgForm').css('display','block');
             $('.errorMsgForm').html(html);
             }
         }

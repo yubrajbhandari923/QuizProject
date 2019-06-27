@@ -3,29 +3,31 @@
 $sql_connect=mysqli_connect('localhost','root');
 $new_db='CREATE DATABASE user_record';
 mysqli_query($sql_connect,$new_db);
-mysqli_select_db($sql_connect,'user_record');
-$newtable="CREATE TABLE account(
+// mysqli_select_db($sql_connect,'user_record');
+$newtable="CREATE TABLE `user_record`.`account`(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name TEXT NOT NULL,
     username TEXT NOT NULL,
     email TEXT NOT NULL,
     password TEXT NOT NULL,
-    pic_status TEXT NOT NULL DEFAULT 'text',
+    pic_status INT NOT NULL DEFAULT '0',
     pic_dir TEXT NOT NULL,
     name_change INT NOT NULL DEFAULT '0'
     )";
     mysqli_query($sql_connect,$newtable);
-    $table_points="CREATE TABLE user_rank(
+    $table_points="CREATE TABLE `user_record`.`user_rank`(
         id INT PRIMARY KEY,
         rank INT NOT NULL DEFAULT '0',
         points INT NOT NULL DEFAULT '0'
     )";
     mysqli_query($sql_connect,$table_points);
+
     $quiz_db='CREATE DATABASE quiz_data';
     mysqli_query($sql_connect,$quiz_db);
+    mysqli_select_db($sql_connect,'quiz_data');
     $quiz_table="CREATE TABLE `quiz_data`.`quiz` (
                  `id` INT ,
-                 `id_of_quiz` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,,
+                 `id_of_quiz` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 `question` TEXT NOT NULL ,
                  `answer` TEXT NOT NULL ,
                   `opt1` TEXT NOT NULL ,

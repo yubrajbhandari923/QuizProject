@@ -51,7 +51,7 @@ body{
     background: #2ecc71;
 }
 .errorMsgForm{
-    display: block;
+    display: none;
     padding: 10px;
     font: 15px calibri;
     background: lightcoral;

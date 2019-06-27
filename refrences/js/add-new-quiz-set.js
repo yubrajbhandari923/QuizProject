@@ -10,8 +10,10 @@ function addquizset(){
         cache:false,
         success:function(html){
             if(html=='Success'){
+                $('.errorMsgForm').eq(0).hide();
                 location.reload();
             }else{
+                $('.errorMsgForm').eq(0).css('display','block');
             $('.errorMsgForm').eq(0).html(html);
             }
         }

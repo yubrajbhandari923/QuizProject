@@ -11,7 +11,9 @@ function namechange(){
         success:function(html){
             if(html=='Success'){
                 location.reload();
+                $('.errorMsgForm').eq(1).hide();
             }else{
+                $('.errorMsgForm').eq(1).css('display','block');
             $('.errorMsgForm').eq(1).html(html);
             }
         }
@@ -31,8 +33,10 @@ function passchange(){
         cache:false,
         success:function(html){
             if(html=='Success'){
+                $('.errorMsgForm').eq(0).hide();
                 location.reload();
             }else{
+                $('.errorMsgForm').eq(0).css('display','block');
             $('.errorMsgForm').eq(0).html(html);
             }
         }

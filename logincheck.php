@@ -26,7 +26,7 @@ setcookie('userid',$user_id,$cookie_time,'/');
 $_SESSION['id']=$user_id;
 
 if($rows==1){
-    if($user_pic_status=='text'){
+    if($user_pic_status==0){
     setcookie('userpic',strtoupper($user_letter[0]),$cookie_time,'/');
     }else{
         setcookie('userpic',"<img src='".$get_id['pic_dir']."' id='pic_logo'>",$cookie_time,'/');
