@@ -150,3 +150,20 @@ body{
   float:left;
 }
 /* ------------------------------------------- */
+.helptxt{
+  margin-top:50px ; 
+  padding: 10px;
+  font: 15px calibri;
+  background: lightsteelblue;
+  position: relative;
+  border-radius: 5px;
+  
+}
+.helptxt:before{
+  content:"+";
+  font: 18px poppins;
+  color: royalblue;
+  position: absolute;
+  top:-12px;
+  left:-5px;
+}

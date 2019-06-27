@@ -9,6 +9,14 @@ document.addEventListener("DOMContentLoaded", function(){
     document.querySelector("#changeDPbutt").onclick= function(){
         document.querySelector("#changeDP").click();
     }
+    document.querySelector("#changeDP").onchange = function (){
+        document.querySelector("#uploadDPbutt").style.display = "block";
+    }
+
+    document.querySelector(".dp img").onclick = function() {
+        document.querySelector("#cover").style.display = "block";
+        document.querySelector("#bigDP").style.display = "block";
+    }
 })
 function confirmPsd(){
     document.querySelector("#cover").style.display = "block";

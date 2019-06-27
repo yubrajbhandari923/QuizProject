@@ -13,7 +13,7 @@
     $check_if_exists=mysqli_num_rows($query_select_question);
     $check=1;
     if($check_if_exists===0){
-        echo 'No questions exist';
+        echo '<span class=helptxt> No questions exist</span>';
     }else{
     while($fetch_record=mysqli_fetch_assoc($query_select_question)){
         if($check===1){

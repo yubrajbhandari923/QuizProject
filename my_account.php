@@ -20,7 +20,7 @@ include 'handle/user_profile.php';
     <body>
     <?php include 'header.php'; ?>
     <div id="cover"></div>
-    <form id="formConfirm" autocomplete='off' onsubmit='return passchange()'>
+    <form class="form" id="formConfirm" autocomplete='off' onsubmit='return passchange()'>
         <div class="close-section fa fa-window-close"></div>
         Change Your Password
         <div class="errorMsgForm"> Error </div>
@@ -34,23 +34,30 @@ include 'handle/user_profile.php';
         <button class="butt green-butt" type=submit id='pass_submit'> Done </button>
         
     </form>
-    <form id="formChangeName" autocomplete="off" onsubmit='return namechange()'>
-        <div class="close-section fa fa-window-close"></div>
-        Change Your Full Name
-        <div class="errorMsgForm"> Error </div>
-        
-        <input type=text placeholder="Enter your New Full Name" id='fullname'>
-        <input type=password placeholder="Enter your password" id='password'>
-        
-        <button class="butt green-butt" type=submit id='submit_namechange'> Done </button>
-        
-    </form>
+    <form class="form" id="formChangeName" autocomplete="off" onsubmit='return namechange()'>
+            <div class="close-section fa fa-window-close"></div>
+            Change Your Full Name
+            <div class="errorMsgForm"> Error </div>
+            
+            <input type=text placeholder="Enter your New Full Name" id='fullname'>
+            <input type=password placeholder="Enter your password" id='password'>
+            
+            <button class="butt green-butt" type=submit id='submit_namechange'> Done </button>
+            
+        </form>
+        <form class="form" id="bigDP">
+                <div class="close-section fa fa-window-close"></div>
+    <img src="uploads/profile_pic/a.jpg">
+</form>
             <div class="data-container">
                 <div class="Display-pic-contain"> 
-                   <div class="dp"> DP Here</div>
+                   <div class="dp"> <img src="uploads/profile_pic/a.jpg"></div>
                    <h2> Display Picture </h2>
                    <a style="display: none;"><input id="changeDP" placeholder="change" type=file></a> 
+                   <form>
                    <div class="butt" id="changeDPbutt"> Change </div>
+                   <button class="butt" id="uploadDPbutt" type='submit'>Upload</button>
+                </form>
                 </div>
                <span><h2>Full Name:</h2> <h3> <?php echo $user_name; ?></h3> <a href="#" onclick="changeName()"> Edit </a></span>
                <span><h2>User Name:</h2> <h3> <?php echo $user_username;?></h3> </span>
