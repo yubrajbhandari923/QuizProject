@@ -13,9 +13,9 @@ include 'handle/afterlog.php';
     </head>
         <script src='refrences/js/open-close.js'>    </script>
         <script src='refrences/js/jquery.js'>    </script>
-        <script src="refrences/js/manage_quiz-script.js"></script>
+        <script src="./refrences/js/manage_quiz-script.js"></script>
         <script src='refrences/js/add-new-quiz-set.js'></script>
-    <body>
+    <body onload="test()">
         <?php include 'header.php';    ?>
         <div id="cover"></div>
         <div class="Main-container">
