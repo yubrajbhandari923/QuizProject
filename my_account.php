@@ -45,8 +45,12 @@ include 'handle/user_profile.php';
         <button class="butt green-butt" type=submit id='submit_namechange'> Done </button>
         
     </form>
-        <div>
             <div class="data-container">
+                <div class="Display-pic-contain"> 
+                   <div class="dp"> DP Here</div>
+                   <h2> Display Picture </h2>
+                   <a href="#"> Change </a> 
+                </div>
                <span><h2>Full Name:</h2> <h3> <?php echo $user_name; ?></h3> <a href="#" onclick="changeName()"> Edit </a></span>
                <span><h2>User Name:</h2> <h3> <?php echo $user_username;?></h3> </span>
                <span><h2>Points earned:</h2> <h3> <?php echo $points;?></h3> </span>
@@ -54,6 +58,5 @@ include 'handle/user_profile.php';
                <span><h2>Email:</h2> <h3><?php echo $user_email; ?></h3> </span>
                 <h2><A href="#" onclick="confirmPsd()">Change Password</A></h2> 
             </div>
-        </div> 
     </body>
 </html>
