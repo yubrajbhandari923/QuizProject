@@ -21,7 +21,7 @@
         <h3 class="headtext"> Manage QuizSet</h3>
         <h2 class="headtext"> <?php echo $data_set['setname'].'/  '.$data_set['field'];?></h2>
         <button class="addQbutt">Add Question</button>
-        <a href='handle/remove-set.php?set=<?php echo $data_set['setname'];?>'><button class="removeThisQSbutt">Remove this Set</button></a>
+        <button class="removeThisQSbutt" onclick="removeThisSet()">Remove this Set</button></a>
         <?php
         include 'handle/viewquestions.php';
         ?>
@@ -38,5 +38,11 @@
             <button type=submit id='submit_question' class="addQsubmitButt">Add new</button>
             <span class='errorMsgForm'> </span>
         </form>
+    
+    <form id='formConfirmBox'>
+     <span>Are You Sure</span>
+     <a class="ch" href='handle/remove-set.php?set=<?php echo $data_set['setname'];?>'><div class="butt"> Yes </div> </a>
+     <div class="butt ch removeQbutt" onclick="removeCBox()"> No </div>
+     </form>
 </body>
 </html>

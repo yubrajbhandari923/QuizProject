@@ -1,4 +1,4 @@
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", function(){
     document.querySelector("#cover").style.display = "none";
     document.querySelector("#formAddQ").style.display= "none";
     let closeButt = document.querySelectorAll(".close-section");
@@ -14,5 +14,14 @@ window.onload = function(){
       document.querySelector("#cover").style.display = "block";
         document.querySelector("#formAddQ").style.display= "block"
     }
+})
+function removeThisSet(){
+    window.scrollTo(0,0);
+    document.querySelector("#cover").style.display = "block";
+    document.querySelector("#formConfirmBox").style.display= "block"  
+}
+function removeCBox(){
+    document.querySelector("#cover").style.display = "none";
+    document.querySelector("#formConfirmBox").style.display= "none"; 
 }
 
