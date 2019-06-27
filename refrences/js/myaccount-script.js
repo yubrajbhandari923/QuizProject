@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function(){
             this.parentElement.style.display = "none";
         })
     }
+    document.querySelector("#changeDPbutt").onclick= function(){
+        document.querySelector("#changeDP").click();
+    }
 })
 function confirmPsd(){
     document.querySelector("#cover").style.display = "block";

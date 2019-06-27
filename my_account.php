@@ -49,7 +49,8 @@ include 'handle/user_profile.php';
                 <div class="Display-pic-contain"> 
                    <div class="dp"> DP Here</div>
                    <h2> Display Picture </h2>
-                   <a href="#"> Change </a> 
+                   <a style="display: none;"><input id="changeDP" placeholder="change" type=file></a> 
+                   <div class="butt" id="changeDPbutt"> Change </div>
                 </div>
                <span><h2>Full Name:</h2> <h3> <?php echo $user_name; ?></h3> <a href="#" onclick="changeName()"> Edit </a></span>
                <span><h2>User Name:</h2> <h3> <?php echo $user_username;?></h3> </span>
