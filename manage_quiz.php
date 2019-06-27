@@ -25,21 +25,6 @@ include 'handle/afterlog.php';
             <?php include 'handle/display-set.php'; ?>
             </ul>
         </div>
-
-            <!-- After User Clicks on Manage button of quizset1 -->
-            <div id="manageQS-contain"> 
-                <h3 class="headtext"> Manage QuizSet1</h3>
-                <button class="addQbutt">Add Question</button>
-                <button class="removeThisQSbutt">Remove this Set</button>
-                <ul>
-                    <li>
-                        <div><span>Question</span> <span>Option1</span> <span>Option2</span> <span>Option3</span> <span>Answer</span></div> 
-                    </li>
-                    <li> <div><span>Who is the father of science?</span> <span>Newton</span> <span>Hawkings</span> <span>Boyle</span> <span>Einstine</span></div> <button class="editQbutt">Edit</button> <button class="removeQbutt">Remove</button></li>
-                </ul>
-            </div>
-
-
                 <!-- After user clicks on Add Quizset -->
                 
             <form id="formAddQS" autocomplete='off' onsubmit='return addquizset()' >
@@ -59,6 +44,19 @@ include 'handle/afterlog.php';
                 
                  </span>
 </form>
+
+<!-- After user clicks on Add question-->
+<form id="formAddQ" autocomplete='off' onsubmit='return addquizquestion()'> 
+            <div class="close-section fa fa-window-close"></div>
+            Add new question<br>
+            <input type=text placeholder="Add question" id='question'>
+            <input type=text placeholder="Enter answer" id='answer'>
+            <input type=text  placeholder="Enter Option1" id='opt1'>
+            <input type=text  placeholder="Enter Option2" id='opt2'>
+            <input type=text placeholder="Enter Option3" id='opt3'>
+            <button type=submit id='submit_question' class="addQsubmitButt">Add new</button>
+            <span class='errorMsgForm'> </span>
+        </form>
     </body>
 
 </html>
