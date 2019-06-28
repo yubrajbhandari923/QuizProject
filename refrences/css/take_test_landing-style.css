@@ -1,0 +1,168 @@
+.a-challenge{
+    display:flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+.notification-container{
+  max-width:80vw;
+  min-width: 100px;
+}
+.notification-container ul li{
+  padding: 1px 10px;
+  margin: 5px 0px;
+  font: 15px arial;
+  list-style: none;
+}
+.a-challenge  .butt{
+  margin-left: auto;
+  padding: 5px;
+}
+.notification-container ul li:nth-child(odd){
+  background: lightgrey
+}
+.notification-container ul li:nth-child(even){
+  background: whitesmoke
+}
+h2{
+    font: 23px josefinsans;
+}
+h1{
+  font: 35px Passionone;
+  letter-spacing: 2px;
+}
+.notification-container{
+  margin: 0px 10px;
+}
+.notification-container .butt{
+  font-size: 15px;
+}
+a{
+    font: 18px josefinsans;
+    color:black;
+  }
+  header a {
+    font: 25px josefinsans;
+
+}
+body{
+    margin: 0px;
+    margin-left: 10px;
+}
+#cover{
+    display:none;
+    background: #000000d6;
+    width: 100%;
+    min-height:100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+  }
+  .butt{  
+    max-width: max-content;
+    background: #f1c40f;
+    border: none;
+    font: 18px poppins;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius:5px;
+    border-bottom:  5px solid #cea709 ;
+    transition: 1s;
+}
+.green-butt{
+    border-bottom:  5px solid #15B358 ;
+    background: #2ecc71;
+}
+.red-butt{
+  border-bottom:  5px solid #CE3323 ;
+  background: #e74c3c
+}
+.blue-butt{
+  background: #55acee;
+  border-bottom-color: #3C93D5;
+}
+.deepblue-butt{
+  background: #446CB3;
+  border-bottom-color: #3b5998;
+}
+
+.errorMsgForm{
+    display: none;
+    padding: 10px;
+    font: 15px calibri;
+    background: lightcoral;
+    width:90%;
+    color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  .form{
+      display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    right:0;
+    height:300px;
+    width: min-content;
+    margin: auto;
+    background: whitesmoke;
+    padding: 20px;
+    font: 30px Passionone;
+    letter-spacing: 3px;
+
+  }
+  .form > input{
+    margin: 10px 0px;
+    width: 40vw;
+    min-width: 150px;
+    font: 18px arial;
+    border: none;
+    border-bottom: 2px solid skyblue;
+    padding: 10px;
+  }
+  .close-section{
+    border-radius: 100%;
+    color: tomato;
+    font-size: 20px;
+    float: right;
+    cursor:pointer;
+  }
+  .Display-pic-contain > form{
+    display: flex;
+  }
+  .Display-pic-contain > form > * {
+    margin: 0px 5px;
+  }
+  #uploadDPbutt{
+    display: none;
+  }
+.dp{
+  width: 200px;
+  height: 200px;
+  background: slateblue;
+  border-radius: 100%;
+  line-height: 100px;
+  text-align: center;
+  overflow:hidden;
+}
+img{
+  object-fit: cover;
+  height:100%;
+  width: 100%;
+  cursor: pointer;
+}
+#bigDP {
+  width : 90vw;
+  padding:0px;
+}
+#bigDP .close-section{
+  position: absolute;
+  right:0;
+  top:0;
+  color: white;
+  font-size: 25px;
+}
