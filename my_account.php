@@ -16,6 +16,7 @@ include 'handle/user_profile.php';
         <script src='refrences/js/open-close.js'>    </script>
         <script src='refrences/js/myaccount-script.js'>    </script>
         <script src='refrences/js/password-name-change.js'>    </script>
+        <script src='refrences/js/add-profile-pic.js'>    </script>
     </head>
     <body>
     <?php include 'header.php'; ?>
@@ -53,8 +54,9 @@ include 'handle/user_profile.php';
                 <div class="Display-pic-contain"> 
                    <div class="dp"> <img src="uploads/profile_pic/a.jpg"></div>
                    <h2> Display Picture </h2>
-                   <a style="display: none;"><input id="changeDP" placeholder="change" type=file></a> 
-                   <form>
+                   <a style="display: none;">
+                   <input id="changeDP" placeholder="change" type=file></a> 
+                   <form onsubmit='return addprofilepic()'>
                    <div class="butt" id="changeDPbutt"> Change </div>
                    <button class="butt" id="uploadDPbutt" type='submit'>Upload</button>
                 </form>

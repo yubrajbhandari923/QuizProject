@@ -31,17 +31,26 @@
         <div>
             <h2> Explore other quizzes</h2>
             <form>
-                <input type="radio" name="fieldType" value="single" checked> Choose single field
-                <input type="radio" name="fieldType" value="multiple"> Choose multiple fields
                 <div>
-                    <div>
+                    <label class=fieldtype-container>
+                        <input type="radio" name="fieldType" value="single" checked> 
+                      <span> Choose single field </span>
+                    </label>
+                    <label class=fieldtype-container>
+                        <input type="radio" name="fieldType" value="multiple"> 
+                      <span> Choose multiple fields </span>
+                    </label>
+                </div>
+                <div class=flipbox >
+                    <div class="isflip">
+                    <div class=frontface>
                         <button name="onefield" value="Geography" type="submit">Geography</button>
                         <button name="onefield" value="Literature" type="submit">Literature</button>
                         <button name="onefield" value="Science" type="submit">Science</button>
                         <button name="onefield" value="History" type="submit">History</button>
                         <button name="onefield" value="Mixed" type="submit">Mixed</button>
                     </div>
-                    <div>
+                    <div class=backface>
                         <input type="checkbox" name="multifield" value="Geography"> Geography
                         <input type="checkbox" name="multifield" value="Literature"> Literature
                         <input type="checkbox" name="multifield" value="Science"> Science
@@ -49,6 +58,7 @@
                         <input type="checkbox" name="multifield" value="Mixed"> Mixed
                         <button class="butt" type=submit> Lets GO!</button>
 
+                    </div>
                     </div>
                 </div>
             </form>
