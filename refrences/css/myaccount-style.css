@@ -113,11 +113,6 @@ body{
   line-height: 100px;
   text-align: center;
   overflow:hidden;
-  font-size: 100px;
-    color: white;
-    line-height: 200px;
-    background: rgba(179, 84, 46, 0.849);
-    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
 }
 img{
   object-fit: cover;
@@ -135,7 +130,4 @@ img{
   top:0;
   color: white;
   font-size: 25px;
-}
-#changeDP{
-  display:none;
 }
