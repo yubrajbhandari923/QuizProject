@@ -12,11 +12,11 @@
         <script>
             window.onload = function() {
                 document.querySelector(".reg-btn").onclick = function(){
-                    window.location.href = window.location.href + "login.php<?php echo '?page=reg'; ?> ";
+                    window.location.href ="register";
                     
                 }
                 document.querySelector(".log-btn").onclick = function(){
-                    window.location.href = window.location.href+ "login.php<?php echo '?page=log'; ?>";
+                    window.location.href ="login";
                 }
             }
          </script>

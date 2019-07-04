@@ -81,7 +81,7 @@
     margin-right: 20px;
   }
 /* ---------------------------------------------------------------------------------------- */
-  button{  
+  button, .butt{  
     max-width: max-content;
    background: #f1c40f;
     border: none;
@@ -129,3 +129,41 @@ body{
     font: 35px Passionone;
     letter-spacing: 2px;
   }
+  /* ------------------------------------------- */
+#formConfirmBox {
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+  text-align: center;
+  display:none;
+}
+#formConfirmBox  * {
+  margin-top: 30px;
+  text-decoration:none;
+}
+#formConfirmBox > span {
+  width: 100%;
+  display: block;
+}
+#formConfirmBox .butt {
+  min-width: 72px;
+  float:left;
+}
+/* ------------------------------------------- */
+.helptxt{
+  margin-top:50px ; 
+  padding: 10px;
+  font: 15px calibri;
+  background: lightsteelblue;
+  position: relative;
+  border-radius: 5px;
+  
+}
+.helptxt:before{
+  content:"+";
+  font: 18px poppins;
+  color: royalblue;
+  position: absolute;
+  top:-12px;
+  left:-5px;
+}

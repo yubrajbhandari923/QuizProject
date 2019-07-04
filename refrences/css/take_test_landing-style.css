@@ -1,0 +1,130 @@
+.a-challenge{
+    display:flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+.notification-container{
+  max-width:80vw;
+  min-width: 100px;
+}
+.notification-container ul li{
+  padding: 1px 10px;
+  margin: 5px 0px;
+  font: 15px arial;
+  list-style: none;
+}
+.a-challenge  .butt{
+  margin-left: auto;
+  padding: 5px;
+}
+.notification-container ul li:nth-child(odd){
+  background: lightgrey
+}
+.notification-container ul li:nth-child(even){
+  background: whitesmoke
+}
+h2{
+    font: 23px josefinsans;
+}
+h1{
+  font: 35px Passionone;
+  letter-spacing: 2px;
+}
+.notification-container{
+  margin: 0px 10px;
+}
+.notification-container .butt{
+  font-size: 15px;
+}
+a{
+    font: 18px josefinsans;
+    color:black;
+  }
+  header a {
+    font: 25px josefinsans;
+
+}
+body{
+    margin: 0px;
+    margin-left: 10px;
+}
+#cover{
+    display:none;
+    background: #000000d6;
+    width: 100%;
+    min-height:100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+  }
+  .butt{  
+    max-width: max-content;
+    background: #f1c40f;
+    border: none;
+    font: 18px poppins;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius:5px;
+    border-bottom:  5px solid #cea709 ;
+    transition: 1s;
+}
+.green-butt{
+    border-bottom:  5px solid #15B358 ;
+    background: #2ecc71;
+}
+.red-butt{
+  border-bottom:  5px solid #CE3323 ;
+  background: #e74c3c
+}
+.blue-butt{
+  background: #55acee;
+  border-bottom-color: #3C93D5;
+}
+.deepblue-butt{
+  background: #446CB3;
+  border-bottom-color: #3b5998;
+}
+form  input[name='fieldType']{
+  opacity:0 ;
+  cursor:pointer;
+  z-index: 2;
+}
+form input[name=fieldType] + span {
+  display: block ;
+ position: relative; 
+}
+form input[name=fieldType] + span::before {
+  position: absolute;
+  content:"";
+  height:20px;
+  width:20px;
+  background: grey;
+  top: 0;
+  left:-20px;
+}
+form input[name=fieldType] + span::after {
+  position: absolute;
+  content:"";
+  height:10px;
+  width:10px;
+  background: white;
+  /* border-bottom:3px solid white; */
+  /* border-right:3px solid white; */
+  top: 4px;
+  left:-15px;
+  display: none;
+  transform: rotate(45deg);
+}
+.fieldtype-container {
+  display: flex;
+  font: 20px eczar; 
+}
+form input[name=fieldType]:checked + span::after {
+  display: block;
+}
+form input[name=fieldType]:checked + span::before {
+  background: royalblue;
+}

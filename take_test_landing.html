@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title> Guffadi </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel=stylesheet href="refrences/fonts/fonts.css ">
+        <link rel=stylesheet href='refrences/css/take_test_landing-style.css'>
+        <link rel=stylesheet href='refrences/css/header.css'>
+        <script src='refrences/js/ajax.js'></script>
+    </head>
+    <body>
+        <h1>
+            Take a Quiz Test
+        </h1>
+        <div class="notification-container">
+            <h2> Challenges</h2>
+            <ul>
+                <li>
+                    <span class="a-challenge"> <span>$user_fullname has challenged you</span> <div class="butt blue-butt"> Take This</div></span>
+                </li>
+                <li>
+                    <span class="a-challenge"> <span>$user_fullname has challenged you</span> <div class="butt blue-butt"> Take This</div></span>
+                </li>
+                <li>
+                    <span class="a-challenge"> <span>$user_fullname has challenged you</span> <div class="butt blue-butt"> Take This</div></span>
+                </li>
+            </ul>
+        </div> 
+        <div>
+            <h2> Explore other quizzes</h2>
+            <form>
+                <label class=fieldtype-container>
+                    <input type="radio" name="fieldType" value="single" checked> 
+                  <span> Choose single field </span>
+                </label>
+                <label class=fieldtype-container>
+                    <input type="radio" name="fieldType" value="multiple"> 
+                  <span> Choose multiple fields </span>
+                </label>
+                <div>
+                    <div>
+                        <button name="onefield" value="Geography" type="submit">Geography</button>
+                        <button name="onefield" value="Literature" type="submit">Literature</button>
+                        <button name="onefield" value="Science" type="submit">Science</button>
+                        <button name="onefield" value="History" type="submit">History</button>
+                        <button name="onefield" value="Mixed" type="submit">Mixed</button>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="multifield" value="Geography"> Geography
+                        <input type="checkbox" name="multifield" value="Literature"> Literature
+                        <input type="checkbox" name="multifield" value="Science"> Science
+                        <input type="checkbox" name="multifield" value="History"> History
+                        <input type="checkbox" name="multifield" value="Mixed"> Mixed
+                        <button class="butt" type=submit> Lets GO!</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

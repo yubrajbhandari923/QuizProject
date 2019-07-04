@@ -6,8 +6,8 @@ include 'handle/session-cookie_check.php';
                  <?php echo  $_COOKIE['userpic'];?>
                     <div>
                         <span> <?php echo $username_user; ?> </span>
-                        <span> <a href="my_account.php">Myaccount</a></span>
-                        <span> <a href="handle/logout.php">Logout</a></span>
+                        <span> <a href="my_account">Myaccount</a></span>
+                        <span> <a href="handle/logout">Logout</a></span>
                     </div>
 
                 </div>
@@ -16,8 +16,8 @@ include 'handle/session-cookie_check.php';
                 </div>
                 <div class="page-links">
                     <ul>
-                        <li><a href="home.php">Home</a></li>
-                        <li><a href="my_account.php">My account</a></li>
+                        <li><a href="home">Home</a></li>
+                        <li><a href="my_account">My account</a></li>
                     </ul>
                 </div>
 </header>
