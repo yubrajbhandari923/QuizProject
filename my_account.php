@@ -16,7 +16,6 @@ include 'handle/user_profile.php';
         <script src='refrences/js/open-close.js'>    </script>
         <script src='refrences/js/myaccount-script.js'>    </script>
         <script src='refrences/js/password-name-change.js'>    </script>
-        <!-- <script src='refrences/js/add-profile-pic.js'>    </script> -->
     </head>
     <body>
     <?php include 'header.php'; ?>

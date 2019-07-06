@@ -5,7 +5,7 @@
     if(isset($_GET['set'])){
         $set_name=mysqli_real_escape_string($sql_connect,$_GET['set']);
     }else{
-        header('location:manage_quiz.php');
+        header('location:../manage_quiz');
         exit();
     }
     $select_question="SELECT * FROM quiz WHERE id='$current_user' AND setname='$set_name'";
@@ -37,7 +37,7 @@
               <span>".$fetch_record['opt3']."</span>
               </div>
                <button class='editQbutt'>Edit</button>
-                <a href='handle/remove-quiz-ques.php?quiz-id=".$fetch_record['id_of_quiz']."&set=".$fetch_record['setname']."'>
+                <a href='../handle/remove-quiz-ques/".$fetch_record['id_of_quiz']."/".$fetch_record['setname']."'>
                 <button class='removeQbutt'>Remove</button>
                 </a>
                 </li>";

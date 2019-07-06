@@ -21,9 +21,6 @@ function getname(str){
 
 
 function scrollToSmoothly(pos, time) {
-  /*Time is only applicable for scrolling upwards*/
-  /*Code written by hev1*/
-  /*pos is the y-position to scroll to (in pixels)*/
   if (isNaN(pos)) {
     throw "Position must be a number";
   }

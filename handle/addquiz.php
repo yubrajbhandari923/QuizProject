@@ -63,6 +63,6 @@ if(isset($_SESSION['current_field'])&&!empty($_SESSION['current_field'])){
     session_destroy();
     exit();
 }else{
-    header('location:../manage_quiz.php');
+    header('location:../manage_quiz');
 }
 ?>

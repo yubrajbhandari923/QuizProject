@@ -4,7 +4,7 @@ include 'sql-connection.php';
     if(isset($_COOKIE['userid'])){
         $user_id=$_COOKIE['userid'];
     }else{
-        header('location:./login.php?page=log');
+        header('location:../login');
         exit();
     }
     $sel_name="SELECT * FROM account WHERE id='$user_id' ";

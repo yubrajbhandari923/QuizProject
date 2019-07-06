@@ -42,7 +42,7 @@
             exit();
         }
     }else{
-        header('location:../my_account.php');
+        header('location:../my_account');
         exit();
     }
 ?>

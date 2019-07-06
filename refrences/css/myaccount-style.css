@@ -131,3 +131,6 @@ img{
   color: white;
   font-size: 25px;
 }
+#changeDP{
+  display: none;
+}
