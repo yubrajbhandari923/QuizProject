@@ -44,7 +44,7 @@ if($data!='reg'){
                             <button id="goto-log"> Already registered? Log in </button>
                             
                         </form>
-                        <form class="login-form" method="POST" action="logincheck.php">
+                        <form class="login-form" method="POST" action="logincheck">
                             <h1>Log In</h1>
                             <input type=text name='username1' Placeholder="Username">
                             <input type=password name='password1' Placeholder="Password">

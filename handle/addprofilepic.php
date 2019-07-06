@@ -12,7 +12,7 @@
         $file_ext=explode('.',$filename);
         $actual_file_ext=end($file_ext);
         $file_name_only=$file_ext[0];
-        $allowed=['png','jpeg','jpg'];
+        $allowed=['png','jpeg','jpg','JPG','PNG','JPEG'];
 
         if($filename==""){
             $_SESSION['upload']="Please select a file";
@@ -32,7 +32,6 @@
                                 $profile_pic="<img src='".$file_destination_db."'>";
                                 setcookie('userpic',$profile_pic,$cookie_time,'/');
                                 header('location:../my_account');
-                                echo 'uploaded';
                                 exit();
                             }else{
                                 $_SESSION['upload']="File is too big";
@@ -52,7 +51,6 @@
         }
     }else{
         header('location:../my_account');
-        echo 'fail';
         exit();
     }
 ?>

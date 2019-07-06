@@ -5,7 +5,7 @@ function addquizset(){
     var dataString='quizSetName='+setname + '&quizFieldName='+fieldname + '&submit-set='+submit_set;
     $.ajax({
         type:'POST',
-        url:'handle/addQuizSet.php',
+        url:'handle/addQuizSet',
         data:dataString,
         cache:false,
         success:function(html){
