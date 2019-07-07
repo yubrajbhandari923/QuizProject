@@ -16,7 +16,7 @@ include 'handle/user_profile.php';
         <script src='refrences/js/open-close.js'>    </script>
         <script src='refrences/js/myaccount-script.js'>    </script>
         <script src='refrences/js/password-name-change.js'>    </script>
-        <script src='refrences/js/add-profile-pic.js'>    </script>
+        <!-- <script src='refrences/js/add-profile-pic.js'>    </script> -->
     </head>
     <body>
     <?php include 'header.php'; ?>
@@ -52,14 +52,15 @@ include 'handle/user_profile.php';
 </form>
             <div class="data-container">
                 <div class="Display-pic-contain"> 
-                   <div class="dp"> <img src="uploads/profile_pic/a.jpg"></div>
+                   <div class="dp"> <?php echo $_COOKIE['userpic'];?></div>
                    <h2> Display Picture </h2>
-                   <a style="display: none;">
-                   <input id="changeDP" placeholder="change" type=file></a> 
-                   <form onsubmit='return addprofilepic()'>
+
+                   <form method='POST' action='handle/addprofilepic' enctype='multipart/form-data'>
+                   <input id="changeDP" placeholder="change" type='file' name='profile_pic'/>
                    <div class="butt" id="changeDPbutt"> Change </div>
-                   <button class="butt" id="uploadDPbutt" type='submit'>Upload</button>
+                   <button class="butt" id="uploadDPbutt" name='upload_submit' type='submit'>Upload</button>
                 </form>
+
                 </div>
                <span><h2>Full Name:</h2> <h3> <?php echo $user_name; ?></h3> <a href="#" onclick="changeName()"> Edit </a></span>
                <span><h2>User Name:</h2> <h3> <?php echo $user_username;?></h3> </span>

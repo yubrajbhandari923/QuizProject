@@ -4,19 +4,18 @@
 <!DOCTYPE Html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width initial-scale=1.0">
-        <title> Guffadi</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel=stylesheet href="refrences/fonts/fonts.css ">
-        <link rel=stylesheet href='refrences/css/manage_quizset-style.css'>
-        <link rel=stylesheet href='refrences/css/header.css'>
+            <title> Guffadi</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width initial-scale=1.0">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel=stylesheet href="../refrences/fonts/fonts.css ">
+            <link rel=stylesheet href='../refrences/css/manage_quizset-style.css'>
+            <link rel=stylesheet href='../refrences/css/header.css'>
         
     </head>
-        <script src='refrences/js/open-close.js'>    </script>
-        <script src='refrences/js/jquery.js'>    </script>
-        <script src="refrences/js/manage_quizset-script.js"></script>
-        <script src="refrences/js/add-question.js"></script>
+        <script src='../refrences/js/jquery.js'>    </script>
+        <script src="../refrences/js/manage_quizset-script.js"></script>
+        <script src="../refrences/js/add-question.js"></script>
     <body>
             <div id="cover"></div>
 <div id="manageQS-contain"> 
@@ -43,7 +42,7 @@
     
     <form id='formConfirmBox'>
      <span>Are You Sure</span>
-     <a class="ch" href='handle/remove-set.php?set=<?php echo $data_set['setname'];?>'><div class="butt"> Yes </div> </a>
+     <a class="ch" href='../handle/remove-set/<?php echo $data_set['setname'];?>'><div class="butt"> Yes </div> </a>
      <div class="butt ch removeQbutt" onclick="removeCBox()"> No </div>
      </form>
 </body>

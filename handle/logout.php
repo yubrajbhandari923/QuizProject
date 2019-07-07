@@ -5,5 +5,5 @@
     setcookie('userpic','',time()-360000,'/');
     unset($_COOKIE['userid']);
     unset($_COOKIE['userpic']);
-    header('location:../login.php?page=log');
+    header('location:../login');
 ?>

@@ -138,9 +138,9 @@ form div:nth-child(1){
 }
 
 .flipbox{
-   width: 200px;
-  height: 260px;
-  perspective: 100px;
+   width: 80vw;
+  height: 200px;
+  perspective: 600px;
 }
 .flipbox > div {
   width: 100%;
@@ -148,6 +148,7 @@ form div:nth-child(1){
   position: relative;
   transition: transform 1s;
   transform-style: preserve-3d;
+  transform-origin: center right;
 }
 .flipbox > div > div {
   position: absolute;
@@ -164,5 +165,4 @@ form div:nth-child(1){
   transform: rotateY( 180deg );
 }
 .isflip {
-  transform: rotateY(180deg);
-}
+  /*! transform: translateX(-100%) rotateY(-180deg); */}

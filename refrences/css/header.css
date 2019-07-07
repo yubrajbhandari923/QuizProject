@@ -53,6 +53,12 @@ header:after{
     color: black;
 
 }
+#user-info-butt img {
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
 
 .head-text{
     flex-basis: 100%;

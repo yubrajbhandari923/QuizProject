@@ -1,5 +1,6 @@
 <?php 
 include 'handle/check-user_cookie.php';
+session_start();
 if(isset($_GET['page'])){
     $data=$_GET['page'];
 }else{
@@ -16,7 +17,7 @@ if($data!='reg'){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title> Guffadi </title>
-    <link rel=stylesheet href="refrences/fonts/fonts.css">
+    <link rel='stylesheet' href="refrences/fonts/fonts.css">
     <link rel="stylesheet" href='refrences/css/login-style.css'>
     <script src="refrences/js/login-script.js">
      </script>
@@ -25,7 +26,7 @@ if($data!='reg'){
     <section class="container">
         <section class="hero">
             <section class="forms forms-<?php echo $data; ?>">
-                    <form class="register-form" method="POST" action="handle/register.php" autocomplete=on>
+                    <form class="register-form" method="POST" action="handle/register" autocomplete=on>
                             <h1>Register</h1>
                             <input type=text name='fullname' placeholder="Enter Your Full Name">
                             <input type=email name='emailid' placeholder="Enter Your Email Address">
@@ -43,7 +44,7 @@ if($data!='reg'){
                             <button id="goto-log"> Already registered? Log in </button>
                             
                         </form>
-                        <form class="login-form" method="POST" action="logincheck.php">
+                        <form class="login-form" method="POST" action="logincheck">
                             <h1>Log In</h1>
                             <input type=text name='username1' Placeholder="Username">
                             <input type=password name='password1' Placeholder="Password">
