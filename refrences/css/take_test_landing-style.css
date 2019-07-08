@@ -112,13 +112,12 @@ form input[name=fieldType] + span::after {
   position: absolute;
   content:"";
   height:10px;
-  width:10px;
-  background: white;
-  /* border-bottom:3px solid white; */
-  /* border-right:3px solid white; */
-  border-radius: 100%;
-  top: 4px;
-  left:-15px;
+  width:5px;
+  background: none;
+  border-bottom:3px solid white; 
+  border-right:3px solid white; 
+  top: 2px;
+  left:-18px;
   display: none;
   transform: rotate(45deg);
 }
@@ -128,7 +127,7 @@ form input[name=fieldType] + span::after {
   margin: 10px;
 }
 form input[name=fieldType]:checked + span::after {
-  display: none;
+  display: block;
 }
 form input[name=fieldType]:checked + span::before {
   background: royalblue;
@@ -138,8 +137,8 @@ form div:nth-child(1){
 }
 
 .flipbox{
-   width: 80vw;
-  height: 200px;
+   width: 700px;
+  height: 50vw;
   perspective: 600px;
 }
 .flipbox > div {
@@ -155,9 +154,24 @@ form div:nth-child(1){
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  justify-content: space-between;
+  align-items:center;
 }
 .frontface {
-  background: red;
+  background: royalblue;
+}
+button{
+  width: 200px;
+  height: 30px;
+  display: block;
+  background: #4CAF50;
+  border: none;
+  color: white;
+  font: 20px viga;
+  padding: 20px 10px;
 }
 
 .backface {
@@ -165,4 +179,6 @@ form div:nth-child(1){
   transform: rotateY( 180deg );
 }
 .isflip {
-  /*! transform: translateX(-100%) rotateY(-180deg); */}
+ transform: translateX(-100%) rotateY(-180deg);
+}
+
