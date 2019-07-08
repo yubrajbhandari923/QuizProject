@@ -23,7 +23,7 @@ include 'handle/afterlog.php';
                             <a  href='manage_quiz'> <button class="butt manage-quiz"> Manage questions </button> </a>
                             <span class="helptxt"> Manage questions of your quiz set. </span>
                             <br>
-                            <button class="butt Take-quiz"> Take a quiz test </button>
+                           <a href='take_test'> <button class="butt Take-quiz"> Take a quiz test </button></a>
                             <span class="helptxt"> Take a test and learn new questions. </span>
                         </div>
                         

@@ -21,6 +21,11 @@ RewriteRule ^handle/password_change handle/password_change.php [NC,L]
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^take_test take_test.php [NC,L]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^handle/addquiz handle/addquiz.php [NC,L]
 
 RewriteEngine on
