@@ -15,10 +15,18 @@ if(empty($_POST['password1'])){
 }else{
     $pass=mysqli_real_escape_string($sql_connect,$_POST['password1']);
 }
-$login_q="SELECT * FROM account WHERE username='$user' AND password='$pass'";
-$query_login=mysqli_query($sql_connect,$login_q);
-$rows=mysqli_num_rows($query_login);
-$get_id=mysqli_fetch_assoc($query_login);
+$login_q1="SELECT * FROM account WHERE username='$user' AND password='$pass'";
+$login_q2="SELECT * FROM account WHERE email='$user' AND password='$pass'";
+$query_login1=mysqli_query($sql_connect,$login_q1);
+$query_login2=mysqli_query($sql_connect,$login_q2);
+$rows1=mysqli_num_rows($query_login1);
+$rows2=mysqli_num_rows($query_login2);
+if($rows1===1){
+    $get_id=mysqli_fetch_assoc($query_login1);
+
+}else{
+    $get_id=mysqli_fetch_assoc($query_login2);
+}
 $user_id=$get_id['id'];
 $user_letter=$get_id['name'];
 $user_pic_status=$get_id['pic_status'];
@@ -26,7 +34,7 @@ $cookie_time=time()+60*60*60*24;
 setcookie('userid',$user_id,$cookie_time,'/');
 $_SESSION['id']=$user_id;
 
-if($rows==1){
+if($rows1==1||$rows2==1){
     if($user_pic_status==0){
     setcookie('userpic',strtoupper($user_letter[0]),$cookie_time,'/');
     }else{

@@ -23,6 +23,15 @@ if($data!='reg'){
      </script>
 </head>
 <body>
+<h1>
+    Congarts succesfully registered?
+    Design This
+<?php
+if(isset($_SESSION['register_success'])){
+echo $_SESSION['register_success'];
+}
+?>
+</h1>
     <section class="container">
         <section class="hero">
             <section class="forms forms-<?php echo $data; ?>">
@@ -46,7 +55,7 @@ if($data!='reg'){
                         </form>
                         <form class="login-form" method="POST" action="logincheck">
                             <h1>Log In</h1>
-                            <input type=text name='username1' Placeholder="Username">
+                            <input type=text name='username1' Placeholder="Username || E-mail">
                             <input type=password name='password1' Placeholder="Password">
                             <div class="error">
                             <?php
