@@ -26,6 +26,12 @@
                                 $file_destination="../uploads/profile_pic/".$newfilename;
                                 $file_destination_db="uploads/profile_pic/".$newfilename;
                                 move_uploaded_file($temp_dir,$file_destination);
+                                $select_img_dir_old="SELECT * FROM account WHERE id='$currentid' ";
+                                $select_img_dir_old_query=mysqli_query($sql_connect,$select_img_dir_old);
+                                $fetch_dir=mysqli_fetch_assoc($select_img_dir_old_query);
+                                $old_dir_image=$fetch_dir['pic_dir'];
+                                $old='../'.$old_dir_image;
+                                unlink($old);
                                 $insert_data="UPDATE account SET pic_status=1 , pic_dir='$file_destination_db' where id='$currentid' ";
                                 mysqli_query($sql_connect,$insert_data);
                                 $cookie_time=time()+60*60*60*24;
