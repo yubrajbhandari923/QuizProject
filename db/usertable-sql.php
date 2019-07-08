@@ -21,11 +21,7 @@ $newtable="CREATE TABLE `user_record`.`account`(
         points INT NOT NULL DEFAULT '0'
     )";
     mysqli_query($sql_connect,$table_points);
-
-    $quiz_db='CREATE DATABASE quiz_data';
-    mysqli_query($sql_connect,$quiz_db);
-    mysqli_select_db($sql_connect,'quiz_data');
-    $quiz_table="CREATE TABLE `quiz_data`.`quiz` (
+    $quiz_table="CREATE TABLE `user_record`.`quiz` (
                  `id` INT ,
                  `id_of_quiz` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 `question` TEXT NOT NULL ,
@@ -36,13 +32,13 @@ $newtable="CREATE TABLE `user_record`.`account`(
                      `field` TEXT NOT NULL,
                      `setname` TEXT NOT NULL )";
     mysqli_query($sql_connect,$quiz_table);
-    $set_table='CREATE TABLE `quiz_data`.`sets`(
+    $set_table='CREATE TABLE `user_record`.`sets`(
         id INT,
         setname TEXT NOT NULL,
         field TEXT NOT NULL
     )';
     mysqli_query($sql_connect,$set_table);
-    $create_table_adminquiz="CREATE TABLE `quiz_data`.`all_question_admin` ( 
+    $create_table_adminquiz="CREATE TABLE `user_record`.`all_question_admin` ( 
         `sn` INT NOT NULL AUTO_INCREMENT ,
          `question` TEXT NOT NULL ,
           `answer` TEXT NOT NULL ,
