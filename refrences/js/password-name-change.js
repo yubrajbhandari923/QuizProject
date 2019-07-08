@@ -5,7 +5,7 @@ function namechange(){
     var datahold='name='+name + '&password='+password+'&submit_check='+submit_check;
     $.ajax({
         type:'POST',
-        url:'handle/change_name.php',
+        url:'handle/change_name',
         data:datahold,
         cache:false,
         success:function(html){
@@ -28,7 +28,7 @@ function passchange(){
     var datahold='oldpass='+oldpassword + '&newpass='+newpassword+'&confirmpass='+confirmpassword+'&check_if_submit='+submit_check_pass;
     $.ajax({
         type:'POST',
-        url:'handle/password_change.php',
+        url:'handle/password_change',
         data:datahold,
         cache:false,
         success:function(html){

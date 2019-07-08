@@ -67,5 +67,7 @@ session_start();
     }
     $rank_record="INSERT INTO user_rank(id) VALUES('$user_curr_id')";
     mysqli_query($sql_connect,$rank_record);
-    header('location:../login.php?page=log');
+    $_SESSION['register_success']='Congratulations!You have successfully registered<br>Now login with your details.';
+    header('location:../login');
+    exit();
 ?>

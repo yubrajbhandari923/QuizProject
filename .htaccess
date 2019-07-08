@@ -11,7 +11,22 @@ RewriteRule ^handle/addQuizSet handle/addQuizSet.php [NC,L]
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^handle/addprofilepic handle/addprofilepic.php [NC,L]
+RewriteRule ^handle/change_name handle/change_name.php [NC,L]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^handle/password_change handle/password_change.php [NC,L]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^take_test take_test.php [NC,L]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^handle/addquiz handle/addquiz.php [NC,L]
 
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -67,4 +82,9 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^quizset_manage/([A-Za-z0-9-\s]+)?$ quizset_manage.php?set=$1 [L,QSA,NC]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^handle/remove-quiz-ques/([A-Za-z0-9-\s]+)/([A-Za-z0-9-\s]+)?$ handle/remove-quiz-ques.php?quiz-id=$1&set=$2 [L,QSA,NC]
 
