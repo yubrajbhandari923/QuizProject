@@ -1,11 +1,14 @@
 <?php
 require 'PHPMailerAutoload.php';
 require 'credential.php';
-
 $mail = new PHPMailer;
 
-$mail->SMTPDebug = 4;                              
 
+
+
+
+
+$mail->SMTPDebug = 4;                              
 $mail->isSMTP();                                  
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true;
@@ -99,11 +102,17 @@ $mail->AltBody = 'Congratulations!You have successfully registered!
 verify your account
 Your verification code is ......
 ';
-
 if(!$mail->send()) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
+    exit();
 } else {
     echo 'Message has been sent';
+    exit();
 }
 ?>
+
+
+
+
+

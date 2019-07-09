@@ -1,6 +1,8 @@
 <?php
 session_start();
     include 'sql-connection.php';
+    require_once 'VerifyEmail.class.php';
+    include 'credential.php';
     if(empty($_POST['fullname'])){
         $_SESSION['error']='Please enter your name';
         header('location:../register');
@@ -55,6 +57,41 @@ session_start();
         $_SESSION['error']='Username is already taken';
         header('location:../register');
         exit();
+    }
+    // Initialize library class
+    $mail = new VerifyEmail();
+    // Set the timeout value on stream
+    // $mail->setStreamTimeoutWait(20);
+    // Set debug output mode
+    // $mail->Debug= TRUE; 
+    // $mail->Debugoutput= 'html'; 
+    // Set email address for SMTP request
+    $mail->setEmailFrom(EMAIL); // you can type what email you want
+    // Check if email is valid and exist
+    $result = $mail->check($email);
+    header('Content-Type: application/json');
+    echo json_encode(['code' => $result, 'index' => $index]);
+    switch ($result) {
+        case 0:
+            $_SESSION['error']= 'E-mail is not valid';
+            header('location:../register');
+            exit;
+            break;
+        case 1: 
+        $_SESSION['error']='success';
+        header('location:../register');
+        exit;
+            break;
+        case 2:
+        $_SESSION['error']= 'There was an error!<br>Check your connection';
+        header('location:../register');
+        exit;
+            break;
+        case 3:
+        $_SESSION['error']= 'Please check your internet connection';
+        header('location:../register');
+        exit;
+        break;
     }
     $record="INSERT INTO account(name,username,email,password) VALUES('$name','$username','$email','$password')";
     mysqli_query($sql_connect,$record);
