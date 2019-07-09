@@ -9,6 +9,7 @@
         <link rel=stylesheet href='refrences/css/take_test_landing-style.css'>
         <link rel=stylesheet href='refrences/css/header.css'>
         <script src='refrences/js/ajax.js'></script>
+        <script src="refrences/js/take-test-landing-script.js"></script>
     </head>
     <body>
         <h1>
@@ -31,17 +32,26 @@
         <div>
             <h2> Explore other quizzes</h2>
             <form>
-                <input type="radio" name="fieldType" value="single" checked> Choose single field
-                <input type="radio" name="fieldType" value="multiple"> Choose multiple fields
                 <div>
-                    <div>
-                        <button name="onefield" value="Geography" type="submit">Geography</button>
-                        <button name="onefield" value="Literature" type="submit">Literature</button>
-                        <button name="onefield" value="Science" type="submit">Science</button>
-                        <button name="onefield" value="History" type="submit">History</button>
-                        <button name="onefield" value="Mixed" type="submit">Mixed</button>
+                    <label class=fieldtype-container>
+                        <input type="radio" name="fieldType" onchange="unFlipIt()"  value="single" checked> 
+                      <span> Choose single field </span>
+                    </label>
+                    <label class=fieldtype-container>
+                        <input type="radio" name="fieldType" onchange="flipIt()" value="multiple"> 
+                      <span> Choose multiple fields </span>
+                    </label>
+                </div>
+                <div class=flipbox >
+                    <div id="flip-scene" >
+                    <div class=frontface>
+                        <input name="onefield" value="Geography" type="submit">
+                        <input name="onefield" value="Literature" type="submit">
+                        <input name="onefield" value="Science" type="submit">
+                        <input name="onefield" value="History" type="submit">
+                        <input name="onefield" value="Mixed" type="submit">
                     </div>
-                    <div>
+                    <div class=backface>
                         <input type="checkbox" name="multifield" value="Geography"> Geography
                         <input type="checkbox" name="multifield" value="Literature"> Literature
                         <input type="checkbox" name="multifield" value="Science"> Science
@@ -49,6 +59,7 @@
                         <input type="checkbox" name="multifield" value="Mixed"> Mixed
                         <button class="butt" type=submit> Lets GO!</button>
 
+                    </div>
                     </div>
                 </div>
             </form>
