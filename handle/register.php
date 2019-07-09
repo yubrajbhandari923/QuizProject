@@ -63,27 +63,24 @@ session_start();
     // Set the timeout value on stream
     // $mail->setStreamTimeoutWait(20);
     // Set debug output mode
-    // $mail->Debug= TRUE; 
-    // $mail->Debugoutput= 'html'; 
+    // $mail->Debug= TRUE;
+    // $mail->Debugoutput= 'html';
     // Set email address for SMTP request
     $mail->setEmailFrom(EMAIL); // you can type what email you want
     // Check if email is valid and exist
     $result = $mail->check($email);
     header('Content-Type: application/json');
-    echo json_encode(['code' => $result, 'index' => $index]);
     switch ($result) {
         case 0:
             $_SESSION['error']= 'E-mail is not valid';
             header('location:../register');
             exit;
             break;
-        case 1: 
-        $_SESSION['error']='success';
-        header('location:../register');
-        exit;
+      case 1:
+            include 'mail.php';
             break;
         case 2:
-        $_SESSION['error']= 'There was an error!<br>Check your connection';
+        $_SESSION['error']= 'This is not a valid email address';
         header('location:../register');
         exit;
             break;
@@ -106,5 +103,5 @@ session_start();
     mysqli_query($sql_connect,$rank_record);
     $_SESSION['register_success']='Congratulations!You have successfully registered<br>Now login with your details.';
     header('location:../login');
-    exit();
-?>
+    ?>
+

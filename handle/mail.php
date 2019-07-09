@@ -1,15 +1,9 @@
 <?php
 require 'PHPMailerAutoload.php';
-require 'credential.php';
 $mail = new PHPMailer;
 
-
-
-
-
-
-$mail->SMTPDebug = 4;                              
-$mail->isSMTP();                                  
+$mail->SMTPDebug = 4;
+$mail->isSMTP();
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true;
 $mail->Username = EMAIL;
@@ -18,7 +12,7 @@ $mail->SMTPSecure = 'tls';
 $mail->Port = 587;
 
 $mail->setFrom(EMAIL, 'Quizee');
-$mail->addAddress('anup8eguy@gmail.com');
+$mail->addAddress($_POST['emailid']);
 $mail->addReplyTo(EMAIL);
 // $mail->addCC('cc@example.com');
 // $mail->addBCC('bcc@example.com');
@@ -104,11 +98,8 @@ Your verification code is ......
 ';
 if(!$mail->send()) {
     echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
-    exit();
 } else {
     echo 'Message has been sent';
-    exit();
 }
 ?>
 
