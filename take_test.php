@@ -93,7 +93,8 @@
                    <p><span> Difficulty Level</span> <span> <select name=difficultyLevel> <option value=easy> Easy </option><option value=medium> Medium </option><option value=hard> Hard </option> </select></span></p>   
                    <p><span> No. of questions:</span> <span> <input type=number max=50 min=10 name=noOfQuestion value=30></span></p>   
                    <p><span> Duration for each question:</span> <span> $display_time</span></p>   
-                   <p><span> </span> <span> $display_time</span></p>   
+                    <p>
+                   <span class='butt green-butt'> Proceed </span> <span class='butt red-butt'> Cancel </span></p>
             </div>
         </div>
     </body>
