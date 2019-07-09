@@ -56,10 +56,10 @@
                         <label class=checkbox-container>
                         <input type="checkbox" name="multifield" value="Geography"> 
                         <span>Geography</span>
-                        </label>
+                    </label>
 
                         <label class=checkbox-container>
-                        <input type="checkbox" name="multifield" value="Literature">
+                            <input type="checkbox" name="multifield" value="Literature">
                         <span> Literature</span>
                         </label>
                         
@@ -76,14 +76,25 @@
                         <label class=checkbox-container>
                         <input type="checkbox" name="multifield" value="Mixed">
                         <span> Mixed</span>
-                        </label>
+                    </label>
                         
                         <button class="butt" type=submit> Lets GO!</button>
 
                     </div>
-                    </div>
+                </div>
                 </div>
             </form>
         </div>
+        <div id=cover>
+            <div class=form>
+                   <h1> Take Test from world's Best collection of Quiz</h1>
+
+                   <p><span> Fields:</span> <span> $display_fields.</span></p>   
+                   <p><span> Difficulty Level</span> <span> <select name=difficultyLevel> <option value=easy> Easy </option><option value=medium> Medium </option><option value=hard> Hard </option> </select></span></p>   
+                   <p><span> No. of questions:</span> <span> <input type=number max=50 min=10 name=noOfQuestion value=30></span></p>   
+                   <p><span> Duration for each question:</span> <span> $display_time</span></p>   
+                   <p><span> </span> <span> $display_time</span></p>   
+            </div>
+        </div>
     </body>
-</html>
+    </html>
