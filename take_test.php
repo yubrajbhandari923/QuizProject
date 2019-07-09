@@ -52,11 +52,32 @@
                         <input name="onefield" value="Mixed" type="submit">
                     </div>
                     <div class=backface>
-                        <input type="checkbox" name="multifield" value="Geography"> Geography
-                        <input type="checkbox" name="multifield" value="Literature"> Literature
-                        <input type="checkbox" name="multifield" value="Science"> Science
-                        <input type="checkbox" name="multifield" value="History"> History
-                        <input type="checkbox" name="multifield" value="Mixed"> Mixed
+                        
+                        <label class=checkbox-container>
+                        <input type="checkbox" name="multifield" value="Geography"> 
+                        <span>Geography</span>
+                        </label>
+
+                        <label class=checkbox-container>
+                        <input type="checkbox" name="multifield" value="Literature">
+                        <span> Literature</span>
+                        </label>
+                        
+                        <label class=checkbox-container>
+                        <input type="checkbox" name="multifield" value="Science">
+                        <span> Science</span>
+                        </label>
+                        
+                        <label class=checkbox-container>
+                        <input type="checkbox" name="multifield" value="History">
+                        <span> History</span>
+                        </label>
+                        
+                        <label class=checkbox-container>
+                        <input type="checkbox" name="multifield" value="Mixed">
+                        <span> Mixed</span>
+                        </label>
+                        
                         <button class="butt" type=submit> Lets GO!</button>
 
                     </div>

@@ -137,12 +137,16 @@ form div:nth-child(1){
 }
 
 .flipbox{
-   width: 700px;
-  height: 50vw;
+   width: 98vw;
+  height: 20vw;
+  position:relative;
   perspective: 600px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
 }
 .flipbox > div {
-  width: 100%;
+  width: 80%;
   height: 100%;
   position: relative;
   transition: transform 1s;
@@ -154,14 +158,18 @@ form div:nth-child(1){
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  justify-content: space-between;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items:center;
+  
 }
 .frontface {
-  background: royalblue;
+  background: lightgray;
+}
+.frontface > * {
+  margin-left:20px;
 }
 input[type=submit]{
   width: 220px;
