@@ -22,80 +22,87 @@ $mail->addReplyTo(EMAIL);
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Succesfully registered ';
-$mail->Body    = "    <div style='height: 30%;width: 80%;background: whitesmoke;margin: auto;text-align: center;'>
-<h1>Quizee</h1>
-<h1 style='font-size: 2vw;'>Congratulations! ..... You have successfully registered!</h1>
-<a href='#' class='button red'><span>Verify</span>account</a><br>
-Your verification code is:.....
-</div>
+$mail->Body    ="<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link href='https://fonts.googleapis.com/css?family=Acme|Passion+One|Poppins&display=swap' rel='stylesheet'>
+
 <style>
-.button {
-display: inline-block;
-height: 50px;
-line-height: 50px;
-padding-right: 30px;
-padding-left: 70px;
-position: relative;
-background-color:rgb(41,127,184);
-color:rgb(255,255,255);
-text-decoration: none;
-text-transform: uppercase;
-letter-spacing: 1px;
-margin-bottom: 15px;
+    *{
+        margin:0px;
+    }
+    body{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background: lightgrey;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        width: 50%;
+    }
+    .container header{
+        padding: 20px;
+        background: dodgerblue;
+        color:white;
+    }
+    h1{
+        font: 28px poppins;
+        text-align:center;
+        text-emphasis: weight;
+    }
+    .content{
+        background: whitesmoke;
+        padding: 50px;
+        font: 20px passion;
+    }
+    h2{
+        font: 22px acme;
+        margin: 10px;
+    }
+    p{
+        margin: 5px;
+    }
+    a{
+        text-align:center;
+        margin:0px 40px;
+        text-decoration: none;
+        color:white;
+    }
+    .button{
+        font: 25px poppins;
+        padding:5px;
+        background: dodgerblue;
+    }
 
 
-border-radius: 5px;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-text-shadow:0px 1px 0px rgba(0,0,0,0.5);
--ms-filter:'progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true)';zoom:1;
-filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true);
+</style>
+</head>
+<body>
+<section class=container>
+<header>
+     <h1>The Quiz Project App: Thank you for registering</h1>
+</header>
+<div class=content>
+    <h2> Welcome to the quiz project app.</h2>
+    <p> Thank you for registering. To continue you just need to follow one step more. <br>
+     click on the button below to verify your account.</p>
 
--moz-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
--webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
--ms-filter:'progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true)';
-filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true);
-}
+     <p> Here are your account details.</p>
+     <p style='margin: 20px;'> Name:".$name."<br>
+    UserName:".$username."<br>
+    Email: ".$email."</p>
 
-.button span {
-position: absolute;
-left: 0;
-width: 70px;
-background-color:rgba(0,0,0,0.5);
 
--webkit-border-top-left-radius: 5px;
--webkit-border-bottom-left-radius: 5px;
--moz-border-radius-topleft: 5px;
--moz-border-radius-bottomleft: 5px;
-border-top-left-radius: 5px;
-border-bottom-left-radius: 5px;
-border-right: 1px solid  rgba(0,0,0,0.15);
-}
+     <a href='#'><div class='button'>Verify Account</div></a>
 
-.button:hover span, .button.active span {
-background-color:rgb(0,102,26);
-border-right: 1px solid  rgba(0,0,0,0.3);
-}
+     <p> If you are having any issues with your account please don't hegistate to contact us.
+         <br> <h2> Thankyou ! Keep learning :) </h2>
+     </p>
+</div>
+<p> If you haven't registered in The Quiz project app. Please Ignore this mail. </p>
+</section>
 
-.button:active {
-margin-top: 2px;
-margin-bottom: 13px;
-
--moz-box-shadow:0px 1px 0px rgba(255,255,255,0.5);
--webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.5);
-box-shadow:0px 1px 0px rgba(255,255,255,0.5);
--ms-filter:'progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccffffff,Positive=true)';
-filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccffffff,Positive=true);
-}
-.button.red {
-background: #e74c3c;
-}
-</style>";
-$mail->AltBody = 'Congratulations!You have successfully registered!
-verify your account
-Your verification code is ......
-';
+</body>";
 if(!$mail->send()) {
     echo 'Message could not be sent.';
 } else {
