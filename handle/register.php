@@ -103,5 +103,3 @@ session_start();
     mysqli_query($sql_connect,$rank_record);
     $_SESSION['register_success']='Congratulations!You have successfully registered<br>Now login with your details.';
     header('location:../login');
-    ?>
-
