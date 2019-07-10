@@ -66,8 +66,6 @@ h1{
 }
 .quiz-info-container{
     width: 100vw;
-    display: grid;
-    grid-template: auto / 3fr 1fr;
 }
 .quiz-info-container div:nth-child(1){
     display: grid;
@@ -75,10 +73,12 @@ h1{
 
 }
 .clock-cover{
-    float:left;
-    justify-self:start;
-    width: 200px;
-    height: 200px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    float: right;
 }
 .quiz-info-container span{
     margin: 5px;
@@ -149,3 +149,6 @@ h1{
         width:15vw;
     }
 }
+
+
+

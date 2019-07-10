@@ -33,7 +33,7 @@ body, html{
 }
 form {
     position: absolute;
-    max-width: 400px;
+    width: 400px;
     min-width: 250px;
     display: flex;
     flex-wrap: wrap;
@@ -80,4 +80,16 @@ form button{
 }
 form button:nth-last-child(1){
     background: #4CAF50 ;
+}
+
+@media all and (max-width: 500px){
+    form{
+        width: 100vw;
+    }
+}
+
+@media all and (max-height: 500px){
+    form{
+        height: 100vh;
+    }
 }
