@@ -1,90 +1,26 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width initial-scale=1.0">
-        <title> Guffadi </title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Acme|Passion+One|Poppins&display=swap" rel="stylesheet">
-
-        <style>
-            *{
-                margin:0px;
-            }
-            body{
-                width: 100%;
-                height: 100%;
-                display: flex;
-                background: lightgrey;
-                justify-content: center;
-                align-items: center;
-            }
-            .container{
-                width: 50%;
-            }
-            .container header{
-                padding: 20px;
-                background: dodgerblue;
-                color:white;
-            }
-            h1{
-                font: 28px poppins;
-                text-align:center;
-                text-emphasis: weight;
-            }
-            .content{
-                background: whitesmoke;
-                padding: 50px;
-                font: 20px passion;
-            }
-            h2{
-                font: 22px acme;
-                margin: 10px;
-            }
-            p{
-                margin: 5px;
-            }
-            a{
-                text-align:center;
-                margin:0px 40px;
-                text-decoration: none;
-                color:white;
-            }
-            .button{
-                font: 25px poppins;
-                padding:5px;
-                background: dodgerblue;
-            }
-
-
-        </style>
-    </head>
-    <body>
-        <section class=container>
-        <header>
-             <h1>The Quiz Project App: Thank you for registering</h1>
-        </header>
-        <div class=content>
-            <h2> Welcome to the quiz project app.</h2>
-            <p> Thank you for registering. To continue you just need to follow one step more. <br>
-             click on the button below to verify your account.</p>
-
-             <p> Here are your account details.</p>
-             <p style="margin: 20px;"> Name: $Full_Name<br>
-            UserName: $USer_Name<br>
-            Email: $User_email</p>
-
-
-             <a href="#"><div class="button">Verify My Account</div></a>
-
-             <p> If you are having any issues with your account please don't hegistate to contact us.
-                 <br> <h2> Thankyou ! Keep learning :) </h2>
-             </p>
+        <div style='width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;'>
+                <section style='width: 100%;'>
+                <header style='padding: 20px;background: dodgerblue;color:white;'>
+                     <h1 style='font: 28px poppins;text-align:center;text-emphasis: weight;'>The Quiz Project App: Thank you for registering</h1>
+                </header>
+                <div  style='background: whitesmoke;padding: 50px;font: 20px passion;'>
+                    <h2 style='font: 22px acme;margin: 10px;'> Welcome to the quiz project app.</h2>
+                    <p> Thank you for registering. To continue you just need to follow one step more. <br>
+                     click on the button below to verify your account.</p>
+                
+                     <p style='margin: 5px;'> Here are your account details.</p>
+                     <p style='margin: 20px;'> Name:".$name."<br>
+                    UserName:".$username."<br>
+                    Email: ".$email."</p>
+                
+                
+                     <a href='#' style='text-align:center;margin:0px 40px;text-decoration: none;color:white;display: block;'>
+                     <div style='font: 25px poppins;padding:5px;background: dodgerblue;width: 20vw;margin: auto;'>Verify Account</div></a>
+                
+                     <p style='margin: 5px;'> If you are having any issues with your account please don't hegistate to contact us.
+                         <br> <h2> Thankyou ! Keep learning :) </h2>
+                     </p>
+                     <p> If you haven't registered in The Quiz project app. Please Ignore this mail. </p>
+                </div>
+                </section>
         </div>
-        <p> If you haven't registered in The Quiz project app. Please Ignore this mail. </p>
-        </section>
-
-
-    </body>
-
-</html>
