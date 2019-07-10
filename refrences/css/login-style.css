@@ -65,6 +65,7 @@ form h1{
     font: 30px josefinsans;
 }
 form .error{
+    display: none;
     text-align: left;
     color: tomato;
     font: 15px lora;

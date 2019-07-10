@@ -23,15 +23,16 @@ if($data!='reg'){
      </script>
 </head>
 <body>
-<h1>
-    Congarts succesfully registered?
-    Design This
-<?php
+    <div style='height:50px;width:90%;margin:auto;color:white;text-align:center;position:absolute;'>
+    <h1>
+    <?php
 if(isset($_SESSION['register_success'])){
 echo $_SESSION['register_success'];
 }
 ?>
-</h1>
+    </h1>
+
+</div>
     <section class="container">
         <section class="hero">
             <section class="forms forms-<?php echo $data; ?>">
