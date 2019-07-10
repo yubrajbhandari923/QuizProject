@@ -37,7 +37,7 @@ body{
     right:0;
     bottom: 0;
   }
-  .butt{  
+  .butt{
     max-width: max-content;
     background: #f1c40f;
     border: none;
@@ -108,11 +108,15 @@ body{
 .dp{
   width: 200px;
   height: 200px;
-  background: slateblue;
+  background: rgba(179, 84, 46, 0.849);
   border-radius: 100%;
-  line-height: 100px;
+  line-height: 180px;
   text-align: center;
   overflow:hidden;
+  font-size: 6em;
+  color: white;
+  font-weight: 500;
+  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
 }
 img{
   object-fit: cover;

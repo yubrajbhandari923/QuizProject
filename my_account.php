@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'handle/afterlog.php';
 include 'handle/user_profile.php';
 ?>
@@ -24,38 +24,38 @@ include 'handle/user_profile.php';
         <div class="close-section fa fa-window-close"></div>
         Change Your Password
         <div class="errorMsgForm"> Error </div>
-        
+
         <input type='password' placeholder="Enter your Old password" id='oldpass'>
 
         <input type='password' placeholder="Enter your New password" id='newpass'/>
 
         <input type='password' placeholder="Confirm your New password" id='confirmpass'/>
-        
+
         <button class="butt green-butt" type=submit id='pass_submit'> Done </button>
-        
+
     </form>
     <form class="form" id="formChangeName" autocomplete="off" onsubmit='return namechange()'>
             <div class="close-section fa fa-window-close"></div>
             Change Your Full Name
             <div class="errorMsgForm"> Error </div>
-            
+
             <input type=text placeholder="Enter your New Full Name" id='fullname'>
             <input type=password placeholder="Enter your password" id='password'>
-            
+
             <button class="butt green-butt" type=submit id='submit_namechange'> Done </button>
-            
+
         </form>
         <form class="form" id="bigDP">
                 <div class="close-section fa fa-window-close"></div>
     <img src="uploads/profile_pic/a.jpg">
 </form>
             <div class="data-container">
-                <div class="Display-pic-contain"> 
+                <div class="Display-pic-contain">
                    <div class="dp"> <?php echo $_COOKIE['userpic'];?></div>
                    <h2> Display Picture </h2>
 
                    <form method='POST' action='handle/addprofilepic' enctype='multipart/form-data'>
-                   <input id="changeDP" placeholder="change" type='file' name='profile_pic'/>
+                   <input id="changeDP" placeholder="change" type='file' name='profile_pic' accept='image/*'/>
                    <div class="butt" id="changeDPbutt"> Change </div>
                    <button class="butt" id="uploadDPbutt" name='upload_submit' type='submit'>Upload</button>
                 </form>
@@ -66,7 +66,7 @@ include 'handle/user_profile.php';
                <span><h2>Points earned:</h2> <h3> <?php echo $points;?></h3> </span>
                <span><h2>Global Rank:</h2> <h3><?php echo $global_rank;?></h3> </span>
                <span><h2>Email:</h2> <h3><?php echo $user_email; ?></h3> </span>
-                <h2><A href="#" onclick="confirmPsd()">Change Password</A></h2> 
+                <h2><A href="#" onclick="confirmPsd()">Change Password</A></h2>
             </div>
     </body>
 </html>

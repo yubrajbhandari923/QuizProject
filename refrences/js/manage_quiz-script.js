@@ -5,17 +5,20 @@ document.addEventListener('DOMContentLoaded', function(){
         document.querySelector("#cover").style.display = "none";
         this.parentElement.style.display = "none";
         })
+        closeButt[i].addEventListener("keypress", function(){
+        identifyEscKeyPressedEvent();
+        })
     }
 
     document.querySelector(".addQuizSetButt").onclick= function(){
         window.scrollTo(0,0)
         document.querySelector("#cover").style.display = "block";
         document.querySelector("#formAddQS").style.display = "block";
-        
+
     }
 
     document.querySelector(".removeThisQSbutt").onclick= function(){
-        
+
     }
     document.querySelector(".addQbutt").onclick= function(){
         document.querySelector("#cover").style.display = "block";
@@ -23,3 +26,15 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 });
 
+function identifyEscKeyPressedEvent(keyEvent)
+{
+    var pressedKeyValue = keyEvent.keyCode;
+    if(pressedKeyValue == 27)
+    {
+        alert("Esc Key is pressed");
+    }
+    else
+    {
+        alert("You have other Key is pressed");
+    }
+}
