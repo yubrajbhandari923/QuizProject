@@ -23,9 +23,20 @@
             echo 'This set name is already taken';
             exit();
         }
+        if(validate_string_spaces_only($set_name)===false){
+            echo 'Only letters and numbers are allowed in set name';
+            exit();
+        }
         $insert_set="INSERT INTO sets(id,setname,field)VALUES('$currentuser','$set_name','$set_field')";
         mysqli_query($sql_connect,$insert_set);
         echo 'Success';
         exit();
+    }
+    function validate_string_spaces_only($string) {
+        if(preg_match('/^[a-zA-Z0-9 .]+$/', $string)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 ?>
