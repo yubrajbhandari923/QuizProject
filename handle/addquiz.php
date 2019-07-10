@@ -1,6 +1,6 @@
 <?php
-include 'connect-quiz-ques.php';
 session_start();
+include 'connect-quiz-ques.php';
 if(isset($_POST['submit_check'])){
 if(isset($_POST['question']) && !empty($_POST['question'])){
     $question=mysqli_real_escape_string($sql_connect,$_POST['question']);
@@ -41,7 +41,7 @@ if(isset($_SESSION['current_setname'])&&!empty($_SESSION['current_setname'])){
 if(isset($_SESSION['current_field'])&&!empty($_SESSION['current_field'])){
     $current_field=$_SESSION['current_field'];
 }else{
-    echo 'Sorry! There was an error';
+    echo 'Sorry! There was an error1';
     exit();
 }
    if(strnatcasecmp($opt1,$opt2)==0 ||strnatcasecmp($opt1,$opt3)==0 || strnatcasecmp($opt2,$opt3)==0){
@@ -59,7 +59,7 @@ if(isset($_SESSION['current_field'])&&!empty($_SESSION['current_field'])){
     $insert_data_admin="INSERT INTO all_question_admin(question,answer,opt1,opt2,opt3,field)VALUES('$question','$answer','$opt1','$opt2','$opt3','$current_field')";
     mysqli_query($sql_connect,$insert_data);
     mysqli_query($sql_connect,$insert_data_admin);
-    echo 'Success';
+    echo '1';
     session_destroy();
     exit();
 }else{

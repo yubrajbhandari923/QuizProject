@@ -17,6 +17,7 @@ include 'handle/afterlog.php';
         <script src='refrences/js/jquery.js'>    </script>
         <script src="./refrences/js/manage_quiz-script.js"></script>
         <script src='refrences/js/add-new-quiz-set.js'></script>
+        <script src='refrences/js/add-question.js'></script>
     <body onload="test()">
         <?php include 'header.php';    ?>
         <div id="cover"></div>
@@ -47,18 +48,6 @@ include 'handle/afterlog.php';
                  </span>
 </form>
 
-<!-- After user clicks on Add question-->
-<form id="formAddQ" autocomplete='off' onsubmit='return addquizquestion()'> 
-            <div class="close-section fa fa-window-close"></div>
-            Add new question<br>
-            <input type=text placeholder="Add question" id='question'>
-            <input type=text placeholder="Enter answer" id='answer'>
-            <input type=text  placeholder="Enter Option1" id='opt1'>
-            <input type=text  placeholder="Enter Option2" id='opt2'>
-            <input type=text placeholder="Enter Option3" id='opt3'>
-            <button type=submit id='submit_question' class="addQsubmitButt">Add new</button>
-            <span class='errorMsgForm'> </span>
-        </form>
     </body>
 
 </html>

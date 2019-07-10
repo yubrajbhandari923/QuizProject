@@ -8,11 +8,11 @@ function addquizquestion(){
     var datahold='question='+question + '&answer='+answer + '&opt1='+opt1 + '&opt2='+opt2 + '&opt3='+opt3 + '&submit_check='+submit_check;
     $.ajax({
         type:'POST',
-        url:'../handle/addquiz',
+        url:'/quiz/handle/addquiz',
         data:datahold,
         cache:false,
         success:function(html){
-            if(html=='Success'){
+            if(html=='1'){ //1 means Success
                 $('.errorMsgForm').hide();
                 location.reload();
             }else{
