@@ -74,6 +74,12 @@ h1{
     grid-template: auto / 1fr 3fr;
 
 }
+.clock-cover{
+    float:left;
+    justify-self:start;
+    width: 200px;
+    height: 200px;
+}
 .quiz-info-container span{
     margin: 5px;
     font: 25px josefinsans;
