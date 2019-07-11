@@ -67,4 +67,3 @@ echo $_SESSION['register_success'];
 </body>
 </html>
 <?php session_destroy();?>
-

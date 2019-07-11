@@ -3,7 +3,7 @@ header{
     background: linear-gradient(to right, #36d1dc, #5b86e5);  
     display: flex;
     flex-wrap: wrap;
-    padding: 7vh 0;
+    padding: 2vh 0 5vh 0;
     justify-content: center;
     position:relative;
     overflow:hidden;
@@ -14,7 +14,7 @@ header:after{
     width: 200%;
     height: 100px;
     background: white;
-    top:90%;
+    top:80%;
     left: -20vw;
     transform: rotateZ(1deg);
 }
@@ -24,7 +24,7 @@ header:after{
     height:50px;
     width:50px;
     border-radius:100%;
-    margin: -10px 30px 20px auto;
+    margin: 0px 30px 0px auto;
     cursor: pointer;
     background: rgba(179, 84, 46, 0.849);
     position: relative;
@@ -59,7 +59,7 @@ header:after{
     width: 50px;
     border-radius: 100%;
 }
-
+/* 
 .head-text{
     flex-basis: 100%;
     width: max-content;
@@ -78,7 +78,7 @@ header:after{
     left:50vw;
     top:110%;
     margin-left: -15vw;
-}
+} */
 .page-links > ul{
     display: flex;
     width: 100vw;
@@ -86,6 +86,8 @@ header:after{
     font: 25px josefinsans;
     list-style: none;
     justify-content: space-around;
+    padding: 0px;
+    flex-wrap: wrap;
 }
 .page-links >ul>li>a{
     text-decoration: none;
@@ -99,4 +101,65 @@ header:after{
     border-radius: 100%;
     height: 50px;
     width: 50px;
+}
+.hide{
+    display:none;
+}
+#search-icon{
+    flex-basis: 10%;
+}
+
+/* --------------------------------------------- */
+.search-contain{
+    flex-basis: 90%;
+    margin: 20px;
+    position: relative;
+}
+.search-contain form{
+    margin: 10px 20px;
+    position: relative;
+    width:90%;
+}
+.search-contain form input{
+    width: 100%;
+    height:30px;
+    font: 20px rubik;
+    padding: 10px;
+    border:none;
+    background: #e4e4e4;
+}
+.search-contain form button{
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: grey;
+    position: absolute;
+    top:0;
+    right:0; 
+    line-height: 50px;
+    cursor: pointer;
+}
+.search-contain form button:active{
+    color:white;
+}
+.search-result {
+    margin: 0px 20px;
+}
+.a-result{
+    display: flex;
+    flex-wrap: wrap;
+    background: whitesmoke;
+    padding: 5px;
+    align-items: center;
+    width: 88vw;
+}
+.a-result > *{
+    margin: 5px 10px;
+}
+.view-profile-opponent, .challenge-opponent{
+    font-size: 15px;
+    min-width: max-content;
+}
+.challenge-opponent{
+    margin-left:auto;
 }
