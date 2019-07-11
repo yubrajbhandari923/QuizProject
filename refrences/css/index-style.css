@@ -40,12 +40,17 @@ body,html{
     transition: 0.5s ease-in-out;
 }
 
-@media  all and (max-width: 600px){
+@media  all and (max-width: 800px){
     .texts{
         margin-left: 20px;
     }
     .btn-container{
         width: 80vw;
+    }
+}
+@media all and (max-width: 350px){
+    .headtext{
+        font-size: 40px;
     }
 }
 

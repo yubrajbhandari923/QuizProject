@@ -47,7 +47,9 @@ include 'handle/user_profile.php';
         </form>
         <form class="form" id="bigDP">
                 <div class="close-section fa fa-window-close"></div>
-    <img src="uploads/profile_pic/a.jpg">
+    <img src="">
+    <button class="butt blue-butt" name='upload_submit' type='submit'>Upload</button>
+    <button class="butt red-butt"  name='upload_submit' type='submit'>Cancel</button>
 </form>
             <div class="data-container">
                 <div class="Display-pic-contain">
@@ -57,7 +59,6 @@ include 'handle/user_profile.php';
                    <form method='POST' action='handle/addprofilepic' enctype='multipart/form-data'>
                    <input id="changeDP" placeholder="change" type='file' name='profile_pic' accept='image/*'/>
                    <div class="butt" id="changeDPbutt"> Change </div>
-                   <button class="butt" id="uploadDPbutt" name='upload_submit' type='submit'>Upload</button>
                 </form>
 
                 </div>

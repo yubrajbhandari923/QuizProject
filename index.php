@@ -25,8 +25,8 @@
             <section class="container">
                     <section class=hero> 
                         <div class="texts">
-                            <h1 class="headtext">Guffadi : ChatApp</h1>
-                            <p class="paratext"> Chat with anyone. Fast, Free and Private</p>
+                            <h1 class="headtext">OmniQuizzer : The Quiz App</h1>
+                            <p class="paratext"> Learn, Take test and challenge friends to broaden your GK</p>
                         </div>
                         <div class="btn-container">
                             <button class="reg-btn">Create an Account</button>
