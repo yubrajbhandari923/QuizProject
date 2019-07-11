@@ -23,7 +23,7 @@ if($data!='reg'){
      </script>
 </head>
 <body>
-    <span style='width:100%;margin:auto;color:white;text-align:center;position:absolute;top:0;font:20px josefinsans; background: lightskyblue; border: 1px solid skyblue;'>
+    <span style='width:100%;margin:auto;color:white;text-align:center;position:absolute;top:0;font:20px josefinsans; background: lightskyblue; border: 1px solid skyblue;z-index:10'>
        <?php
 if(isset($_SESSION['register_success'])){
 echo $_SESSION['register_success'];
