@@ -61,6 +61,11 @@ RewriteRule ^handle/logout handle/logout.php [L]
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^handle/temp-profile handle/temp-profile.php [L]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^handle/addprofilepic handle/addprofilepic.php [NC,L]
 
 RewriteEngine on
@@ -87,4 +92,9 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^handle/remove-quiz-ques/([A-Za-z0-9-\s]+)/([A-Za-z0-9-\s]+)?$ handle/remove-quiz-ques.php?quiz-id=$1&set=$2 [L,QSA,NC]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^handle/getquestions/([A-Za-z0-9-\s]+)/([A-Za-z0-9-\s]+)/([A-Za-z0-9-\s]+)?$ handle/getquestions.php?field=$1&no=$2&level=$3 [L,QSA,NC]
 

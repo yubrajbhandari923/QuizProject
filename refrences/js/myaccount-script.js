@@ -35,7 +35,7 @@ function displaypic(){
     var form_data = new FormData();
     form_data.append('file', file_data);
     $.ajax({
-        url: 'handle/temp-profile.php',
+        url: 'handle/temp-profile',
         dataType: 'text',
         cache: false,
         contentType: false,
@@ -50,3 +50,4 @@ function displaypic(){
      })
      return false;
     }
+    //fiek no of questions level
