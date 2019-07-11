@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
         closeButt[i].addEventListener("click", function(){
         document.querySelector("#cover").style.display = "none";
         this.parentElement.style.display = "none";
-        })       
+        })
     }
 
     document.querySelector(".addQuizSetButt").onclick= function(){
