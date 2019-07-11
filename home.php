@@ -11,7 +11,6 @@ include 'handle/afterlog.php';
         <link rel=stylesheet href="refrences/fonts/fonts.css ">
         <link rel=stylesheet href='refrences/css/user_home-style.css'>
         <link rel=stylesheet href='refrences/css/header.css'>
-        <script src='refrences/js/ajax.js'></script>
     </head>
     <body>
     <?php 

@@ -20,18 +20,16 @@ include 'handle/session-cookie_check.php';
                     <form id=search-form>
                         <i  id=search-ham class=" bar fa fa-bars"></i>
                         <input name=player-search type=text placeholder="Search a person to challenge here." id='search-player' onkeyup='getname(this.value)'>
-                        <button type=submit>
+                         <button type=submit>
                             <span class="fa fa-send"></span>
                         </button>
                     </form>
+                    <div class="search-result"> </div>
                 </div>
                 <!-- <div class="head-text">
                     Hey! <?php echo $name_user; ?>. Long Heading Text Here.
                 </div> -->
             </header>
             <script src='refrences/js/open-close.js'></script> 
-                                                    <!-- <div class="search-contain">
-                                                        <form>
-                                                    <div class="search-result"> </div>
-                                                    </form> 
-                                                    </div> -->
+            <script src='refrences/js/ajax.js'></script>
+       
