@@ -3,18 +3,18 @@ header{
     background: linear-gradient(to right, #36d1dc, #5b86e5);  
     display: flex;
     flex-wrap: wrap;
-    padding: 2vh 0 5vh 0;
+    padding: 2vh 0 8vh 0;
     justify-content: center;
     position:relative;
-    overflow:hidden;
+    overflow:hien;
 }
 header:after{
     content:"";
     position: absolute;
     width: 200%;
-    height: 100px;
+    height: 50px;
     background: white;
-    top:80%;
+    top:85%;
     left: -20vw;
     transform: rotateZ(1deg);
 }
@@ -59,26 +59,10 @@ header:after{
     width: 50px;
     border-radius: 100%;
 }
-/* 
-.head-text{
-    flex-basis: 100%;
-    width: max-content;
-    text-align: center;
-    font: 35px viga;
-    font-weight: bold;
-    color: white;
-    position:relative;
+
+.page-links{
+    position: relative;
 }
-.head-text::after{
-    content: "";
-    position: absolute;
-    height: 0.5px;
-    width: 30vw;
-    background: white;
-    left:50vw;
-    top:110%;
-    margin-left: -15vw;
-} */
 .page-links > ul{
     display: flex;
     width: 100vw;
@@ -108,42 +92,40 @@ header:after{
 #search-icon{
     flex-basis: 10%;
 }
-
 /* --------------------------------------------- */
-.search-contain{
-    flex-basis: 90%;
-    margin: 20px;
-    position: relative;
+header .page-links form {
+    width: 0vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:0px;
+    overflow: hidden;
 }
-.search-contain form{
-    margin: 10px 20px;
-    position: relative;
-    width:90%;
-}
-.search-contain form input{
-    width: 100%;
+header input{
+    width: 80vw;
     height:30px;
     font: 20px rubik;
     padding: 10px;
     border:none;
     background: #e4e4e4;
 }
-.search-contain form button{
+header form button,header .bar{
     font-size: 30px;
     background: transparent;
     border: none;
-    color: grey;
-    position: absolute;
-    top:0;
-    right:0; 
+    color: black; 
     line-height: 50px;
     cursor: pointer;
+    margin: 0 10px ;
 }
-.search-contain form button:active{
-    color:white;
-}
-.search-result {
-    margin: 0px 20px;
+.search-result{
+    position: absolute;
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    z-index:10;
+    flex-wrap:wrap;
+    top:50px;
 }
 .a-result{
     display: flex;
@@ -151,7 +133,8 @@ header:after{
     background: whitesmoke;
     padding: 5px;
     align-items: center;
-    width: 88vw;
+    width: calc(80vw + 10px);
+    margin-left: -19px;
 }
 .a-result > *{
     margin: 5px 10px;
@@ -162,4 +145,25 @@ header:after{
 }
 .challenge-opponent{
     margin-left:auto;
+}
+@keyframes animate{
+    0%{
+        width: 0vw;
+    }
+    100%{
+        width: 100vw;
+    }
+}
+
+/* --------------------------------------------- */
+@media all and (max-width: 400px){
+    header input {
+        font-size: 16px;    
+        padding:8px;
+    }
+    header form button,header .bar{
+        font-size: 18px;
+        margin:3px 0;
+
+    }
 }

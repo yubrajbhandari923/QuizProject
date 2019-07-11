@@ -101,59 +101,7 @@ body,html{
     width: 40px;
     border-radius: 100%;
 }
-.search-contain{
-    flex-basis: 100%;
-    margin: 20px;
-    position: relative;
-}
-.search-contain form{
-    margin: 10px 20px;
-    position: relative;
-    width:90%;
-}
-.search-contain form input{
-    width: 100%;
-    height:30px;
-    font: 20px rubik;
-    padding: 10px;
-    border:none;
-    background: #e4e4e4;
-}
-.search-contain form button{
-    font-size: 30px;
-    background: transparent;
-    border: none;
-    color: grey;
-    position: absolute;
-    top:0;
-    right:0; 
-    line-height: 50px;
-    cursor: pointer;
-}
-.search-contain form button:active{
-    color:white;
-}
-.search-result {
-    margin: 0px 20px;
-}
-.a-result{
-    display: flex;
-    flex-wrap: wrap;
-    background: whitesmoke;
-    padding: 5px;
-    align-items: center;
-    width: 88vw;
-}
-.a-result > *{
-    margin: 5px 10px;
-}
-.view-profile-opponent, .challenge-opponent{
-    font-size: 15px;
-    min-width: max-content;
-}
-.challenge-opponent{
-    margin-left:auto;
-}
+
 
 
 
