@@ -10,7 +10,7 @@ include 'sql-connection.php';
     $data_store[]='';
     for($i=1;$i<=$no_of_ques;$i++){
         check:
-        $randa= mt_rand(1,$num_rows);
+        $randa= rand(1,$num_rows);
         if(in_array($randa,$stock)){
             goto check ;
         }
