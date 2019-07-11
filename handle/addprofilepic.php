@@ -7,7 +7,7 @@
         $fileerror=$_FILES['profile_pic']['error'];
         $filetype=$_FILES['profile_pic']['type'];
         $filesize=$_FILES['profile_pic']['size'];
-        
+
         //Now getting file name and extension
         $file_ext=explode('.',$filename);
         $actual_file_ext=end($file_ext);
@@ -16,7 +16,7 @@
 
         if($filename==""){
             $_SESSION['upload']="Please select a file";
-            header('location:../my_account');
+            // header('location:../my_account');
             exit();
         }else{
             if($fileerror===0){
@@ -37,26 +37,26 @@
                                 $cookie_time=time()+60*60*60*24;
                                 $profile_pic="<img src='".$file_destination_db."'>";
                                 setcookie('userpic',$profile_pic,$cookie_time,'/');
-                                header('location:../my_account');
+                                // header('location:../my_account');
                                 exit();
                             }else{
                                 $_SESSION['upload']="File is too big";
-                                header('location:../my_account');
+                                // header('location:../my_account');
                                 exit();
                             }
                     }else{
                         $_SESSION['upload']="File type not allowed";
-                        header('location:../my_account');
+                        // header('location:../my_account');
                         exit();
                     }
             }else{
                 $_SESSION['upload']="There was an error";
-                header('location:../my_account');
+                // header('location:../my_account');
                 exit();
             }
         }
     }else{
-        header('location:../my_account');
+        // header('location:../my_account');
         exit();
     }
 ?>

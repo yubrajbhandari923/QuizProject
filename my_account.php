@@ -47,17 +47,18 @@ include 'handle/user_profile.php';
         </form>
         <form class="form" id="bigDP">
                 <div class="close-section fa fa-window-close"></div>
-    <img src="">
-    <button class="butt blue-butt" name='upload_submit' type='submit'>Upload</button>
-    <button class="butt red-butt"  name='upload_submit' type='submit'>Cancel</button>
+        <img>
+    <form method='POST' action='handle/addprofilepic' enctype='multipart/form-data'>
+                   <input id="changeDP" placeholder="change" type='file' name='profile_pic' accept='image/*'>
+                   <button class="butt blue-butt" name='upload_submit' type='submit'>Upload</button>
+                    <button class="butt red-butt">Cancel</button></form>
 </form>
             <div class="data-container">
                 <div class="Display-pic-contain">
                    <div class="dp"> <?php echo $_COOKIE['userpic'];?></div>
                    <h2> Display Picture </h2>
 
-                   <form method='POST' action='handle/addprofilepic' enctype='multipart/form-data'>
-                   <input id="changeDP" placeholder="change" type='file' name='profile_pic' accept='image/*'/>
+                   <form >
                    <div class="butt" id="changeDPbutt"> Change </div>
                 </form>
 
@@ -67,7 +68,7 @@ include 'handle/user_profile.php';
                <span><h2>Points earned:</h2> <h3> <?php echo $points;?></h3> </span>
                <span><h2>Global Rank:</h2> <h3><?php echo $global_rank;?></h3> </span>
                <span><h2>Email:</h2> <h3><?php echo $user_email; ?></h3> </span>
-                <h2><A href="#" onclick="confirmPsd()">Change Password</A></h2>
+                <h2><a href="#" onclick="confirmPsd()">Change Password</a></h2>
             </div>
     </body>
 </html>

@@ -11,14 +11,13 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     document.querySelector("#changeDP").onchange = function (){
         document.querySelector("#cover").style.display = "block";
-        console.log(document.querySelector("#changeDP").value);
-        document.querySelector("#bigDP img").setAttribute("src", document.querySelector("#changeDP").value); 
         document.querySelector("#bigDP").style.display = "block";
+        displaypic();
     }
 
     document.querySelector(".dp img").onclick = function() {
         document.querySelector("#cover").style.display = "block";
-        document.querySelector("#bigDP img").setAttribute("src", document.querySelector(".dp img").getAttribute("src")); 
+        document.querySelector("#bigDP img").setAttribute("src", document.querySelector(".dp img").getAttribute("src"));
         document.querySelector("#bigDP").style.display = "block";
     }
 })
@@ -28,5 +27,26 @@ function confirmPsd(){
 }
 function changeName(){
     document.querySelector("#cover").style.display = "block";
-    document.querySelector("#formChangeName").style.display = "block";  
+    document.querySelector("#formChangeName").style.display = "block";
 }
+// ****************************
+function displaypic(){
+    var file_data = $('#changeDP').prop('files')[0];
+    var form_data = new FormData();
+    form_data.append('file', file_data);
+    $.ajax({
+        url: 'handle/temp-profile.php',
+        dataType: 'text',
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: form_data,
+        type: 'post',
+        success: function(html){
+            if(html){//Success
+                document.querySelector("#bigDP img").setAttribute("src",html);
+            }
+        }
+     })
+     return false;
+    }
