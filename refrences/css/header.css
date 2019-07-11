@@ -3,7 +3,7 @@ header{
     background: linear-gradient(to right, #36d1dc, #5b86e5);  
     display: flex;
     flex-wrap: wrap;
-    padding: 2vh 0 5vh 0;
+    padding: 2vh 0 8vh 0;
     justify-content: center;
     position:relative;
     overflow:hidden;
@@ -79,6 +79,9 @@ header:after{
     top:110%;
     margin-left: -15vw;
 } */
+.page-links{
+    position: relative;
+}
 .page-links > ul{
     display: flex;
     width: 100vw;
@@ -108,36 +111,55 @@ header:after{
 #search-icon{
     flex-basis: 10%;
 }
-
 /* --------------------------------------------- */
-.search-contain{
-    flex-basis: 90%;
-    margin: 20px;
-    position: relative;
+header .page-links form {
+    width: 0vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:0px;
+    overflow: hidden;
 }
-.search-contain form{
-    margin: 10px 20px;
-    position: relative;
-    width:90%;
-}
-.search-contain form input{
-    width: 100%;
+header input{
+    width: 80vw;
     height:30px;
     font: 20px rubik;
     padding: 10px;
     border:none;
     background: #e4e4e4;
 }
-.search-contain form button{
+header form button,header .bar{
     font-size: 30px;
     background: transparent;
     border: none;
-    color: grey;
-    position: absolute;
-    top:0;
-    right:0; 
+    color: black; 
     line-height: 50px;
     cursor: pointer;
+    margin: 0 10px ;
+}
+
+@keyframes animate{
+    0%{
+        width: 0vw;
+    }
+    100%{
+        width: 100vw;
+    }
+}
+
+/* --------------------------------------------- */
+/* .search-contain{
+    margin: 20px;
+    position: absolute;
+    top:-110%;
+    width: 100%;
+    left:0px;
+    display:flex;
+}
+.search-contain form{
+    margin: 10px 20px;
+    position: relative;
+    flex-basis:90%;
 }
 .search-contain form button:active{
     color:white;
@@ -162,4 +184,4 @@ header:after{
 }
 .challenge-opponent{
     margin-left:auto;
-}
+} */

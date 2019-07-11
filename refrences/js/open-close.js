@@ -13,11 +13,13 @@ document.addEventListener("DOMContentLoaded",function(){
     }
 
     document.getElementById("search-icon").onclick = function(){
-        var a = document.querySelectorAll(".page-links li")
-        for(i=0;i<a.length;i++){
-            a[i].classList.add("hide");
-        }
-        document.querySelector(".page-links > ul ").lastChild.style.display= "block";
+        document.getElementById("search-form").style.animation = "animate 2s forwards 1";
+        document.querySelector(".page-links ul").style.opacity = "0";
+    }
+    document.getElementById("search-ham").onclick = function(){
+        document.getElementById("search-form").style.animation = "animate 2s backwards 1";
+        document.querySelector(".page-links ul").style.opacity = "1";
+
     }
 
 })
