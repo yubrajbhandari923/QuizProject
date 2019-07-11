@@ -96,5 +96,15 @@ RewriteRule ^handle/remove-quiz-ques/([A-Za-z0-9-\s]+)/([A-Za-z0-9-\s]+)?$ handl
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^handle/getquestions/([A-Za-z0-9-\s]+)/([A-Za-z0-9-\s]+)/([A-Za-z0-9-\s]+)?$ handle/getquestions.php?field=$1&no=$2&level=$3 [L,QSA,NC]
+RewriteRule ^handle/getquestions handle/getquestions.php [L,QSA,NC]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^handle/taketest handle/taketest.php [L,QSA,NC]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^taketour taketour.php [L,QSA,NC]
 

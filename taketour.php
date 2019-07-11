@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,14 +8,14 @@
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <title> Guffadi </title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel=stylesheet href="refrences/fonts/fonts.css ">
-        <link rel=stylesheet href='refrences/css/take_test_main-style.css'>
-        <link rel=stylesheet href='refrences/css/header.css'>
-        <script src='refrences/js/ajax.js'></script>
-        <script src="refrences/js/take-test-main-script.js"></script>
+        <link rel=stylesheet href="/quiz/refrences/fonts/fonts.css ">
+        <link rel=stylesheet href='/quiz/refrences/css/take_test_main-style.css'>
+        <link rel=stylesheet href='/quiz/refrences/css/header.css'>
+        <script src='/quiz/refrences/js/ajax.js'></script>
+        <script src="/quiz/refrences/js/take-test-main-script.js"></script>
     </head>
     <body>
-        <div class=cover> 
+        <div class=cover>
             <div id=readyText>
                 <span> Ready</span>
             </div>
@@ -27,7 +30,7 @@
                     </div>
                     <div class="clock-cover">
                             <svg id="wrap" viewbox="0 0 300 300">
-  
+
                                     <!-- background -->
                                     <svg>
                                       <circle cx="150" cy="150" r="130" style="stroke: lightblue; stroke-width:18; fill:transparent"/>
@@ -36,24 +39,24 @@
                                         <animate attributeName="stroke-dashoffset" dur="6s" to="-820" repeatCount="indefinite"/>
                                       </path>
                                     </svg>
-                                    
+
                                     <!-- image -->
                                     <svg>
                                       <path id="hourglass" d="M150,150 C60,85 240,85 150,150 C60,215 240,215 150,150 Z" style="stroke: white; stroke-width:5; fill:white;" />
-                                      
+
                                       <path id="frame" d="M100,97 L200, 97 M100,203 L200,203 M110,97 L110,142 M110,158 L110,200 M190,97 L190,142 M190,158 L190,200 M110,150 L110,150 M190,150 L190,150" style="stroke:lightblue; stroke-width:6; stroke-linecap:round" />
-                                      
+
                                       <animateTransform xlink:href="#frame" attributeName="transform" type="rotate" begin="0s" dur="3s" values="0 150 150; 0 150 150; 180 150 150" keyTimes="0; 0.8; 1" repeatCount="indefinite" />
                                       <animateTransform xlink:href="#hourglass" attributeName="transform" type="rotate" begin="0s" dur="3s" values="0 150 150; 0 150 150; 180 150 150" keyTimes="0; 0.8; 1" repeatCount="indefinite" />
                                     </svg>
-                                    
+
                                     <!-- sand -->
                                     <svg>
                                       <!-- upper part -->
                                       <polygon id="upper" points="120,125 180,125 150,147" style="fill:#2c3e50;">
                                         <animate attributeName="points" dur="3s" keyTimes="0; 0.8; 1" values="120,125 180,125 150,147; 150,150 150,150 150,150; 150,150 150,150 150,150" repeatCount="indefinite"/>
                                       </polygon>
-                                      
+
                                       <!-- falling sand -->
                                       <path id="line" stroke-linecap="round" stroke-dasharray="1,4" stroke-dashoffset="200.00" stroke="#2c3e50" stroke-width="2" d="M150,150 L150,198">
                                         <!-- running sand -->
@@ -63,7 +66,7 @@
                                         <!-- last drop -->
                                         <animate attributeName="stroke" dur="3s" keyTimes="0; 0.65; 0.8; 1" values="#2c3e50;#2c3e50;transparent;transparent" to="transparent" repeatCount="indefinite"/>
                                       </path>
-                                      
+
                                       <!-- lower part -->
                                       <g id="lower">
                                         <path d="M150,180 L180,190 A28,10 0 1,1 120,190 L150,180 Z" style="stroke: transparent; stroke-width:5; fill:#2c3e50;">
@@ -76,7 +79,7 @@
                                                       keyTimes="0; 0.8; 1"
                                                       repeatCount="indefinite"/>
                                       </g>
-                                      
+
                                       <!-- lower overlay - hourglass -->
                                       <path d="M150,150 C60,85 240,85 150,150 C60,215 240,215 150,150 Z" style="stroke: white; stroke-width:5; fill:transparent;">
                                         <animateTransform attributeName="transform"
@@ -86,7 +89,7 @@
                                                       keyTimes="0; 0.8; 1"
                                                       repeatCount="indefinite"/>
                                       </path>
-                                      
+
                                       <!-- lower overlay - frame -->
                                       <path id="frame" d="M100,97 L200, 97 M100,203 L200,203" style="stroke:lightblue; stroke-width:6; stroke-linecap:round">
                                         <animateTransform attributeName="transform"
@@ -97,11 +100,11 @@
                                                       repeatCount="indefinite"/>
                                       </path>
                                     </svg>
-                                    
+
                                   </svg>
                     </div>
                 </div>
-                                
+
                 <div class=main-quiz-container>
                     <div class="question-container"> the Long question goes here hdhsd dkjhfh dhbshb hdfhb </div>
                     <div class='options-container'>
@@ -114,4 +117,5 @@
             </section>
         </section>
     </body>
+    <script>var data=<?php if(isset($_SESSION['data'])){echo $_SESSION['data'];}?></script>
 </html>

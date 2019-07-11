@@ -1,8 +1,9 @@
 <?php
 include 'sql-connection.php';
-    $field=$_GET['field'];
-    $no_of_ques=$_GET['no'];
-    $level=$_GET['level'];
+session_start();
+    $field=$_POST['field'];
+    $no_of_ques=$_POST['no'];
+    $level=$_POST['level'];
     $select_ques="SELECT * FROM all_question_admin ";
     $select_ques_query=mysqli_query($sql_connect,$select_ques);
     $num_rows=mysqli_num_rows($select_ques_query);
@@ -10,7 +11,7 @@ include 'sql-connection.php';
     $data_store[]='';
     for($i=1;$i<=$no_of_ques;$i++){
         check:
-        $randa= rand(1,$num_rows);
+        $randa=mt_rand(1,$num_rows);
         if(in_array($randa,$stock)){
             goto check ;
         }
@@ -22,5 +23,7 @@ include 'sql-connection.php';
         array_push($data_store,$temp_hold);
     }
     $jsoncode=json_encode($data_store);
-    echo $jsoncode;
+    $_SESSION['data']=$jsoncode;
+    header('location:../taketour');
+    exit();
 ?>

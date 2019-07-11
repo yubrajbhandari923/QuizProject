@@ -28,17 +28,17 @@
                     <span class="a-challenge"> <span>$user_fullname has challenged you</span> <div class="butt blue-butt"> Take This</div></span>
                 </li>
             </ul>
-        </div> 
+        </div>
         <div>
             <h2> Explore other quizzes</h2>
             <form>
                 <div>
                     <label class=fieldtype-container>
-                        <input type="radio" name="fieldType" onchange="unFlipIt()"  value="single" checked> 
+                        <input type="radio" name="fieldType" onchange="unFlipIt()"  value="single" checked>
                       <span> Choose single field </span>
                     </label>
                     <label class=fieldtype-container>
-                        <input type="radio" name="fieldType" onchange="flipIt()" value="multiple"> 
+                        <input type="radio" name="fieldType" onchange="flipIt()" value="multiple">
                       <span> Choose multiple fields </span>
                     </label>
                 </div>
@@ -52,9 +52,9 @@
                         <input name="onefield" value="Mixed" type="submit">
                     </div>
                     <div class=backface>
-                        
+
                         <label class=checkbox-container>
-                        <input type="checkbox" name="multifield" value="Geography"> 
+                        <input type="checkbox" name="multifield" value="Geography">
                         <span>Geography</span>
                     </label>
 
@@ -62,22 +62,22 @@
                             <input type="checkbox" name="multifield" value="Literature">
                         <span> Literature</span>
                         </label>
-                        
+
                         <label class=checkbox-container>
                         <input type="checkbox" name="multifield" value="Science">
                         <span> Science</span>
                         </label>
-                        
+
                         <label class=checkbox-container>
                         <input type="checkbox" name="multifield" value="History">
                         <span> History</span>
                         </label>
-                        
+
                         <label class=checkbox-container>
                         <input type="checkbox" name="multifield" value="Mixed">
                         <span> Mixed</span>
                     </label>
-                        
+
                         <button class="butt" type=submit> Lets GO!</button>
 
                     </div>
@@ -85,17 +85,23 @@
                 </div>
             </form>
         </div>
-        <div id=cover>
-            <div class=form>
+        <div id=cover style='display:block;'>
+            <form class=form action='handle/getquestions' method='POST'>
                    <h1> Take Test from world's Best collection of Quiz</h1>
 
-                   <p><span> Fields:</span> <span> $display_fields.</span></p>   
-                   <p><span> Difficulty Level</span> <span> <select name=difficultyLevel> <option value=easy> Easy </option><option value=medium> Medium </option><option value=hard> Hard </option> </select></span></p>   
-                   <p><span> No. of questions:</span> <span> <input type=number max=50 min=10 name=noOfQuestion value=30></span></p>   
-                   <p><span> Duration for each question:</span> <span> $display_time</span></p>   
+                   <p><span> Fields:</span> <select name=field>
+                    <option value="Geography">Geography</option>
+                    <option value="Science">Science</option>
+                    <option value="History">History</option>
+                    <option value="Literature">Literature</option>
+                    <option value="Mixed">Mixed</option>
+                </select></p>
+                   <p><span> Difficulty Level</span> <span> <select name=level> <option value=easy> Easy </option><option value=medium> Medium </option><option value=hard> Hard </option> </select></span></p>
+                   <p><span> No. of questions:</span> <span> <input type=number max=50 min=10 name=no value=30></span></p>
+                   <p><span> Duration for each question:</span> <span> $display_time</span></p>
                     <p>
-                   <span class='butt green-butt'> Proceed </span> <span class='butt red-butt'> Cancel </span></p>
-            </div>
+                   <button class='butt green-butt' type='submit'> Proceed </button> <span class='butt red-butt'> Cancel </span></p>
+            </form>
         </div>
     </body>
     </html>
