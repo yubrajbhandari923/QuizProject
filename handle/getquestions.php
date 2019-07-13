@@ -3,7 +3,6 @@ include 'sql-connection.php';
 session_start();
     $field=$_POST['field'];
     $no_of_ques=$_POST['no'];
-    $level=$_POST['level'];
     $select_ques="SELECT * FROM all_question_admin ";
     $select_ques_query=mysqli_query($sql_connect,$select_ques);
     $num_rows=mysqli_num_rows($select_ques_query);
@@ -23,7 +22,6 @@ session_start();
         array_push($data_store,$temp_hold);
     }
     $jsoncode=json_encode($data_store);
-    $_SESSION['data']=$jsoncode;
-    header('location:../taketour');
+    echo $jsoncode;
     exit();
 ?>
