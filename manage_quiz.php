@@ -1,6 +1,5 @@
 <?php
 include 'crypt.php';
-// include 'handle/afterlog.php';
 ?>
 <!DOCTYPE Html>
 <html>

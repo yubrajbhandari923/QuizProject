@@ -1,6 +1,7 @@
 <?php
     include '../crypt.php';
     include 'sql-connection.php';
+    include 'session-cookie_check.php';
     $currentid_encrypt=$_COOKIE['hafhk43'];
  $c = new McryptCipher('passKey');
  $currentid= $c->decrypt($currentid_encrypt);

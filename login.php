@@ -28,6 +28,9 @@ if($data!='reg'){
 if(isset($_SESSION['register_success'])){
 echo $_SESSION['register_success'];
 }
+if(isset($_SESSION['error_direct'])){
+    echo $_SESSION['error_direct'];
+    }
 ?>
     
 

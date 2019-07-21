@@ -1,4 +1,5 @@
 <?php
+include 'session-cookie_check.php';
 include 'sql-connection.php';
 session_start();
     $field=$_POST['field'];

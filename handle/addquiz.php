@@ -1,6 +1,7 @@
 <?php
 session_start();
 include '../crypt.php';
+include 'session-cookie_check.php';
 include 'connect-quiz-ques.php';
 if(isset($_POST['submit_check'])){
 if(isset($_POST['question']) && !empty($_POST['question'])){

@@ -5,7 +5,9 @@ include 'sql-connection.php';
         $c = new McryptCipher('secret key goes here');
         $user_id= $c->decrypt($_COOKIE['hafhk43']);
     }else{
-        header('location:../login');
+        session_start();
+        $_SESSION['error_direct']='Please login first';
+        header('location:/QuizProject/login');
         exit();
     }
     $sel_name="SELECT * FROM account WHERE id='$user_id' ";

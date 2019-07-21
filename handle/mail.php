@@ -1,4 +1,5 @@
 <?php
+include 'session-cookie_check.php';
 require 'PHPMailerAutoload.php';
 $mail = new PHPMailer;
 

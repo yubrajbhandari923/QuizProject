@@ -1,5 +1,6 @@
 <?php
     include '../crypt.php';
+    include 'session-cookie_check.php';
     include 'sql-connection.php';
     if(isset($_POST['check_if_submit'])){
         if(isset($_POST['oldpass']) && !empty($_POST['oldpass'])){

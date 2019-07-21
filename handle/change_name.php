@@ -1,5 +1,6 @@
 <?php
 include '../crypt.php';
+include 'session-cookie_check.php';
     include 'sql-connection.php';
     if(isset($_POST['submit_check'])){
         if(isset($_POST['name']) && !empty($_POST['name'])){

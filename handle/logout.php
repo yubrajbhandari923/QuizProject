@@ -1,4 +1,5 @@
 <?php
+    include 'session-cookie_check.php';
     session_start();
     session_destroy();
     setcookie('hafhk43','',time()-360000,'/');

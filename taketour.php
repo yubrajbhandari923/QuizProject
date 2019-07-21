@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'session-cookie_check.php';
 ?>
 <!DOCTYPE html>
 <html>

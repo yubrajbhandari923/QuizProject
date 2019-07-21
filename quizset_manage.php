@@ -1,6 +1,7 @@
 <?php
     include 'crypt.php';
     include 'handle/managequizset.php';
+    include 'handle/session-cookie_check.php';
 ?>
 <!DOCTYPE Html>
 <html>

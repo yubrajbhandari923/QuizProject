@@ -1,5 +1,6 @@
 <?php
 include '../crypt.php';
+include 'session-cookie_check.php';
 include 'sql-connection.php';
     $user_query=$_GET['text'];
     $select_name='SELECT * FROM account';

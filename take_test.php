@@ -1,3 +1,6 @@
+<?php
+include 'session-cookie_check.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>

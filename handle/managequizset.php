@@ -1,5 +1,5 @@
 <?php
-    // include 'session-cookie_check.php';
+    include 'session-cookie_check.php';
     include 'connect-quiz-ques.php';
     session_start();
     $userid_encrypt=$_COOKIE['hafhk43'];

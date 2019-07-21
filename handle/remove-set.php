@@ -1,5 +1,6 @@
 <?php
 include '../crypt.php';
+include 'session-cookie_check.php';
     include 'connect-quiz-ques.php';
     $setname=mysqli_real_escape_string($sql_connect,$_GET['set']);
     $userid_encrypt=$_COOKIE['hafhk43'];

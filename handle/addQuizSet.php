@@ -1,5 +1,6 @@
 <?php
     include '../crypt.php';
+    include 'session-cookie_check.php';
     include 'connect-quiz-ques.php';
     $currentuser_encrypt=$_COOKIE['hafhk43'];
     $c = new McryptCipher('passKey');

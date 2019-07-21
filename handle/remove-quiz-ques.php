@@ -1,5 +1,6 @@
 <?php
     include '../crypt.php';
+    include 'session-cookie_check.php';
     include 'connect-quiz-ques.php';
     // include 'session-cookie_check.php';
     $location='location:../quizset_manage/'.$_GET['set'];

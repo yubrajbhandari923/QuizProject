@@ -1,5 +1,6 @@
 <?php
     include '../crypt.php';
+    include 'session-cookie_check.php';
     include 'sql-connection.php';
     session_start();
     $currentid_encrypt=$_COOKIE['hafhk43'];
