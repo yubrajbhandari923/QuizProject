@@ -1,4 +1,5 @@
 <?php
+include 'crypt.php';
 include 'handle/afterlog.php';
 include 'handle/user_profile.php';
 ?>

@@ -1,4 +1,5 @@
 <?php
+    include 'crypt.php';
     include 'handle/managequizset.php';
 ?>
 <!DOCTYPE Html>

@@ -1,11 +1,14 @@
 <?php
-include 'handle/session-cookie_check.php';
+// include 'handle/session-cookie_check.php';
 ?>
 <header>
                 <div class="user-info-butt" id="user-info-butt">
-                 <?php echo  $_COOKIE['userpic'];?>
+                 <?php 
+                 $c = new McryptCipher('passKey');
+                $decrypted = $c->decrypt($_COOKIE['nbie09']);
+                echo $decrypted;
+                 ?>
                     <div>
-                        <span> <?php echo $username_user; ?> </span>
                         <span> <a href="my_account">Myaccount</a></span>
                         <span> <a href="handle/logout">Logout</a></span>
                     </div>
@@ -25,10 +28,7 @@ include 'handle/session-cookie_check.php';
                         </button>
                     </form>
                     <div class="search-result"> </div>
-                </div>
-                <!-- <div class="head-text">
-                    Hey! <?php echo $name_user; ?>. Long Heading Text Here.
-                </div> -->
+                </div>               
             </header>
             <script src='refrences/js/open-close.js'></script> 
             <script src='refrences/js/ajax.js'></script>

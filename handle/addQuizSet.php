@@ -1,6 +1,10 @@
 <?php
+    include '../crypt.php';
     include 'connect-quiz-ques.php';
-    $currentuser=$_COOKIE['userid'];
+    $currentuser_encrypt=$_COOKIE['hafhk43'];
+    $c = new McryptCipher('passKey');
+    $currentuser= $c->decrypt($currentuser_encrypt);
+
     $select_table="SELECT * FROM sets WHERE id='$currentuser'";
     $query_table_set=mysqli_query($sql_connect,$select_table);
     if(isset($_POST['submit-set'])){

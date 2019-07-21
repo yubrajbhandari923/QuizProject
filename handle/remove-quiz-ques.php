@@ -1,6 +1,7 @@
 <?php
+    include '../crypt.php';
     include 'connect-quiz-ques.php';
-    include 'session-cookie_check.php';
+    // include 'session-cookie_check.php';
     $location='location:../quizset_manage/'.$_GET['set'];
     if(isset($_GET['quiz-id'])){
         $id_of_quiz=mysqli_real_escape_string($sql_connect,$_GET['quiz-id']);
@@ -9,7 +10,9 @@
         header($location);
         exit();
     }
-    $current_id=$_COOKIE['userid'];
+    $current_id_encrypt=$_COOKIE['hafhk43'];
+    $c = new McryptCipher('passKey');
+    $current_id = $c->decrypt($current_id_encrypt);
     $delete_query="DELETE FROM quiz WHERE id='$current_id' AND id_of_quiz='$id_of_quiz' AND setname='$set_name' ";
     $select_query="SELECT * FROM quiz WHERE id='$current_id' AND id_of_quiz='$id_of_quiz' AND setname='$set_name'";
     $query_select_question=mysqli_query($sql_connect,$select_query);

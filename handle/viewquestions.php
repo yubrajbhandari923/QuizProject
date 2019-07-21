@@ -1,7 +1,9 @@
 <?php
     include 'connect-quiz-ques.php';
-    include 'session-cookie_check.php';
-    $current_user=$_COOKIE['userid'];
+    // include 'session-cookie_check.php';
+    $current_user_encrypt=$_COOKIE['hafhk43'];
+ $c = new McryptCipher('passKey');
+ $current_user = $c->decrypt($current_user_encrypt);
     if(isset($_GET['set'])){
         $set_name=mysqli_real_escape_string($sql_connect,$_GET['set']);
     }else{

@@ -1,6 +1,8 @@
 <?php
     include 'sql-connection.php';
-    $current_user=$_COOKIE['userid'];
+$current_user_encrypted=$_COOKIE['hafhk43'];
+$c = new McryptCipher('passKey');
+$current_user = $c->decrypt($current_user_encrypted);
     $select_user="SELECT * FROM account WHERE id='$current_user' ";
     $query_user_select=mysqli_query($sql_connect,$select_user);
     $row_check=mysqli_num_rows($query_user_select);

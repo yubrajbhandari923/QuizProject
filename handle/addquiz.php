@@ -1,5 +1,6 @@
 <?php
 session_start();
+include '../crypt.php';
 include 'connect-quiz-ques.php';
 if(isset($_POST['submit_check'])){
 if(isset($_POST['question']) && !empty($_POST['question'])){
@@ -44,17 +45,13 @@ if(isset($_SESSION['current_field'])&&!empty($_SESSION['current_field'])){
     echo 'Sorry! There was an error1';
     exit();
 }
-   if(strnatcasecmp($opt1,$opt2)==0 ||strnatcasecmp($opt1,$opt3)==0 || strnatcasecmp($opt2,$opt3)==0){
-        echo 'Options cannot be sames';
+   if(strnatcasecmp($opt1,$opt2)==0 ||strnatcasecmp($opt1,$opt3)==0 || strnatcasecmp($opt2,$opt3)==0 || strnatcasecmp($opt1,$answer)==0|| strnatcasecmp($opt2,$answer)==0|| strnatcasecmp($opt3,$answer)==0){
+        echo 'Options cannot be same';
         exit();
     }
-    if(strnatcasecmp($answer,$opt1)==0 || strnatcasecmp($answer,$opt2)==0 || strnatcasecmp($answer,$opt3)==0){
-        //Ntg to do
-    }else{
-        echo 'One of your option should match with answer';
-        exit();
-    }
-    $userid=$_COOKIE['userid'];
+    $userid_encrypt=$_COOKIE['hafhk43'];
+    $c = new McryptCipher('passKey');
+    $userid= $c->decrypt($userid_encrypt);
     $insert_data="INSERT INTO quiz(id,question,answer,opt1,opt2,opt3,field,setname)VALUES('$userid','$question','$answer','$opt1','$opt2','$opt3','$current_field','$current_setname')";
     $insert_data_admin="INSERT INTO all_question_admin(question,answer,opt1,opt2,opt3,field)VALUES('$question','$answer','$opt1','$opt2','$opt3','$current_field')";
     mysqli_query($sql_connect,$insert_data);

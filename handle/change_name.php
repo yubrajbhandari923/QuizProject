@@ -1,4 +1,5 @@
 <?php
+include '../crypt.php';
     include 'sql-connection.php';
     if(isset($_POST['submit_check'])){
         if(isset($_POST['name']) && !empty($_POST['name'])){
@@ -14,7 +15,9 @@
             echo 'Enter your password';
             exit();
         }
-        $current_userid=$_COOKIE['userid'];
+        $current_userid_encrypt=$_COOKIE['hafhk43'];
+        $c = new McryptCipher('passKey');
+        $current_userid = $c->decrypt($current_userid_encrypt);
         $select_password="SELECT * FROM account WHERE id='$current_userid' AND password='$password'";
         $select_password_query=mysqli_query($sql_connect,$select_password);
         $check_password_existence=mysqli_num_rows($select_password_query);

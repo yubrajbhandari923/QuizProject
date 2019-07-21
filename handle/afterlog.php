@@ -1,8 +1,9 @@
 <?php 
 session_start();
 include 'sql-connection.php';
-    if(isset($_COOKIE['userid'])){
-        $user_id=$_COOKIE['userid'];
+    if(isset($_COOKIE['hafhk43'])){
+        $c = new McryptCipher('secret key goes here');
+        $user_id= $c->decrypt($_COOKIE['hafhk43']);
     }else{
         header('location:../login');
         exit();

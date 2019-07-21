@@ -1,7 +1,10 @@
 <?php
+    include '../crypt.php';
     include 'sql-connection.php';
     session_start();
-    $currentid=$_COOKIE['userid'];
+    $currentid_encrypt=$_COOKIE['hafhk43'];
+ $c = new McryptCipher('passKey');
+ $currentid= $c->decrypt($currentid_encrypt);
         $filename=$_FILES['file']['name'];
         $temp_dir=$_FILES['file']['tmp_name'];
         $fileerror=$_FILES['file']['error'];

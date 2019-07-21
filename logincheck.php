@@ -1,5 +1,6 @@
 <?php
 include 'handle/sql-connection.php';
+include 'crypt.php';
 session_start();
 if(empty($_POST['username1'])){
     $_SESSION['error1']='Enter your email or username';
@@ -28,17 +29,23 @@ if($rows1===1){
     $get_id=mysqli_fetch_assoc($query_login2);
 }
 $user_id=$get_id['id'];
+$c = new McryptCipher('passKey');
+$encrypted_user_id= $c->encrypt($user_id);
 $user_letter=$get_id['name'];
 $user_pic_status=$get_id['pic_status'];
 $cookie_time=time()+60*60*60*24;
-setcookie('userid',$user_id,$cookie_time,'/');
+setcookie('hafhk43',$encrypted_user_id,$cookie_time,'/');
 $_SESSION['id']=$user_id;
 
 if($rows1==1||$rows2==1){
     if($user_pic_status==0){
-    setcookie('userpic',strtoupper($user_letter[0]),$cookie_time,'/');
+        $c = new McryptCipher('passKey');
+    $encrypted_user_pic= $c->encrypt(strtoupper($user_letter[0]));
+    setcookie('nbie09',$encrypted_user_pic,$cookie_time,'/');
     }else{
-        setcookie('userpic',"<img src='".$get_id['pic_dir']."'>",$cookie_time,'/');
+        $c = new McryptCipher('passKey');
+    $encrypted_user_pic= $c->encrypt($get_id['pic_dir']);
+        setcookie('nbie09',"<img src='".$encrypted_user_pic."'>",$cookie_time,'/');
     }
     header('location:home');
     exit();
