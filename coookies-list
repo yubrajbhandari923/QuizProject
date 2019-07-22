@@ -4,8 +4,14 @@ userpic------nbie09
 $decrypted = $c->decrypt($encrypted);
 $encrypted = $c->encrypt('secret message');
 
-afterlog.php
-check-user_cookie
 check-user_cookie
 display-set
+credential
+error
+mail
+PHPmailerAutoload
+session-cookie_check
+verifyemail.class
+
+
 
