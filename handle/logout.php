@@ -1,4 +1,8 @@
 <?php
+if(!isset($_SERVER['HTTP_REFERER'])){
+    include '../error.php';
+    exit;
+}
     include 'session-cookie_check.php';
     session_start();
     session_destroy();

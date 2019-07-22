@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 include 'sql-connection.php';
     if(isset($_COOKIE['hafhk43'])){

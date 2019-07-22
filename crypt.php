@@ -1,4 +1,8 @@
 <?php
+if(!defined('check')){
+    include 'error.php';
+    exit();
+    }
 class McryptCipher{
     const PBKDF2_HASH_ALGORITHM = 'SHA256';
     const PBKDF2_ITERATIONS = 64000;

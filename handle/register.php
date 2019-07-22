@@ -1,4 +1,8 @@
 <?php
+if(!isset($_SERVER['HTTP_REFERER'])){
+    include '../error.php';
+    exit;
+}
 session_start();
     include 'sql-connection.php';
     require_once 'VerifyEmail.class.php';

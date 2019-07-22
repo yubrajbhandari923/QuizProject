@@ -1,4 +1,6 @@
 <?php 
+define('check',TRUE);
+define('head_check',TRUE);
 include 'crypt.php';
 include 'handle/afterlog.php';
 ?>

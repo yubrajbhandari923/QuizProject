@@ -3,3 +3,9 @@ userpic------nbie09
  $c = new McryptCipher('passKey');
 $decrypted = $c->decrypt($encrypted);
 $encrypted = $c->encrypt('secret message');
+
+afterlog.php
+check-user_cookie
+check-user_cookie
+display-set
+

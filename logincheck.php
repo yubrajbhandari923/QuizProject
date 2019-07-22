@@ -1,4 +1,9 @@
 <?php
+define('check',TRUE);
+if(!isset($_SERVER['HTTP_REFERER'])){
+    include 'error.php';
+    exit;
+}
 include 'handle/sql-connection.php';
 include 'crypt.php';
 session_start();
@@ -54,6 +59,4 @@ if($rows1==1||$rows2==1){
     header('location:login');
     exit();
 }
-
-
 ?>

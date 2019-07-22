@@ -1,4 +1,8 @@
 <?php
+if(!defined('head_check')){
+    include 'error.php';
+    exit;
+}
 include 'handle/session-cookie_check.php';
 ?>
 <header>

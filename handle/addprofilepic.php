@@ -1,4 +1,9 @@
 <?php
+    define('check',TRUE);
+    if(!isset($_SERVER['HTTP_REFERER'])){
+        include '../error.php';
+        exit;
+    }
     include '../crypt.php';
     include 'sql-connection.php';
     include 'session-cookie_check.php';
