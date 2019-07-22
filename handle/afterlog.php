@@ -1,4 +1,8 @@
 <?php
+ if(!defined('afterlog_check')){
+     include '../error.php';
+     exit;
+ }
 session_start();
 include 'sql-connection.php';
     if(isset($_COOKIE['hafhk43'])){
