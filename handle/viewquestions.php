@@ -1,5 +1,5 @@
 <?php
-    include 'connect-quiz-ques.php';
+    include 'sql-connection.php';
     $current_user_encrypt=$_COOKIE['hafhk43'];
  $c = new McryptCipher('passKey');
  $current_user = $c->decrypt($current_user_encrypt);

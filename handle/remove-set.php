@@ -1,4 +1,5 @@
 <?php
+define('sql-connection_check',TRUE);
 define('check',TRUE);
 if(!isset($_SERVER['HTTP_REFERER'])){
     include '../error.php';
@@ -6,7 +7,7 @@ if(!isset($_SERVER['HTTP_REFERER'])){
 }
 include '../crypt.php';
 include 'session-cookie_check.php';
-    include 'connect-quiz-ques.php';
+    include 'sql-connection.php';
     $setname=mysqli_real_escape_string($sql_connect,$_GET['set']);
     $userid_encrypt=$_COOKIE['hafhk43'];
  $c = new McryptCipher('passKey');

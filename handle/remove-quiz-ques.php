@@ -1,4 +1,5 @@
 <?php
+define('sql-connection_check',TRUE);
 define('check',TRUE);
 if(!isset($_SERVER['HTTP_REFERER'])){
     include '../error.php';
@@ -6,7 +7,7 @@ if(!isset($_SERVER['HTTP_REFERER'])){
 }
     include '../crypt.php';
     include 'session-cookie_check.php';
-    include 'connect-quiz-ques.php';
+    include 'sql-connection.php';
     // include 'session-cookie_check.php';
     $location='location:../quizset_manage/'.$_GET['set'];
     if(isset($_GET['quiz-id'])){

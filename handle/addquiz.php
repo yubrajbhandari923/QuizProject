@@ -1,13 +1,14 @@
 <?php
 session_start();
 define('check',TRUE);
+define('sql-connection_check',TRUE);
 if(!isset($_SERVER['HTTP_REFERER'])){
     include '../error.php';
     exit;
 }
 include '../crypt.php';
 include 'session-cookie_check.php';
-include 'connect-quiz-ques.php';
+include 'sql-connection.php';
 if(isset($_POST['submit_check'])){
 if(isset($_POST['question']) && !empty($_POST['question'])){
     $question=mysqli_real_escape_string($sql_connect,$_POST['question']);

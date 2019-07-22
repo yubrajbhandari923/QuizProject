@@ -1,10 +1,11 @@
 <?php
+define('sql-connection_check',TRUE);
 if(!isset($_SERVER['HTTP_REFERER'])){
     include '../error.php';
     exit;
 }
     include 'session-cookie_check.php';
-    include 'connect-quiz-ques.php';
+    include 'sql-connection.php';
     session_start();
     $userid_encrypt=$_COOKIE['hafhk43'];
     $c = new McryptCipher('passKey');
