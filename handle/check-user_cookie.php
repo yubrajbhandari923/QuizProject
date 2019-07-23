@@ -1,4 +1,8 @@
 <?php
+if(!defined('check-user_cookie_check')){
+     include 'error.php';
+     exit;
+ }
 if(isset($_COOKIE['hafhk43'])){
         header('location:home');
     }

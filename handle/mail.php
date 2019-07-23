@@ -1,4 +1,9 @@
 <?php
+define('mailer_check',TRUE);
+if(!defined('mail_check')){
+    include 'error.php';
+    exit();
+}
 include 'session-cookie_check.php';
 require 'PHPMailerAutoload.php';
 $mail = new PHPMailer;

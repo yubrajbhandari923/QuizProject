@@ -1,5 +1,7 @@
 <?php
 define('sql-connection_check',TRUE);
+define('verifyemail_check',TRUE);
+define('credential_check',TRUE);
 if(!isset($_SERVER['HTTP_REFERER'])){
     include 'error.php';
     exit;
@@ -82,6 +84,7 @@ session_start();
             exit;
             break;
       case 1:
+      define('check-user_cookie_check',TRUE);
             include 'mail.php';
             break;
         case 2:

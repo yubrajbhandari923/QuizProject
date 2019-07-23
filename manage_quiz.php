@@ -1,6 +1,7 @@
 <?php
 define('check',TRUE);
 define('head_check',TRUE);
+define('display-set_check',TRUE);
 include 'crypt.php';
 ?>
 <!DOCTYPE Html>

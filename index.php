@@ -1,4 +1,5 @@
-<?php 
+<?php
+define('check-user_cookie_check',TRUE);
     include 'handle/check-user_cookie.php';
  ?>
 <!DOCTYPE html>

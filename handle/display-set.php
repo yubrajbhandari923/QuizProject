@@ -1,4 +1,8 @@
 <?php
+if(!defined('display-set_check')){
+  include 'error.php';
+  exit();
+}
 define('sql-connection_check',TRUE);
     include 'sql-connection.php';
     $currentuser_encrypt=$_COOKIE['hafhk43'];
