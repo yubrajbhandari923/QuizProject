@@ -1,5 +1,4 @@
 <?php
-define('session-cookie_check',TRUE);
 define('sql-connection_check',TRUE);
 if(!isset($_SERVER['HTTP_REFERER'])){
     include 'error.php';

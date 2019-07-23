@@ -4,13 +4,6 @@ userpic------nbie09
 $decrypted = $c->decrypt($encrypted);
 $encrypted = $c->encrypt('secret message');
 
-error
-session-cookie_check
-
 
 Where /quizProjetc are used
 in Htaccess
-
-have to check those who carry parameters
-
-
