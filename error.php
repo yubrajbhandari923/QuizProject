@@ -327,7 +327,7 @@ body {
 
   <div class="box__description">
     <div class="box__description-container">
-      <div class="box__description-title">Whoops!</div>
+      <div class="box__description-title">Whoops!  <b>404</b></div>
       <div class="box__description-text">It seems like we couldn't find the page you were looking for</div>
     </div>
 

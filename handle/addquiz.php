@@ -3,7 +3,7 @@ session_start();
 define('check',TRUE);
 define('sql-connection_check',TRUE);
 if(!isset($_SERVER['HTTP_REFERER'])){
-    include '../error.php';
+    include 'error.php';
     exit;
 }
 include '../crypt.php';

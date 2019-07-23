@@ -1,6 +1,6 @@
 <?php
 if(!isset($_SERVER['HTTP_REFERER'])){
-    include '../error.php';
+    include 'error.php';
     exit;
 }
     include 'session-cookie_check.php';

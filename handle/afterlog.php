@@ -1,7 +1,7 @@
 <?php
 define('sql-connection_check',TRUE);
  if(!defined('afterlog_check')){
-     include '../error.php';
+     include 'error.php';
      exit;
  }
 session_start();

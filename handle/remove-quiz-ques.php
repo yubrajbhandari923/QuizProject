@@ -2,7 +2,7 @@
 define('sql-connection_check',TRUE);
 define('check',TRUE);
 if(!isset($_SERVER['HTTP_REFERER'])){
-    include '../error.php';
+    include 'error.php';
     exit;
 }
     include '../crypt.php';
