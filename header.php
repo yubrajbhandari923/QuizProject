@@ -1,4 +1,5 @@
 <?php
+define('session-cookie_check',TRUE);
 if(!defined('head_check')){
     include 'error.php';
     exit;

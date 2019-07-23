@@ -1,5 +1,6 @@
 <?php
 define('check',TRUE);
+define('session-cookie_check',TRUE);
 include 'handle/session-cookie_check.php';
 ?>
 <!DOCTYPE html>

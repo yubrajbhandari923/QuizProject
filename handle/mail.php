@@ -1,4 +1,5 @@
 <?php
+define('session-cookie_check',TRUE);
 define('mailer_check',TRUE);
 if(!defined('mail_check')){
     include 'error.php';
