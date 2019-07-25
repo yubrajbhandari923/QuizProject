@@ -9,7 +9,7 @@ if(!isset($_SERVER['HTTP_REFERER'])){
 include '../crypt.php';
 include 'session-cookie_check.php';
 include 'sql-connection.php';
-    $user_query=$_GET['text'];
+    $user_query=mysqli_real_escape_string($sql_connect,$_GET['text']);
     $select_name='SELECT * FROM account';
     $query_select_name=mysqli_query($sql_connect,$select_name);
     $current_user_encrypt=$_COOKIE['hafhk43'];

@@ -8,8 +8,8 @@ if(!isset($_SERVER['HTTP_REFERER'])){
 include 'session-cookie_check.php';
 include 'sql-connection.php';
 session_start();
-    $field=$_POST['field'];
-    $no_of_ques=$_POST['no'];
+    $field=mysqli_real_escape_string($sql_connect,$_POST['field']);
+    $no_of_ques=mysqli_real_escape_string($sql_connect,$_POST['no']);
     $select_ques="SELECT * FROM all_question_admin ";
     $select_ques_query=mysqli_query($sql_connect,$select_ques);
     $num_rows=mysqli_num_rows($select_ques_query);
