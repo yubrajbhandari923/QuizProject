@@ -30,11 +30,11 @@ $rows1=mysqli_num_rows($query_login1);
 $rows2=mysqli_num_rows($query_login2);
 if($rows1===1){
     $get_id=mysqli_fetch_assoc($query_login1);
-
 }else{
     $get_id=mysqli_fetch_assoc($query_login2);
 }
-$user_id=$get_id['id'];
+if($rows1==1||$rows2==1){
+    $user_id=$get_id['id'];
 $c = new McryptCipher('passKey');
 $encrypted_user_id= $c->encrypt($user_id);
 $user_letter=$get_id['name'];
@@ -43,7 +43,6 @@ $cookie_time=time()+60*60*60*24;
 setcookie('hafhk43',$encrypted_user_id,$cookie_time,'/');
 $_SESSION['id']=$user_id;
 
-if($rows1==1||$rows2==1){
     if($user_pic_status==0){
         $c = new McryptCipher('passKey');
     $encrypted_user_pic= $c->encrypt(strtoupper($user_letter[0]));
