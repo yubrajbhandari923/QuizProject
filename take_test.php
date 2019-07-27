@@ -20,7 +20,7 @@ include 'handle/session-cookie_check.php';
     </head>
     <body>
         <h1>
-            Take a Quiz Test
+            Take a Quiz Test Now!
         </h1>
         <div class="notification-container">
             <h2> Challenges</h2>
