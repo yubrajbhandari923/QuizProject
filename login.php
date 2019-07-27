@@ -64,6 +64,7 @@ if(isset($_SESSION['error_direct'])){
                             </div>
                             <button type=submit> Login </button>
                             <button id="goto-reg">New ? Register</button>
+                            <a href='forgotpassword'><button type='button'>Forgot Password</button></a>
                         </form>
             </section>
         </section>
