@@ -67,38 +67,38 @@ session_start();
         exit();
     }
     // Initialize library class
-    $mail = new VerifyEmail();
-    // Set the timeout value on stream
-    // $mail->setStreamTimeoutWait(20);
-    // Set debug output mode
-    // $mail->Debug= TRUE;
-    // $mail->Debugoutput= 'html';
-    // Set email address for SMTP request
-    $mail->setEmailFrom(EMAIL); // you can type what email you want
-    // Check if email is valid and exist
-    $result = $mail->check($email);
-    header('Content-Type: application/json');
-    switch ($result) {
-        case 0:
-            $_SESSION['error']= 'E-mail is not valid';
-            header('location:../register');
-            exit;
-            break;
-      case 1:
-      define('check-user_cookie_check',TRUE);
-            include 'mail.php';
-            break;
-        case 2:
-        $_SESSION['error']= 'This is not a valid email address';
-        header('location:../register');
-        exit;
-            break;
-        case 3:
-        $_SESSION['error']= 'Please check your internet connection';
-        header('location:../register');
-        exit;
-        break;
-    }
+    // $mail = new VerifyEmail();
+    // // Set the timeout value on stream
+    // // $mail->setStreamTimeoutWait(20);
+    // // Set debug output mode
+    // // $mail->Debug= TRUE;
+    // // $mail->Debugoutput= 'html';
+    // // Set email address for SMTP request
+    // $mail->setEmailFrom(EMAIL); // you can type what email you want
+    // // Check if email is valid and exist
+    // $result = $mail->check($email);
+    // header('Content-Type: application/json');
+    // switch ($result) {
+    //     case 0:
+    //         $_SESSION['error']= 'E-mail is not valid';
+    //         header('location:../register');
+    //         exit;
+    //         break;
+    //   case 1:
+    //   define('check-user_cookie_check',TRUE);
+    //         include 'mail.php';
+    //         break;
+    //     case 2:
+    //     $_SESSION['error']= 'This is not a valid email address';
+    //     header('location:../register');
+    //     exit;
+    //         break;
+    //     case 3:
+    //     $_SESSION['error']= 'Please check your internet connection';
+    //     header('location:../register');
+    //     exit;
+    //     break;
+    // }
     $record="INSERT INTO account(name,username,email,password) VALUES('$name','$username','$email','$password')";
     mysqli_query($sql_connect,$record);
     $select_user_id="SELECT * FROM account WHERE username='$username' AND password='$password'";
