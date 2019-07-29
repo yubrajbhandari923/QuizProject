@@ -20,9 +20,9 @@ if(!isset($_SERVER['HTTP_REFERER'])){
     <section class="container">
         <section class="hero">
             <section class="forms forms-reg">
-                    <form class="register-form" method="POST" action="forgotpass" autocomplete=on>
-                            <h1>Forgot Password</h1>                            
-                            <input type=email name='emailid' placeholder="Enter Your Email Address">
+                    <form class="register-form" method="POST" action="handle/verify" autocomplete=on>
+                            <h1>Enter your verification code</h1>                            
+                            <input type=number name='vercode' placeholder="Verification code">
                             <div class="error">
                             <?php
                             if(isset($_SESSION['error1'])){

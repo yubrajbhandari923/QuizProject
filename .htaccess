@@ -1,4 +1,4 @@
-ErrorDocument 404 /QuizProject/error.php
+ErrorDocument 404 /error.php
 
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -123,5 +123,14 @@ RewriteRule ^forgotpassword forgotpassword.php [L,QSA,NC]
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^handle/forgotpassword handle/forgotpassword.php [L,QSA,NC]
+RewriteRule ^forgotpass forgotpass.php [L,QSA,NC]
 
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^verify verify.php [L,QSA,NC]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^handle/verify handle/verify.php [L,QSA,NC]

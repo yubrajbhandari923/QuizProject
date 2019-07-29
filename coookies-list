@@ -1,8 +1,11 @@
 userid======hafhk43
 userpic------nbie09
+temp_user------?fdgirt3
+
  $c = new McryptCipher('passKey');
 $decrypted = $c->decrypt($encrypted);
 $encrypted = $c->encrypt('secret message');
+
 
 
 Where /quizProjetc are used
