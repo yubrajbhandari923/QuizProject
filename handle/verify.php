@@ -37,14 +37,16 @@ $fetch_data=mysqli_fetch_assoc($select_user_query);
 $vercode_db=$fetch_data['pass_pin'];
 $time_db=$fetch_data['pin_time'];
 $time_diff=time()-$time_db;
-if($time_diff<=172800){
+if($time_diff>=172800){
     $_SESSION['error1']='Sorry|Your verification code has expired';
     header('location:../verify.php');
     exit();
 }
-if($vercode===$vercode_db){
+if($vercode!==$vercode_db){
     $_SESSION['error1']='Your code is not valid';
     header('location:../verify.php');
     exit();
+}else{
+    header('location:../changepassword');
+    exit();
 }
-echo 'Every thing is right';

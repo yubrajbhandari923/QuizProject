@@ -33,8 +33,6 @@ if(isset($_SESSION['error_direct'])){
     echo $_SESSION['error_direct'];
     }
 ?>
-    
-
 </span>
     <section class="container">
         <section class="hero">

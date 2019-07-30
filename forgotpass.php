@@ -34,7 +34,7 @@ if(mb_strlen($pin)!==7){
     goto top;
 }
 $pin_time=time();
-$db_update="UPDATE account SET pass_pin='$pin',pin_time='$pin_time'";
+$db_update="UPDATE account SET pass_pin='$pin',pin_time='$pin_time' WHERE email='$email'";
 mysqli_query($sql_connect,$db_update);
 $to =$email;
 $subject ='Quizee||Password Reset  Your password reset Code is:';
@@ -46,15 +46,16 @@ $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
 // Additional headers
 $headers[] = 'From: b.anup.135@gmail.com>';
-if(!mail($to, $subject, $message, implode("\r\n", $headers))){
-    $_SESSION['error1']="Sorry error communicatiing with mail server";
-    header('location:forgotpassword');
-    exit();
-}
+// if(!mail($to, $subject, $message, implode("\r\n", $headers))){
+//     $_SESSION['error1']="Sorry error communicatiing with mail server";
+//     header('location:forgotpassword');
+//     exit();
+// }
 $c = new McryptCipher('passKey');
-$temp_userid = $c->decrypt($fetch_data['id']);
-$cookie_time=60*60*24;
+$temp_userid = $c->encrypt($fetch_data['id']);
+$cookie_time=time()+60*60;
 setcookie('fdgirt3',$temp_userid,$cookie_time,'/');
+setcookie('mail',$pin,$cookie_time,'/');
 header('location:verify');
 exit();
 ?>

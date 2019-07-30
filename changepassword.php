@@ -13,16 +13,17 @@ if(!isset($_SERVER['HTTP_REFERER'])){
     <title> Forgot Password </title>
     <link rel='stylesheet' href="refrences/fonts/fonts.css">
     <link rel="stylesheet" href='refrences/css/login-style.css'>
-    <script src="refrences/js/forgotpassword.js">
-     </script>
+    <script src="refrences/js/jquery.js"></script>
+    <script src="refrences/js/forgotpassword.js"></script>
 </head>
 <body>
     <section class="container">
         <section class="hero">
             <section class="forms forms-reg">
-                    <form class="register-form" method="POST" action="forgotpass" autocomplete=on>
-                            <h1>Forgot Password</h1>                            
-                            <input type=email name='emailid' placeholder="Enter Your Email Address">
+                    <form class="register-form" autocomplete=on method='POST' action='handle/changepass'>
+                            <h1>Change Password</h1>                            
+                            <input type=password name='newpass' placeholder="Enter Your Password">
+                            <input type=password name='confirmpass' placeholder="Confirm Password">
                             <div class="error">
                             <?php
                             if(isset($_SESSION['error1'])){
@@ -30,7 +31,7 @@ if(!isset($_SERVER['HTTP_REFERER'])){
                             }
                             ?>
                             </div>
-                            <button type='submit' name='submit'>Submit</button>
+                            <button type='submit' name='check_if_submit'>Submit</button>
                         </form>
             </section>
         </section>

@@ -22,7 +22,7 @@ if(!isset($_SERVER['HTTP_REFERER'])){
             <section class="forms forms-reg">
                     <form class="register-form" method="POST" action="handle/verify" autocomplete=on>
                             <h1>Enter your verification code</h1>                            
-                            <input type=number name='vercode' placeholder="Verification code">
+                            <input name='vercode' placeholder="Verification code">
                             <div class="error">
                             <?php
                             if(isset($_SESSION['error1'])){
