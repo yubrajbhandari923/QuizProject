@@ -24,7 +24,7 @@
   background: whitesmoke
 }
 h2{
-    font: 23px josefinsans;
+    font: 30px josefinsans;
 }
 h1{
   font: 35px Passionone;
@@ -49,7 +49,7 @@ body{
     margin-left: 10px;
 }
 #cover{
-    display:none;
+    display:block;
     background: #000000d6;
     width: 100%;
     min-height:100%;
@@ -87,111 +87,6 @@ body{
   background: #446CB3;
   border-bottom-color: #3b5998;
 }
-form  input[name='fieldType']{
-  opacity:0 ;
-  margin-right: 5px;
-  cursor:pointer;
-  z-index: 2;
-  height:20px;
-  width:20px;
-}
-form input[name=fieldType] + span {
-  display: block ;
- position: relative; 
-}
-form input[name=fieldType] + span::before {
-  position: absolute;
-  content:"";
-  height:20px;
-  width:20px;
-  background: grey;
-  top: 0;
-  left:-25px;
-}
-form input[name=fieldType] + span::after {
-  position: absolute;
-  content:"";
-  height:10px;
-  width:5px;
-  background: none;
-  border-bottom:3px solid white; 
-  border-right:3px solid white; 
-  top: 2px;
-  left:-18px;
-  display: none;
-  transform: rotate(45deg);
-}
-.fieldtype-container {
-  display: flex;
-  font: 18px cabin; 
-  margin: 10px;
-}
-form input[name=fieldType]:checked + span::after {
-  display: block;
-}
-form input[name=fieldType]:checked + span::before {
-  background: royalblue;
-}
-form div:nth-child(1){
-  display: flex;
-}
-
-.flipbox{
-   width: 98vw;
-  height: 20vw;
-  position:relative;
-  perspective: 600px;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-}
-.flipbox > div {
-  width: 80%;
-  height: 100%;
-  position: relative;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  transform-origin: center right;
-}
-.flipbox > div > div {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  backface-visibility: hidden;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items:center;
-  
-}
-.frontface {
-  background: lightgray;
-}
-.frontface > * {
-  margin-left:20px;
-}
-input[type=submit]{
-  width: 220px;
-  height: 50px;
-  display: block;
-  background: #4CAF50;
-  border: none;
-  color: white;
-  font: 20px viga;
-}
-
-.backface {
-  background: #4caf50;
-  transform: rotateY( 180deg );
-}
-.isflip {
- transform: translateX(-100%) rotateY(-180deg);
-}
-
-
-
-
 .form{
 position: fixed;
 top:0;
@@ -223,3 +118,104 @@ font: 18px poppins;
 .form p .butt{
   width:100%;
 }
+
+/* ------------------Explore paxi ko */
+.btn {
+  width: 100%;
+  height:90px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  transition: 2s;
+  margin: 5px;
+  
+}
+
+.btn path{
+    transition: 2s;
+}
+.btn:hover path{
+  stroke-dasharray: 100;
+}
+/* .btn:hover .btn-value:before{
+  display: block;
+} */
+.btn:nth-child(even):hover{
+  background: gold
+}
+.btn:nth-child(odd):hover{
+  color:white;
+   background: #5b86e5 ;
+}
+.btn-value{
+  position:relative;
+  margin: -60px 0 0 10px;
+  width: 100%;
+  font: 25px arvo;
+}
+.btn input{
+  display: none;
+}
+.btn-value i{
+  float: right;
+  margin-right: 50px;
+  font-size: 30px;
+  color:green;
+  display: none;
+}
+/* .btn-value:after, .btn-value:before{
+  position: absolute;
+  content: "";
+  top:-10%;
+  right: 10%;
+ 
+} */
+.btn-clicked{
+  color:white;
+  background: #607d8b;
+}
+.btn-clicked path{
+  stroke-dasharray: 100; 
+}
+.btn-clicked i {
+  display: block;
+}
+/* .btn-clicked .btn-value:before, .btn-clicked .btn-value:after{
+  display: block;
+} */
+
+/* .btn-value:before{
+   height: 40px;
+  width: 40px;
+   border-radius: 100%;
+  background: lightgray;
+  display:none;
+  transition: 2s;
+}
+.btn-value:after{
+  height: 20px;
+  width: 14px;
+  transform: rotate(45deg) translateX(-5px) translateY(10px);
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+  display: none;
+} */
+.quizzes-container{
+  width:100%;
+  display: grid;
+  position: relative;
+  grid-template-rows: 100px ;
+}
+@media all and (max-width:720px){
+  .form{
+    width: 330px;
+    height: max-content;
+  }
+  .form p{
+    grid-template: auto / 1fr;
+  }
+  .form > *{
+    margin: 30px 0;
+  }
+}
+
