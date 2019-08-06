@@ -73,8 +73,8 @@ include 'handle/session-cookie_check.php';
                    <h1> Take Test from world's Best collection of Quiz</h1>
                     <input type="hidden" name="field_select">
                    <p><span> Fields:</span> <span id='field_select'> </span></p>
-                   <p><span> Difficulty Level</span> <span> <select name=level > <option value=easy> Easy </option><option value=medium> Medium </option><option value=hard> Hard </option> </select></span></p>
-                   <p><span> No. of questions:</span> <span> <input type=number max=50 min=1 name=no value=30 id='num_select'></span></p>
+                   <p><span> Difficulty Level</span> <span> <select name=level id='level_select'> <option value=easy> Easy </option><option value=medium> Medium </option><option value=hard> Hard </option> </select></span></p>
+                   <p><span> No. of questions:</span> <span> <input type=number max=50 min=1 name=no value=5 id='num_select'></span></p>
                    <p><span> Duration for each question:</span> <span id="duration"></span></p>
                     <p>
                    <button class='butt green-butt' type='submit'> Proceed </button> <span class='butt red-butt' id="cancel-butt"> Cancel </span></p>
