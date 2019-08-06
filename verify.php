@@ -31,6 +31,8 @@ if(!isset($_SERVER['HTTP_REFERER'])){
                             ?>
                             </div>
                             <button type='submit' name='submit'>Submit</button>
+                            <a href='handle/resendcode'><button type='button'>Resend Code</button></a>
+                            <button type='button'>If you didn't find verification code in Inbox,check Spam folder</button>
                         </form>
             </section>
         </section>

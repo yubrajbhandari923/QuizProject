@@ -1,12 +1,14 @@
 <?php
 define('session-cookie_check',TRUE);
+define('mail_check',TRUE);
 define('mailer_check',TRUE);
+define('credential_check',TRUE);
 if(!defined('mail_check')){
     include 'error.php';
     exit();
 }
-include 'session-cookie_check.php';
 require 'PHPMailerAutoload.php';
+require 'credential.php';
 $mail = new PHPMailer;
 
 $mail->SMTPDebug = 4;
@@ -19,7 +21,7 @@ $mail->SMTPSecure = 'tls';
 $mail->Port = 587;
 
 $mail->setFrom(EMAIL, 'Quizee');
-$mail->addAddress($_POST['emailid']);
+$mail->addAddress($email);
 $mail->addReplyTo(EMAIL);
 // $mail->addCC('cc@example.com');
 // $mail->addBCC('bcc@example.com');
@@ -28,7 +30,7 @@ $mail->addReplyTo(EMAIL);
 // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Succesfully registered ';
+$mail->Subject = 'Password Reset';
 $mail->Body    ="
 <div style='width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;'>
 <section style='width: 100%;'>
@@ -41,13 +43,12 @@ $mail->Body    ="
      click on the button below to verify your account.</p>
 
      <p style='margin: 5px;'> Here are your account details.</p>
-     <p style='margin: 20px;'> Name:".$name."<br>
-    UserName:".$username."<br>
-    Email: ".$email."</p>
+     <p style='margin: 20px;'> Name:<br>
+     Verification code:<b>$pin</b>
 
 
-     <a href='#' style='text-align:center;margin:0px 40px;text-decoration: none;color:white;display: block;'>
-     <div style='font: 25px poppins;padding:5px;background: dodgerblue;width: 20vw;margin: auto;'>Verify Account</div></a>
+     <a href='bee-proform.tk/handle/verify/$temp_userid_sss/$pin_encrypt' style='text-align:center;margin:0px 40px;text-decoration: none;color:white;display: block;'>
+ <div style='font: 25px poppins;padding:5px;background: dodgerblue;width: 20vw;margin: auto;'>Verify Account</div></a>
 
      <p style='margin: 5px;'> If you are having any issues with your account please don't hegistate to contact us.
          <br> <h2> Thankyou ! Keep learning :) </h2>
@@ -57,10 +58,18 @@ $mail->Body    ="
 </section>
 </div>
 ";
+$mail->SMTPOptions = array(
+    'ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true
+    )
+);
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
-} else {
-    echo 'Message has been sent';
+    // echo 'Message could not be sent.';
+        $_SESSION['error1']="Sorry error communicatiing with mail server";
+    header('location:../forgotpassword');
+    exit();
 }
 ?>
 
