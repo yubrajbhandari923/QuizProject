@@ -38,36 +38,19 @@ include 'handle/session-cookie_check.php';
         </div>
         <div>
             <h2> Explore other quizzes</h2>
-            <div class="quizzes-container">
-<div class="btn btn-clicked">
-   <svg width="100%" height="90px" viewbox="0,0,100,100" preserveAspectRatio="none">
-    <path d="M0 100 L 100 100" fill="transparent" fill="transparent" stroke-width="5" stroke-dasharray="50" stroke="black"></path>
-</svg>
-  <div class="btn-value">Geography <i class="fas fa-check-circle" id="Done-select"></i>  </div>
-  <input type="checkbox" name="selected-field" value="geography" >
-</div>
-<div class="btn btn-clicked">
-   <svg width="100%" height="90px" viewbox="0,0,100,100" preserveAspectRatio="none">
-    <path d="M0 100 L 100 100" fill="transparent" fill="transparent" stroke-width="5" stroke-dasharray="50" stroke="black"></path>
-</svg>
-  <div class="btn-value">History <i class="fas fa-check-circle" id="Done-select"></i>  </div>
-  <input type="checkbox" name="selected-field" value="history" >
-</div>
-<div class="btn">
-   <svg width="100%" height="90px" viewbox="0,0,100,100" preserveAspectRatio="none">
-    <path d="M0 100 L 100 100" fill="transparent" fill="transparent" stroke-width="5" stroke-dasharray="50" stroke="black"></path>
-</svg>
-  <div class="btn-value">GK <i class="fas fa-check-circle" id="Done-select"></i>  </div>
-  <input type="checkbox" name="selected-field" value="gk" >
-</div>
-
-
+            <div class="btns-container">
+                <div class="btns "> Literature </div>
+                <div class="btns "> Science </div>
+                <div class="btns "> History </div>
+                <div class="btns "> Computer and IT </div>
+                <div class="btns "> Geography </div>
+                <div class="btns "> IQ </div>
+                <div class="btns "> Geography </div>
+                <div class="btns "> Geography </div>
+                <div class="btns "> Geography </div>
+            </div>
         </div>
-
-
-
-
-
+        <div class="done-bttn green-butt">Thats it!</div>
         <div id=cover style=''>
             <form class=form onsubmit='return playomniquiz()'>
                    <h1> Take Test from world's Best collection of Quiz</h1>
