@@ -122,36 +122,17 @@ class McryptCipher{
             $this->pbkdf2Salt = $pbkdf2Salt;
         }
         else {
-            $this->pbkdf2Salt = mcrypt_create_iv(self::PBKDF2_SALT_BYTE_SIZE, MCRYPT_DEV_URANDOM);
+            $this->pbkdf2Salt=mcrypt_create_iv(self::PBKDF2_SALT_BYTE_SIZE, MCRYPT_DEV_URANDOM);
         }
         list($this->secureEncryptionKey, $this->secureHMACKey) = str_split(
             $this->pbkdf2(self::PBKDF2_HASH_ALGORITHM, $this->password, $this->pbkdf2Salt, self::PBKDF2_ITERATIONS, self::PBKDF2_HASH_BYTE_SIZE * 2, true),
             self::PBKDF2_HASH_BYTE_SIZE
         );
     }
-    /**
-     * Calculates HMAC for the message.
-     *
-     * @param string $message
-     * @return string
-     */
-    private function hmac($message)
-    {
-        return hash_hmac(self::PBKDF2_HASH_ALGORITHM, $message, $this->secureHMACKey, true);
-    }
-    /**
-     * Encrypts the input text
-     *
-     * @param string $input
-     * @return string Format: hmac:pbkdf2Salt:iv:encryptedText
-     */
     public function encrypt($input)
     {
         $this->derivateSecureKeys();
         $mcryptIvSize = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC);
-        // By default mcrypt_create_iv() function uses /dev/random as a source of random values.
-        // If server has low entropy this source could be very slow.
-        // That is why here /dev/urandom is used.
         $iv = mcrypt_create_iv($mcryptIvSize, MCRYPT_DEV_URANDOM);
         $encrypted = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $this->secureEncryptionKey, $input, MCRYPT_MODE_CBC, $iv);
         $hmac = $this->hmac($this->pbkdf2Salt . $iv . $encrypted);
@@ -162,12 +143,6 @@ class McryptCipher{
             base64_encode($encrypted)
         ));
     }
-    /**
-     * Decrypts the input text.
-     *
-     * @param string $input Format: hmac:pbkdf2Salt:iv:encryptedText
-     * @return string
-     */
     public function decrypt($input)
     {
         list($hmac, $pbkdf2Salt, $iv, $encrypted) = explode(':', $input);
