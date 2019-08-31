@@ -7,6 +7,7 @@ function playomniquiz(){
         field:field,
         no:no,
         level:level
+        
     }
     var datahold='field='+field + '&no='+no;
     localStorage.setItem('field',JSON.stringify(fieldData));
