@@ -1,32 +1,59 @@
+:root{
+    --sky: #375E97;
+    --sunset: #FB6542;
+    --sun:#FFBB00;
+    --grass: #3F681C;
+    --black: #101820FF;
+    --yellow: #FBDE44FF;
+    --island-green: #2BAE66FF;
+    --whitish: #FCF6F5FF;
+    --red:#F65058FF;
+}
 *{
     margin: 0px;
+    padding:0px;
 }
+
 body{
     overflow-x: hidden;
-    background:#00203FFF;
-    padding: 20px;
+  
 }
 
 .cover{
     position: absolute;
     z-index: 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100vw;
     height: 100vh;
     background:#00203FFF;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .cover div{
     border-radius: 100%;
     height: 15vw;
     width: 15vw;
+    min-width: 200px;
+    min-height:200px;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background:#ADEFD1FF;
-    animation: animate 1s ease-in-out infinite;
+    -webkit-animation: animate 1s ease-in-out infinite;
+            animation: animate 1s ease-in-out infinite;
 }
 .cover div:after, .cover div:before{
     content: "";
@@ -51,89 +78,106 @@ body{
 }
 
 /* ------___________________________________________________------------------------------------------ */
-
 .hero{
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+}
+.Q-Box{ 
     width: 100vw;
-    background: #00203fff;
-    color: #ADEFD1FF;
+    background: var(--red);
+    display: flex;
+    flex-flow: column;
+    padding: 25px;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
 }
-h1{
-    font: 40px passionone;
-    text-align: center;
-    letter-spacing: 2px;
-    padding: 20px;
+.Q-Box > span{
+    margin: 20px;
+    color: white;
+    font:30px quicksand; 
+    max-width: 80%;
 }
-.quiz-info-container{
-    width: 100vw;
+.Q-field,.qno{
+      font:18px quicksand; 
 }
-.quiz-info-container div:nth-child(1){
-    display: grid;
-    grid-template: auto / 1fr 3fr;
-
-}
-.clock-cover{
+.Opt-box{
+    width:100vw;
     position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 100px;
-    height: 100px;
-    float: right;
+    bottom: 0;
+    display: flex;
+    height: 50vh;
+    max-height: 250px;
+    margin: 0px;
+    background: #28334AFF;
+    justify-content: space-evenly;
 }
-.quiz-info-container span{
-    margin: 5px;
-    font: 25px josefinsans;
+.Opt{
+    justify-content: center;
+    border-bottom: 0px solid black;
+    text-align: left;
+    color:black;
+    background: var(--yellow);
+    font: 20px quicksand;
+    padding:  20px 5px;
+    border-radius: 20px;
+    max-height: 150px;
+    flex-basis: 40%;
+    margin: 10px ;
+    
 }
+/* --------------------0-------------------------------------------------------------- */
+@media all and (min-height:500px){
+    .Q-Box{
+        height: calc(100vh - 250px);
+    }
+}
+@media all and (max-height: 400px){
+    .Opt-box{
+        max-height:100px;
+    }
+    .Q-Box{
+        height: calc(100vh - 100px);
+    }
+}
+@media all and (max-width: 550px){
+    .Opt-box{
+    flex-wrap: wrap;
+    height:300px;
+    }
+    .Q-Box{
+        height: calc(100vh - 300px);
+    }
+}
+@media all and (max-width: 300px){
+    .Opt{
+        font-size: 18px;
+        padding: 5px;
+    }
+    //.Opt-box{
+        max-height:100px;
+    }
+    .Q-Box > span{
+         font-size: 18px;
+        padding: 5px;
 
-.main-quiz-container{
-    width: 90vw;
-    min-width: min-content;
-    padding: 20px;
-    border: 5px solid #ADEFD1FF;
-    color: #ADEFD1FF;
-    margin-top: 100px;
-    position:relative;
+    }
 }
-.main-quiz-container:before{
-    position: absolute;
-    content: "1/30";
-    width: 100px;
-    height: 100px;
-    top:-50px;
-    font: 35px josefinsans ;
-    text-align: center;
-    line-height: 100px;
-    left: 50%;
-    margin-left: -50px;
-    border-radius: 100%;
-    background: #00203fff;
-    border: 5px solid #ADEFD1FF;
+@-webkit-keyframes animate{
+    0%{
+        height:15vw;
+        width:15vw;
+    }
+    50%{
+        height:25vw;
+        width:25vw;
+    }
+    100%{
+        height:15vw;
+        width:15vw;
+    }
 }
-.question-container{
-    width:100%;
-    margin-top: 60px;
-    font: 35px josefinsans ;
-    text-align:center;
-    padding: 40px;
-}
-.options-container{
-    width: 100%;
-    display: grid;
-    grid-template: auto / 1fr 1fr;
-    grid-gap:10px;
-    margin: 0px 5px; 
-}
-.options-container span{
-    font: 30px josefinslab;
-    background: #ADEFD1FF;
-    color: #00203fff;
-    padding: 10px;
-    cursor: pointer;
-}
-
-
-
-/* ---------------------------------------------------------------------------------- */
 
 @keyframes animate{
     0%{
@@ -149,6 +193,7 @@ h1{
         width:15vw;
     }
 }
+
 
 
 
