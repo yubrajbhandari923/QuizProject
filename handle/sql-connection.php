@@ -11,8 +11,8 @@
 //     include 'error.php';
 //     exit();
 //     }
-// $sql_connect=mysqli_connect('sql205.epizy.com','epiz_24238078','a8MlToyeWfTG9w');
-// $db_connect=mysqli_select_db($sql_connect,'epiz_24238078_user_record');
+// $sql_connect=mysqli_connect('sql205.epizy.com','	epiz_24410186','F1wMPbRajVoD');
+// $db_connect=mysqli_select_db($sql_connect,'epiz_24410186_user_record');
 // mysqli_query($sql_connect,$db_connect);
 
 if(!defined('sql-connection_check')){

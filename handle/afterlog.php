@@ -20,11 +20,11 @@ include 'sql-connection.php';
     $name_user_fetch=mysqli_fetch_assoc($query_sel_name);
     $name_user=$name_user_fetch['name'];
     $username_user=$name_user_fetch['username'];
-    $acc_status=$name_user_fetch['acc_status'];
-    if($acc_status==0){
-        echo "<div class='container'>
-        You are not yet verified
-<a href='#' class='button red'><span>✓</span>Verify now</a>
-</div>";
-    }
+//     $acc_status=$name_user_fetch['acc_status'];
+//     if($acc_status==0){
+//         echo "<div class='container'>
+//         You are not yet verified
+// <a href='#' class='button red'><span>✓</span>Verify now</a>
+// </div>";
+//     }
 ?>
